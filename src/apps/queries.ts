@@ -96,6 +96,7 @@ export const extensionList = gql`
     }
   }
 `;
+export const EXTENSION_LIST_QUERY = "ExtensionList";
 
 export const useAppsListQuery = makeQuery<AppsList, AppsListVariables>(
   appsList

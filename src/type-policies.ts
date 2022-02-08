@@ -4,99 +4,114 @@ import {
   TypePolicies,
   TypePolicy
 } from "@apollo/client/cache";
-export type AccountAddressCreateKeySpecifier = Array<
+export type AccountAddressCreateKeySpecifier = (
   | "user"
   | "accountErrors"
   | "errors"
   | "address"
   | AccountAddressCreateKeySpecifier
->;
-export interface AccountAddressCreateFieldPolicy {
+)[];
+export type AccountAddressCreateFieldPolicy = {
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   address?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AccountAddressDeleteKeySpecifier = Array<
+};
+export type AccountAddressDeleteKeySpecifier = (
   | "user"
   | "accountErrors"
   | "errors"
   | "address"
   | AccountAddressDeleteKeySpecifier
->;
-export interface AccountAddressDeleteFieldPolicy {
+)[];
+export type AccountAddressDeleteFieldPolicy = {
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   address?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AccountAddressUpdateKeySpecifier = Array<
+};
+export type AccountAddressUpdateKeySpecifier = (
   | "user"
   | "accountErrors"
   | "errors"
   | "address"
   | AccountAddressUpdateKeySpecifier
->;
-export interface AccountAddressUpdateFieldPolicy {
+)[];
+export type AccountAddressUpdateFieldPolicy = {
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   address?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AccountDeleteKeySpecifier = Array<
-  "accountErrors" | "errors" | "user" | AccountDeleteKeySpecifier
->;
-export interface AccountDeleteFieldPolicy {
+};
+export type AccountDeleteKeySpecifier = (
+  | "accountErrors"
+  | "errors"
+  | "user"
+  | AccountDeleteKeySpecifier
+)[];
+export type AccountDeleteFieldPolicy = {
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   user?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AccountErrorKeySpecifier = Array<
-  "field" | "message" | "code" | "addressType" | AccountErrorKeySpecifier
->;
-export interface AccountErrorFieldPolicy {
+};
+export type AccountErrorKeySpecifier = (
+  | "field"
+  | "message"
+  | "code"
+  | "addressType"
+  | AccountErrorKeySpecifier
+)[];
+export type AccountErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
   addressType?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AccountRegisterKeySpecifier = Array<
+};
+export type AccountRegisterKeySpecifier = (
   | "requiresConfirmation"
   | "accountErrors"
   | "errors"
   | "user"
   | AccountRegisterKeySpecifier
->;
-export interface AccountRegisterFieldPolicy {
+)[];
+export type AccountRegisterFieldPolicy = {
   requiresConfirmation?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   user?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AccountRequestDeletionKeySpecifier = Array<
-  "accountErrors" | "errors" | AccountRequestDeletionKeySpecifier
->;
-export interface AccountRequestDeletionFieldPolicy {
+};
+export type AccountRequestDeletionKeySpecifier = (
+  | "accountErrors"
+  | "errors"
+  | AccountRequestDeletionKeySpecifier
+)[];
+export type AccountRequestDeletionFieldPolicy = {
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AccountSetDefaultAddressKeySpecifier = Array<
-  "user" | "accountErrors" | "errors" | AccountSetDefaultAddressKeySpecifier
->;
-export interface AccountSetDefaultAddressFieldPolicy {
+};
+export type AccountSetDefaultAddressKeySpecifier = (
+  | "user"
+  | "accountErrors"
+  | "errors"
+  | AccountSetDefaultAddressKeySpecifier
+)[];
+export type AccountSetDefaultAddressFieldPolicy = {
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AccountUpdateKeySpecifier = Array<
-  "accountErrors" | "errors" | "user" | AccountUpdateKeySpecifier
->;
-export interface AccountUpdateFieldPolicy {
+};
+export type AccountUpdateKeySpecifier = (
+  | "accountErrors"
+  | "errors"
+  | "user"
+  | AccountUpdateKeySpecifier
+)[];
+export type AccountUpdateFieldPolicy = {
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   user?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AddressKeySpecifier = Array<
+};
+export type AddressKeySpecifier = (
   | "id"
   | "firstName"
   | "lastName"
@@ -112,8 +127,8 @@ export type AddressKeySpecifier = Array<
   | "isDefaultShippingAddress"
   | "isDefaultBillingAddress"
   | AddressKeySpecifier
->;
-export interface AddressFieldPolicy {
+)[];
+export type AddressFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   firstName?: FieldPolicy<any> | FieldReadFunction<any>;
   lastName?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -128,43 +143,58 @@ export interface AddressFieldPolicy {
   phone?: FieldPolicy<any> | FieldReadFunction<any>;
   isDefaultShippingAddress?: FieldPolicy<any> | FieldReadFunction<any>;
   isDefaultBillingAddress?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AddressCreateKeySpecifier = Array<
-  "user" | "accountErrors" | "errors" | "address" | AddressCreateKeySpecifier
->;
-export interface AddressCreateFieldPolicy {
+};
+export type AddressCreateKeySpecifier = (
+  | "user"
+  | "accountErrors"
+  | "errors"
+  | "address"
+  | AddressCreateKeySpecifier
+)[];
+export type AddressCreateFieldPolicy = {
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   address?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AddressDeleteKeySpecifier = Array<
-  "user" | "accountErrors" | "errors" | "address" | AddressDeleteKeySpecifier
->;
-export interface AddressDeleteFieldPolicy {
+};
+export type AddressDeleteKeySpecifier = (
+  | "user"
+  | "accountErrors"
+  | "errors"
+  | "address"
+  | AddressDeleteKeySpecifier
+)[];
+export type AddressDeleteFieldPolicy = {
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   address?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AddressSetDefaultKeySpecifier = Array<
-  "user" | "accountErrors" | "errors" | AddressSetDefaultKeySpecifier
->;
-export interface AddressSetDefaultFieldPolicy {
+};
+export type AddressSetDefaultKeySpecifier = (
+  | "user"
+  | "accountErrors"
+  | "errors"
+  | AddressSetDefaultKeySpecifier
+)[];
+export type AddressSetDefaultFieldPolicy = {
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AddressUpdateKeySpecifier = Array<
-  "user" | "accountErrors" | "errors" | "address" | AddressUpdateKeySpecifier
->;
-export interface AddressUpdateFieldPolicy {
+};
+export type AddressUpdateKeySpecifier = (
+  | "user"
+  | "accountErrors"
+  | "errors"
+  | "address"
+  | AddressUpdateKeySpecifier
+)[];
+export type AddressUpdateFieldPolicy = {
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   address?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AddressValidationDataKeySpecifier = Array<
+};
+export type AddressValidationDataKeySpecifier = (
   | "countryCode"
   | "countryName"
   | "addressFormat"
@@ -183,8 +213,8 @@ export type AddressValidationDataKeySpecifier = Array<
   | "postalCodeExamples"
   | "postalCodePrefix"
   | AddressValidationDataKeySpecifier
->;
-export interface AddressValidationDataFieldPolicy {
+)[];
+export type AddressValidationDataFieldPolicy = {
   countryCode?: FieldPolicy<any> | FieldReadFunction<any>;
   countryName?: FieldPolicy<any> | FieldReadFunction<any>;
   addressFormat?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -202,16 +232,19 @@ export interface AddressValidationDataFieldPolicy {
   postalCodeMatchers?: FieldPolicy<any> | FieldReadFunction<any>;
   postalCodeExamples?: FieldPolicy<any> | FieldReadFunction<any>;
   postalCodePrefix?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AllocationKeySpecifier = Array<
-  "id" | "quantity" | "warehouse" | AllocationKeySpecifier
->;
-export interface AllocationFieldPolicy {
+};
+export type AllocationKeySpecifier = (
+  | "id"
+  | "quantity"
+  | "warehouse"
+  | AllocationKeySpecifier
+)[];
+export type AllocationFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   quantity?: FieldPolicy<any> | FieldReadFunction<any>;
   warehouse?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AppKeySpecifier = Array<
+};
+export type AppKeySpecifier = (
   | "id"
   | "privateMetadata"
   | "metadata"
@@ -233,8 +266,8 @@ export type AppKeySpecifier = Array<
   | "accessToken"
   | "extensions"
   | AppKeySpecifier
->;
-export interface AppFieldPolicy {
+)[];
+export type AppFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -255,76 +288,98 @@ export interface AppFieldPolicy {
   version?: FieldPolicy<any> | FieldReadFunction<any>;
   accessToken?: FieldPolicy<any> | FieldReadFunction<any>;
   extensions?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AppActivateKeySpecifier = Array<
-  "appErrors" | "errors" | "app" | AppActivateKeySpecifier
->;
-export interface AppActivateFieldPolicy {
+};
+export type AppActivateKeySpecifier = (
+  | "appErrors"
+  | "errors"
+  | "app"
+  | AppActivateKeySpecifier
+)[];
+export type AppActivateFieldPolicy = {
   appErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   app?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AppCountableConnectionKeySpecifier = Array<
-  "pageInfo" | "edges" | "totalCount" | AppCountableConnectionKeySpecifier
->;
-export interface AppCountableConnectionFieldPolicy {
+};
+export type AppCountableConnectionKeySpecifier = (
+  | "pageInfo"
+  | "edges"
+  | "totalCount"
+  | AppCountableConnectionKeySpecifier
+)[];
+export type AppCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AppCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | AppCountableEdgeKeySpecifier
->;
-export interface AppCountableEdgeFieldPolicy {
+};
+export type AppCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | AppCountableEdgeKeySpecifier
+)[];
+export type AppCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AppCreateKeySpecifier = Array<
-  "authToken" | "appErrors" | "errors" | "app" | AppCreateKeySpecifier
->;
-export interface AppCreateFieldPolicy {
+};
+export type AppCreateKeySpecifier = (
+  | "authToken"
+  | "appErrors"
+  | "errors"
+  | "app"
+  | AppCreateKeySpecifier
+)[];
+export type AppCreateFieldPolicy = {
   authToken?: FieldPolicy<any> | FieldReadFunction<any>;
   appErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   app?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AppDeactivateKeySpecifier = Array<
-  "appErrors" | "errors" | "app" | AppDeactivateKeySpecifier
->;
-export interface AppDeactivateFieldPolicy {
+};
+export type AppDeactivateKeySpecifier = (
+  | "appErrors"
+  | "errors"
+  | "app"
+  | AppDeactivateKeySpecifier
+)[];
+export type AppDeactivateFieldPolicy = {
   appErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   app?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AppDeleteKeySpecifier = Array<
-  "appErrors" | "errors" | "app" | AppDeleteKeySpecifier
->;
-export interface AppDeleteFieldPolicy {
+};
+export type AppDeleteKeySpecifier = (
+  | "appErrors"
+  | "errors"
+  | "app"
+  | AppDeleteKeySpecifier
+)[];
+export type AppDeleteFieldPolicy = {
   appErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   app?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AppDeleteFailedInstallationKeySpecifier = Array<
+};
+export type AppDeleteFailedInstallationKeySpecifier = (
   | "appErrors"
   | "errors"
   | "appInstallation"
   | AppDeleteFailedInstallationKeySpecifier
->;
-export interface AppDeleteFailedInstallationFieldPolicy {
+)[];
+export type AppDeleteFailedInstallationFieldPolicy = {
   appErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   appInstallation?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AppErrorKeySpecifier = Array<
-  "field" | "message" | "code" | "permissions" | AppErrorKeySpecifier
->;
-export interface AppErrorFieldPolicy {
+};
+export type AppErrorKeySpecifier = (
+  | "field"
+  | "message"
+  | "code"
+  | "permissions"
+  | AppErrorKeySpecifier
+)[];
+export type AppErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
   permissions?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AppExtensionKeySpecifier = Array<
+};
+export type AppExtensionKeySpecifier = (
   | "id"
   | "permissions"
   | "label"
@@ -334,8 +389,8 @@ export type AppExtensionKeySpecifier = Array<
   | "app"
   | "accessToken"
   | AppExtensionKeySpecifier
->;
-export interface AppExtensionFieldPolicy {
+)[];
+export type AppExtensionFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   permissions?: FieldPolicy<any> | FieldReadFunction<any>;
   label?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -344,42 +399,50 @@ export interface AppExtensionFieldPolicy {
   target?: FieldPolicy<any> | FieldReadFunction<any>;
   app?: FieldPolicy<any> | FieldReadFunction<any>;
   accessToken?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AppExtensionCountableConnectionKeySpecifier = Array<
+};
+export type AppExtensionCountableConnectionKeySpecifier = (
   | "pageInfo"
   | "edges"
   | "totalCount"
   | AppExtensionCountableConnectionKeySpecifier
->;
-export interface AppExtensionCountableConnectionFieldPolicy {
+)[];
+export type AppExtensionCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AppExtensionCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | AppExtensionCountableEdgeKeySpecifier
->;
-export interface AppExtensionCountableEdgeFieldPolicy {
+};
+export type AppExtensionCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | AppExtensionCountableEdgeKeySpecifier
+)[];
+export type AppExtensionCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AppFetchManifestKeySpecifier = Array<
-  "manifest" | "appErrors" | "errors" | AppFetchManifestKeySpecifier
->;
-export interface AppFetchManifestFieldPolicy {
+};
+export type AppFetchManifestKeySpecifier = (
+  | "manifest"
+  | "appErrors"
+  | "errors"
+  | AppFetchManifestKeySpecifier
+)[];
+export type AppFetchManifestFieldPolicy = {
   manifest?: FieldPolicy<any> | FieldReadFunction<any>;
   appErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AppInstallKeySpecifier = Array<
-  "appErrors" | "errors" | "appInstallation" | AppInstallKeySpecifier
->;
-export interface AppInstallFieldPolicy {
+};
+export type AppInstallKeySpecifier = (
+  | "appErrors"
+  | "errors"
+  | "appInstallation"
+  | AppInstallKeySpecifier
+)[];
+export type AppInstallFieldPolicy = {
   appErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   appInstallation?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AppInstallationKeySpecifier = Array<
+};
+export type AppInstallationKeySpecifier = (
   | "id"
   | "status"
   | "createdAt"
@@ -388,8 +451,8 @@ export type AppInstallationKeySpecifier = Array<
   | "appName"
   | "manifestUrl"
   | AppInstallationKeySpecifier
->;
-export interface AppInstallationFieldPolicy {
+)[];
+export type AppInstallationFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   status?: FieldPolicy<any> | FieldReadFunction<any>;
   createdAt?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -397,87 +460,111 @@ export interface AppInstallationFieldPolicy {
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   appName?: FieldPolicy<any> | FieldReadFunction<any>;
   manifestUrl?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AppManifestExtensionKeySpecifier = Array<
+};
+export type AppManifestExtensionKeySpecifier = (
   | "permissions"
   | "label"
   | "url"
   | "mount"
   | "target"
   | AppManifestExtensionKeySpecifier
->;
-export interface AppManifestExtensionFieldPolicy {
+)[];
+export type AppManifestExtensionFieldPolicy = {
   permissions?: FieldPolicy<any> | FieldReadFunction<any>;
   label?: FieldPolicy<any> | FieldReadFunction<any>;
   url?: FieldPolicy<any> | FieldReadFunction<any>;
   mount?: FieldPolicy<any> | FieldReadFunction<any>;
   target?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AppRetryInstallKeySpecifier = Array<
-  "appErrors" | "errors" | "appInstallation" | AppRetryInstallKeySpecifier
->;
-export interface AppRetryInstallFieldPolicy {
+};
+export type AppRetryInstallKeySpecifier = (
+  | "appErrors"
+  | "errors"
+  | "appInstallation"
+  | AppRetryInstallKeySpecifier
+)[];
+export type AppRetryInstallFieldPolicy = {
   appErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   appInstallation?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AppTokenKeySpecifier = Array<
-  "id" | "name" | "authToken" | AppTokenKeySpecifier
->;
-export interface AppTokenFieldPolicy {
+};
+export type AppTokenKeySpecifier = (
+  | "id"
+  | "name"
+  | "authToken"
+  | AppTokenKeySpecifier
+)[];
+export type AppTokenFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   authToken?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AppTokenCreateKeySpecifier = Array<
-  "authToken" | "appErrors" | "errors" | "appToken" | AppTokenCreateKeySpecifier
->;
-export interface AppTokenCreateFieldPolicy {
+};
+export type AppTokenCreateKeySpecifier = (
+  | "authToken"
+  | "appErrors"
+  | "errors"
+  | "appToken"
+  | AppTokenCreateKeySpecifier
+)[];
+export type AppTokenCreateFieldPolicy = {
   authToken?: FieldPolicy<any> | FieldReadFunction<any>;
   appErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   appToken?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AppTokenDeleteKeySpecifier = Array<
-  "appErrors" | "errors" | "appToken" | AppTokenDeleteKeySpecifier
->;
-export interface AppTokenDeleteFieldPolicy {
+};
+export type AppTokenDeleteKeySpecifier = (
+  | "appErrors"
+  | "errors"
+  | "appToken"
+  | AppTokenDeleteKeySpecifier
+)[];
+export type AppTokenDeleteFieldPolicy = {
   appErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   appToken?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AppTokenVerifyKeySpecifier = Array<
-  "valid" | "appErrors" | "errors" | AppTokenVerifyKeySpecifier
->;
-export interface AppTokenVerifyFieldPolicy {
+};
+export type AppTokenVerifyKeySpecifier = (
+  | "valid"
+  | "appErrors"
+  | "errors"
+  | AppTokenVerifyKeySpecifier
+)[];
+export type AppTokenVerifyFieldPolicy = {
   valid?: FieldPolicy<any> | FieldReadFunction<any>;
   appErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AppUpdateKeySpecifier = Array<
-  "appErrors" | "errors" | "app" | AppUpdateKeySpecifier
->;
-export interface AppUpdateFieldPolicy {
+};
+export type AppUpdateKeySpecifier = (
+  | "appErrors"
+  | "errors"
+  | "app"
+  | AppUpdateKeySpecifier
+)[];
+export type AppUpdateFieldPolicy = {
   appErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   app?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AssignNavigationKeySpecifier = Array<
-  "menu" | "menuErrors" | "errors" | AssignNavigationKeySpecifier
->;
-export interface AssignNavigationFieldPolicy {
+};
+export type AssignNavigationKeySpecifier = (
+  | "menu"
+  | "menuErrors"
+  | "errors"
+  | AssignNavigationKeySpecifier
+)[];
+export type AssignNavigationFieldPolicy = {
   menu?: FieldPolicy<any> | FieldReadFunction<any>;
   menuErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AssignedVariantAttributeKeySpecifier = Array<
-  "attribute" | "variantSelection" | AssignedVariantAttributeKeySpecifier
->;
-export interface AssignedVariantAttributeFieldPolicy {
+};
+export type AssignedVariantAttributeKeySpecifier = (
+  | "attribute"
+  | "variantSelection"
+  | AssignedVariantAttributeKeySpecifier
+)[];
+export type AssignedVariantAttributeFieldPolicy = {
   attribute?: FieldPolicy<any> | FieldReadFunction<any>;
   variantSelection?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AttributeKeySpecifier = Array<
+};
+export type AttributeKeySpecifier = (
   | "id"
   | "privateMetadata"
   | "metadata"
@@ -499,8 +586,8 @@ export type AttributeKeySpecifier = Array<
   | "productTypes"
   | "productVariantTypes"
   | AttributeKeySpecifier
->;
-export interface AttributeFieldPolicy {
+)[];
+export type AttributeFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -521,103 +608,129 @@ export interface AttributeFieldPolicy {
   withChoices?: FieldPolicy<any> | FieldReadFunction<any>;
   productTypes?: FieldPolicy<any> | FieldReadFunction<any>;
   productVariantTypes?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AttributeBulkDeleteKeySpecifier = Array<
-  "count" | "attributeErrors" | "errors" | AttributeBulkDeleteKeySpecifier
->;
-export interface AttributeBulkDeleteFieldPolicy {
+};
+export type AttributeBulkDeleteKeySpecifier = (
+  | "count"
+  | "attributeErrors"
+  | "errors"
+  | AttributeBulkDeleteKeySpecifier
+)[];
+export type AttributeBulkDeleteFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   attributeErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AttributeCountableConnectionKeySpecifier = Array<
-  "pageInfo" | "edges" | "totalCount" | AttributeCountableConnectionKeySpecifier
->;
-export interface AttributeCountableConnectionFieldPolicy {
+};
+export type AttributeCountableConnectionKeySpecifier = (
+  | "pageInfo"
+  | "edges"
+  | "totalCount"
+  | AttributeCountableConnectionKeySpecifier
+)[];
+export type AttributeCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AttributeCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | AttributeCountableEdgeKeySpecifier
->;
-export interface AttributeCountableEdgeFieldPolicy {
+};
+export type AttributeCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | AttributeCountableEdgeKeySpecifier
+)[];
+export type AttributeCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AttributeCreateKeySpecifier = Array<
-  "attribute" | "attributeErrors" | "errors" | AttributeCreateKeySpecifier
->;
-export interface AttributeCreateFieldPolicy {
+};
+export type AttributeCreateKeySpecifier = (
+  | "attribute"
+  | "attributeErrors"
+  | "errors"
+  | AttributeCreateKeySpecifier
+)[];
+export type AttributeCreateFieldPolicy = {
   attribute?: FieldPolicy<any> | FieldReadFunction<any>;
   attributeErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AttributeDeleteKeySpecifier = Array<
-  "attributeErrors" | "errors" | "attribute" | AttributeDeleteKeySpecifier
->;
-export interface AttributeDeleteFieldPolicy {
+};
+export type AttributeDeleteKeySpecifier = (
+  | "attributeErrors"
+  | "errors"
+  | "attribute"
+  | AttributeDeleteKeySpecifier
+)[];
+export type AttributeDeleteFieldPolicy = {
   attributeErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   attribute?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AttributeErrorKeySpecifier = Array<
-  "field" | "message" | "code" | AttributeErrorKeySpecifier
->;
-export interface AttributeErrorFieldPolicy {
+};
+export type AttributeErrorKeySpecifier = (
+  | "field"
+  | "message"
+  | "code"
+  | AttributeErrorKeySpecifier
+)[];
+export type AttributeErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AttributeReorderValuesKeySpecifier = Array<
+};
+export type AttributeReorderValuesKeySpecifier = (
   | "attribute"
   | "attributeErrors"
   | "errors"
   | AttributeReorderValuesKeySpecifier
->;
-export interface AttributeReorderValuesFieldPolicy {
+)[];
+export type AttributeReorderValuesFieldPolicy = {
   attribute?: FieldPolicy<any> | FieldReadFunction<any>;
   attributeErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AttributeTranslatableContentKeySpecifier = Array<
+};
+export type AttributeTranslatableContentKeySpecifier = (
   | "id"
   | "name"
   | "translation"
   | "attribute"
   | AttributeTranslatableContentKeySpecifier
->;
-export interface AttributeTranslatableContentFieldPolicy {
+)[];
+export type AttributeTranslatableContentFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   translation?: FieldPolicy<any> | FieldReadFunction<any>;
   attribute?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AttributeTranslateKeySpecifier = Array<
-  "translationErrors" | "errors" | "attribute" | AttributeTranslateKeySpecifier
->;
-export interface AttributeTranslateFieldPolicy {
+};
+export type AttributeTranslateKeySpecifier = (
+  | "translationErrors"
+  | "errors"
+  | "attribute"
+  | AttributeTranslateKeySpecifier
+)[];
+export type AttributeTranslateFieldPolicy = {
   translationErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   attribute?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AttributeTranslationKeySpecifier = Array<
-  "id" | "language" | "name" | AttributeTranslationKeySpecifier
->;
-export interface AttributeTranslationFieldPolicy {
+};
+export type AttributeTranslationKeySpecifier = (
+  | "id"
+  | "language"
+  | "name"
+  | AttributeTranslationKeySpecifier
+)[];
+export type AttributeTranslationFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   language?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AttributeUpdateKeySpecifier = Array<
-  "attribute" | "attributeErrors" | "errors" | AttributeUpdateKeySpecifier
->;
-export interface AttributeUpdateFieldPolicy {
+};
+export type AttributeUpdateKeySpecifier = (
+  | "attribute"
+  | "attributeErrors"
+  | "errors"
+  | AttributeUpdateKeySpecifier
+)[];
+export type AttributeUpdateFieldPolicy = {
   attribute?: FieldPolicy<any> | FieldReadFunction<any>;
   attributeErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AttributeValueKeySpecifier = Array<
+};
+export type AttributeValueKeySpecifier = (
   | "id"
   | "name"
   | "slug"
@@ -631,8 +744,8 @@ export type AttributeValueKeySpecifier = Array<
   | "date"
   | "dateTime"
   | AttributeValueKeySpecifier
->;
-export interface AttributeValueFieldPolicy {
+)[];
+export type AttributeValueFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   slug?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -645,112 +758,117 @@ export interface AttributeValueFieldPolicy {
   boolean?: FieldPolicy<any> | FieldReadFunction<any>;
   date?: FieldPolicy<any> | FieldReadFunction<any>;
   dateTime?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AttributeValueBulkDeleteKeySpecifier = Array<
-  "count" | "attributeErrors" | "errors" | AttributeValueBulkDeleteKeySpecifier
->;
-export interface AttributeValueBulkDeleteFieldPolicy {
+};
+export type AttributeValueBulkDeleteKeySpecifier = (
+  | "count"
+  | "attributeErrors"
+  | "errors"
+  | AttributeValueBulkDeleteKeySpecifier
+)[];
+export type AttributeValueBulkDeleteFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   attributeErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AttributeValueCountableConnectionKeySpecifier = Array<
+};
+export type AttributeValueCountableConnectionKeySpecifier = (
   | "pageInfo"
   | "edges"
   | "totalCount"
   | AttributeValueCountableConnectionKeySpecifier
->;
-export interface AttributeValueCountableConnectionFieldPolicy {
+)[];
+export type AttributeValueCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AttributeValueCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | AttributeValueCountableEdgeKeySpecifier
->;
-export interface AttributeValueCountableEdgeFieldPolicy {
+};
+export type AttributeValueCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | AttributeValueCountableEdgeKeySpecifier
+)[];
+export type AttributeValueCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AttributeValueCreateKeySpecifier = Array<
+};
+export type AttributeValueCreateKeySpecifier = (
   | "attribute"
   | "attributeErrors"
   | "errors"
   | "attributeValue"
   | AttributeValueCreateKeySpecifier
->;
-export interface AttributeValueCreateFieldPolicy {
+)[];
+export type AttributeValueCreateFieldPolicy = {
   attribute?: FieldPolicy<any> | FieldReadFunction<any>;
   attributeErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   attributeValue?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AttributeValueDeleteKeySpecifier = Array<
+};
+export type AttributeValueDeleteKeySpecifier = (
   | "attribute"
   | "attributeErrors"
   | "errors"
   | "attributeValue"
   | AttributeValueDeleteKeySpecifier
->;
-export interface AttributeValueDeleteFieldPolicy {
+)[];
+export type AttributeValueDeleteFieldPolicy = {
   attribute?: FieldPolicy<any> | FieldReadFunction<any>;
   attributeErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   attributeValue?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AttributeValueTranslatableContentKeySpecifier = Array<
+};
+export type AttributeValueTranslatableContentKeySpecifier = (
   | "id"
   | "name"
   | "richText"
   | "translation"
   | "attributeValue"
   | AttributeValueTranslatableContentKeySpecifier
->;
-export interface AttributeValueTranslatableContentFieldPolicy {
+)[];
+export type AttributeValueTranslatableContentFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   richText?: FieldPolicy<any> | FieldReadFunction<any>;
   translation?: FieldPolicy<any> | FieldReadFunction<any>;
   attributeValue?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AttributeValueTranslateKeySpecifier = Array<
+};
+export type AttributeValueTranslateKeySpecifier = (
   | "translationErrors"
   | "errors"
   | "attributeValue"
   | AttributeValueTranslateKeySpecifier
->;
-export interface AttributeValueTranslateFieldPolicy {
+)[];
+export type AttributeValueTranslateFieldPolicy = {
   translationErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   attributeValue?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AttributeValueTranslationKeySpecifier = Array<
+};
+export type AttributeValueTranslationKeySpecifier = (
   | "id"
   | "language"
   | "name"
   | "richText"
   | AttributeValueTranslationKeySpecifier
->;
-export interface AttributeValueTranslationFieldPolicy {
+)[];
+export type AttributeValueTranslationFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   language?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   richText?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type AttributeValueUpdateKeySpecifier = Array<
+};
+export type AttributeValueUpdateKeySpecifier = (
   | "attribute"
   | "attributeErrors"
   | "errors"
   | "attributeValue"
   | AttributeValueUpdateKeySpecifier
->;
-export interface AttributeValueUpdateFieldPolicy {
+)[];
+export type AttributeValueUpdateFieldPolicy = {
   attribute?: FieldPolicy<any> | FieldReadFunction<any>;
   attributeErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   attributeValue?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type BulkProductErrorKeySpecifier = Array<
+};
+export type BulkProductErrorKeySpecifier = (
   | "field"
   | "message"
   | "code"
@@ -760,8 +878,8 @@ export type BulkProductErrorKeySpecifier = Array<
   | "warehouses"
   | "channels"
   | BulkProductErrorKeySpecifier
->;
-export interface BulkProductErrorFieldPolicy {
+)[];
+export type BulkProductErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -770,8 +888,8 @@ export interface BulkProductErrorFieldPolicy {
   index?: FieldPolicy<any> | FieldReadFunction<any>;
   warehouses?: FieldPolicy<any> | FieldReadFunction<any>;
   channels?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type BulkStockErrorKeySpecifier = Array<
+};
+export type BulkStockErrorKeySpecifier = (
   | "field"
   | "message"
   | "code"
@@ -779,16 +897,16 @@ export type BulkStockErrorKeySpecifier = Array<
   | "values"
   | "index"
   | BulkStockErrorKeySpecifier
->;
-export interface BulkStockErrorFieldPolicy {
+)[];
+export type BulkStockErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
   attributes?: FieldPolicy<any> | FieldReadFunction<any>;
   values?: FieldPolicy<any> | FieldReadFunction<any>;
   index?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CategoryKeySpecifier = Array<
+};
+export type CategoryKeySpecifier = (
   | "id"
   | "privateMetadata"
   | "metadata"
@@ -806,8 +924,8 @@ export type CategoryKeySpecifier = Array<
   | "backgroundImage"
   | "translation"
   | CategoryKeySpecifier
->;
-export interface CategoryFieldPolicy {
+)[];
+export type CategoryFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -824,47 +942,61 @@ export interface CategoryFieldPolicy {
   children?: FieldPolicy<any> | FieldReadFunction<any>;
   backgroundImage?: FieldPolicy<any> | FieldReadFunction<any>;
   translation?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CategoryBulkDeleteKeySpecifier = Array<
-  "count" | "productErrors" | "errors" | CategoryBulkDeleteKeySpecifier
->;
-export interface CategoryBulkDeleteFieldPolicy {
+};
+export type CategoryBulkDeleteKeySpecifier = (
+  | "count"
+  | "productErrors"
+  | "errors"
+  | CategoryBulkDeleteKeySpecifier
+)[];
+export type CategoryBulkDeleteFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CategoryCountableConnectionKeySpecifier = Array<
-  "pageInfo" | "edges" | "totalCount" | CategoryCountableConnectionKeySpecifier
->;
-export interface CategoryCountableConnectionFieldPolicy {
+};
+export type CategoryCountableConnectionKeySpecifier = (
+  | "pageInfo"
+  | "edges"
+  | "totalCount"
+  | CategoryCountableConnectionKeySpecifier
+)[];
+export type CategoryCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CategoryCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | CategoryCountableEdgeKeySpecifier
->;
-export interface CategoryCountableEdgeFieldPolicy {
+};
+export type CategoryCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | CategoryCountableEdgeKeySpecifier
+)[];
+export type CategoryCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CategoryCreateKeySpecifier = Array<
-  "productErrors" | "errors" | "category" | CategoryCreateKeySpecifier
->;
-export interface CategoryCreateFieldPolicy {
+};
+export type CategoryCreateKeySpecifier = (
+  | "productErrors"
+  | "errors"
+  | "category"
+  | CategoryCreateKeySpecifier
+)[];
+export type CategoryCreateFieldPolicy = {
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   category?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CategoryDeleteKeySpecifier = Array<
-  "productErrors" | "errors" | "category" | CategoryDeleteKeySpecifier
->;
-export interface CategoryDeleteFieldPolicy {
+};
+export type CategoryDeleteKeySpecifier = (
+  | "productErrors"
+  | "errors"
+  | "category"
+  | CategoryDeleteKeySpecifier
+)[];
+export type CategoryDeleteFieldPolicy = {
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   category?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CategoryTranslatableContentKeySpecifier = Array<
+};
+export type CategoryTranslatableContentKeySpecifier = (
   | "id"
   | "seoTitle"
   | "seoDescription"
@@ -874,8 +1006,8 @@ export type CategoryTranslatableContentKeySpecifier = Array<
   | "translation"
   | "category"
   | CategoryTranslatableContentKeySpecifier
->;
-export interface CategoryTranslatableContentFieldPolicy {
+)[];
+export type CategoryTranslatableContentFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   seoTitle?: FieldPolicy<any> | FieldReadFunction<any>;
   seoDescription?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -884,16 +1016,19 @@ export interface CategoryTranslatableContentFieldPolicy {
   descriptionJson?: FieldPolicy<any> | FieldReadFunction<any>;
   translation?: FieldPolicy<any> | FieldReadFunction<any>;
   category?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CategoryTranslateKeySpecifier = Array<
-  "translationErrors" | "errors" | "category" | CategoryTranslateKeySpecifier
->;
-export interface CategoryTranslateFieldPolicy {
+};
+export type CategoryTranslateKeySpecifier = (
+  | "translationErrors"
+  | "errors"
+  | "category"
+  | CategoryTranslateKeySpecifier
+)[];
+export type CategoryTranslateFieldPolicy = {
   translationErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   category?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CategoryTranslationKeySpecifier = Array<
+};
+export type CategoryTranslationKeySpecifier = (
   | "id"
   | "language"
   | "seoTitle"
@@ -902,8 +1037,8 @@ export type CategoryTranslationKeySpecifier = Array<
   | "description"
   | "descriptionJson"
   | CategoryTranslationKeySpecifier
->;
-export interface CategoryTranslationFieldPolicy {
+)[];
+export type CategoryTranslationFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   language?: FieldPolicy<any> | FieldReadFunction<any>;
   seoTitle?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -911,16 +1046,19 @@ export interface CategoryTranslationFieldPolicy {
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   description?: FieldPolicy<any> | FieldReadFunction<any>;
   descriptionJson?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CategoryUpdateKeySpecifier = Array<
-  "productErrors" | "errors" | "category" | CategoryUpdateKeySpecifier
->;
-export interface CategoryUpdateFieldPolicy {
+};
+export type CategoryUpdateKeySpecifier = (
+  | "productErrors"
+  | "errors"
+  | "category"
+  | CategoryUpdateKeySpecifier
+)[];
+export type CategoryUpdateFieldPolicy = {
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   category?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ChannelKeySpecifier = Array<
+};
+export type ChannelKeySpecifier = (
   | "id"
   | "name"
   | "isActive"
@@ -929,8 +1067,8 @@ export type ChannelKeySpecifier = Array<
   | "hasOrders"
   | "defaultCountry"
   | ChannelKeySpecifier
->;
-export interface ChannelFieldPolicy {
+)[];
+export type ChannelFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   isActive?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -938,57 +1076,76 @@ export interface ChannelFieldPolicy {
   slug?: FieldPolicy<any> | FieldReadFunction<any>;
   hasOrders?: FieldPolicy<any> | FieldReadFunction<any>;
   defaultCountry?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ChannelActivateKeySpecifier = Array<
-  "channel" | "channelErrors" | "errors" | ChannelActivateKeySpecifier
->;
-export interface ChannelActivateFieldPolicy {
+};
+export type ChannelActivateKeySpecifier = (
+  | "channel"
+  | "channelErrors"
+  | "errors"
+  | ChannelActivateKeySpecifier
+)[];
+export type ChannelActivateFieldPolicy = {
   channel?: FieldPolicy<any> | FieldReadFunction<any>;
   channelErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ChannelCreateKeySpecifier = Array<
-  "channelErrors" | "errors" | "channel" | ChannelCreateKeySpecifier
->;
-export interface ChannelCreateFieldPolicy {
+};
+export type ChannelCreateKeySpecifier = (
+  | "channelErrors"
+  | "errors"
+  | "channel"
+  | ChannelCreateKeySpecifier
+)[];
+export type ChannelCreateFieldPolicy = {
   channelErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   channel?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ChannelDeactivateKeySpecifier = Array<
-  "channel" | "channelErrors" | "errors" | ChannelDeactivateKeySpecifier
->;
-export interface ChannelDeactivateFieldPolicy {
+};
+export type ChannelDeactivateKeySpecifier = (
+  | "channel"
+  | "channelErrors"
+  | "errors"
+  | ChannelDeactivateKeySpecifier
+)[];
+export type ChannelDeactivateFieldPolicy = {
   channel?: FieldPolicy<any> | FieldReadFunction<any>;
   channelErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ChannelDeleteKeySpecifier = Array<
-  "channelErrors" | "errors" | "channel" | ChannelDeleteKeySpecifier
->;
-export interface ChannelDeleteFieldPolicy {
+};
+export type ChannelDeleteKeySpecifier = (
+  | "channelErrors"
+  | "errors"
+  | "channel"
+  | ChannelDeleteKeySpecifier
+)[];
+export type ChannelDeleteFieldPolicy = {
   channelErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   channel?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ChannelErrorKeySpecifier = Array<
-  "field" | "message" | "code" | "shippingZones" | ChannelErrorKeySpecifier
->;
-export interface ChannelErrorFieldPolicy {
+};
+export type ChannelErrorKeySpecifier = (
+  | "field"
+  | "message"
+  | "code"
+  | "shippingZones"
+  | ChannelErrorKeySpecifier
+)[];
+export type ChannelErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
   shippingZones?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ChannelUpdateKeySpecifier = Array<
-  "channelErrors" | "errors" | "channel" | ChannelUpdateKeySpecifier
->;
-export interface ChannelUpdateFieldPolicy {
+};
+export type ChannelUpdateKeySpecifier = (
+  | "channelErrors"
+  | "errors"
+  | "channel"
+  | ChannelUpdateKeySpecifier
+)[];
+export type ChannelUpdateFieldPolicy = {
   channelErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   channel?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CheckoutKeySpecifier = Array<
+};
+export type CheckoutKeySpecifier = (
   | "id"
   | "privateMetadata"
   | "metadata"
@@ -1021,8 +1178,8 @@ export type CheckoutKeySpecifier = Array<
   | "totalPrice"
   | "languageCode"
   | CheckoutKeySpecifier
->;
-export interface CheckoutFieldPolicy {
+)[];
+export type CheckoutFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1054,101 +1211,120 @@ export interface CheckoutFieldPolicy {
   token?: FieldPolicy<any> | FieldReadFunction<any>;
   totalPrice?: FieldPolicy<any> | FieldReadFunction<any>;
   languageCode?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CheckoutAddPromoCodeKeySpecifier = Array<
-  "checkout" | "checkoutErrors" | "errors" | CheckoutAddPromoCodeKeySpecifier
->;
-export interface CheckoutAddPromoCodeFieldPolicy {
+};
+export type CheckoutAddPromoCodeKeySpecifier = (
+  | "checkout"
+  | "checkoutErrors"
+  | "errors"
+  | CheckoutAddPromoCodeKeySpecifier
+)[];
+export type CheckoutAddPromoCodeFieldPolicy = {
   checkout?: FieldPolicy<any> | FieldReadFunction<any>;
   checkoutErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CheckoutBillingAddressUpdateKeySpecifier = Array<
+};
+export type CheckoutBillingAddressUpdateKeySpecifier = (
   | "checkout"
   | "checkoutErrors"
   | "errors"
   | CheckoutBillingAddressUpdateKeySpecifier
->;
-export interface CheckoutBillingAddressUpdateFieldPolicy {
+)[];
+export type CheckoutBillingAddressUpdateFieldPolicy = {
   checkout?: FieldPolicy<any> | FieldReadFunction<any>;
   checkoutErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CheckoutCompleteKeySpecifier = Array<
+};
+export type CheckoutCompleteKeySpecifier = (
   | "order"
   | "confirmationNeeded"
   | "confirmationData"
   | "checkoutErrors"
   | "errors"
   | CheckoutCompleteKeySpecifier
->;
-export interface CheckoutCompleteFieldPolicy {
+)[];
+export type CheckoutCompleteFieldPolicy = {
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   confirmationNeeded?: FieldPolicy<any> | FieldReadFunction<any>;
   confirmationData?: FieldPolicy<any> | FieldReadFunction<any>;
   checkoutErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CheckoutCountableConnectionKeySpecifier = Array<
-  "pageInfo" | "edges" | "totalCount" | CheckoutCountableConnectionKeySpecifier
->;
-export interface CheckoutCountableConnectionFieldPolicy {
+};
+export type CheckoutCountableConnectionKeySpecifier = (
+  | "pageInfo"
+  | "edges"
+  | "totalCount"
+  | CheckoutCountableConnectionKeySpecifier
+)[];
+export type CheckoutCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CheckoutCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | CheckoutCountableEdgeKeySpecifier
->;
-export interface CheckoutCountableEdgeFieldPolicy {
+};
+export type CheckoutCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | CheckoutCountableEdgeKeySpecifier
+)[];
+export type CheckoutCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CheckoutCreateKeySpecifier = Array<
+};
+export type CheckoutCreateKeySpecifier = (
   | "created"
   | "checkoutErrors"
   | "errors"
   | "checkout"
   | CheckoutCreateKeySpecifier
->;
-export interface CheckoutCreateFieldPolicy {
+)[];
+export type CheckoutCreateFieldPolicy = {
   created?: FieldPolicy<any> | FieldReadFunction<any>;
   checkoutErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   checkout?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CheckoutCustomerAttachKeySpecifier = Array<
-  "checkout" | "checkoutErrors" | "errors" | CheckoutCustomerAttachKeySpecifier
->;
-export interface CheckoutCustomerAttachFieldPolicy {
+};
+export type CheckoutCustomerAttachKeySpecifier = (
+  | "checkout"
+  | "checkoutErrors"
+  | "errors"
+  | CheckoutCustomerAttachKeySpecifier
+)[];
+export type CheckoutCustomerAttachFieldPolicy = {
   checkout?: FieldPolicy<any> | FieldReadFunction<any>;
   checkoutErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CheckoutCustomerDetachKeySpecifier = Array<
-  "checkout" | "checkoutErrors" | "errors" | CheckoutCustomerDetachKeySpecifier
->;
-export interface CheckoutCustomerDetachFieldPolicy {
+};
+export type CheckoutCustomerDetachKeySpecifier = (
+  | "checkout"
+  | "checkoutErrors"
+  | "errors"
+  | CheckoutCustomerDetachKeySpecifier
+)[];
+export type CheckoutCustomerDetachFieldPolicy = {
   checkout?: FieldPolicy<any> | FieldReadFunction<any>;
   checkoutErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CheckoutDeliveryMethodUpdateKeySpecifier = Array<
-  "checkout" | "errors" | CheckoutDeliveryMethodUpdateKeySpecifier
->;
-export interface CheckoutDeliveryMethodUpdateFieldPolicy {
+};
+export type CheckoutDeliveryMethodUpdateKeySpecifier = (
+  | "checkout"
+  | "errors"
+  | CheckoutDeliveryMethodUpdateKeySpecifier
+)[];
+export type CheckoutDeliveryMethodUpdateFieldPolicy = {
   checkout?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CheckoutEmailUpdateKeySpecifier = Array<
-  "checkout" | "checkoutErrors" | "errors" | CheckoutEmailUpdateKeySpecifier
->;
-export interface CheckoutEmailUpdateFieldPolicy {
+};
+export type CheckoutEmailUpdateKeySpecifier = (
+  | "checkout"
+  | "checkoutErrors"
+  | "errors"
+  | CheckoutEmailUpdateKeySpecifier
+)[];
+export type CheckoutEmailUpdateFieldPolicy = {
   checkout?: FieldPolicy<any> | FieldReadFunction<any>;
   checkoutErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CheckoutErrorKeySpecifier = Array<
+};
+export type CheckoutErrorKeySpecifier = (
   | "field"
   | "message"
   | "code"
@@ -1156,141 +1332,159 @@ export type CheckoutErrorKeySpecifier = Array<
   | "lines"
   | "addressType"
   | CheckoutErrorKeySpecifier
->;
-export interface CheckoutErrorFieldPolicy {
+)[];
+export type CheckoutErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
   variants?: FieldPolicy<any> | FieldReadFunction<any>;
   lines?: FieldPolicy<any> | FieldReadFunction<any>;
   addressType?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CheckoutLanguageCodeUpdateKeySpecifier = Array<
+};
+export type CheckoutLanguageCodeUpdateKeySpecifier = (
   | "checkout"
   | "checkoutErrors"
   | "errors"
   | CheckoutLanguageCodeUpdateKeySpecifier
->;
-export interface CheckoutLanguageCodeUpdateFieldPolicy {
+)[];
+export type CheckoutLanguageCodeUpdateFieldPolicy = {
   checkout?: FieldPolicy<any> | FieldReadFunction<any>;
   checkoutErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CheckoutLineKeySpecifier = Array<
+};
+export type CheckoutLineKeySpecifier = (
   | "id"
   | "variant"
   | "quantity"
   | "totalPrice"
   | "requiresShipping"
   | CheckoutLineKeySpecifier
->;
-export interface CheckoutLineFieldPolicy {
+)[];
+export type CheckoutLineFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   variant?: FieldPolicy<any> | FieldReadFunction<any>;
   quantity?: FieldPolicy<any> | FieldReadFunction<any>;
   totalPrice?: FieldPolicy<any> | FieldReadFunction<any>;
   requiresShipping?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CheckoutLineCountableConnectionKeySpecifier = Array<
+};
+export type CheckoutLineCountableConnectionKeySpecifier = (
   | "pageInfo"
   | "edges"
   | "totalCount"
   | CheckoutLineCountableConnectionKeySpecifier
->;
-export interface CheckoutLineCountableConnectionFieldPolicy {
+)[];
+export type CheckoutLineCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CheckoutLineCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | CheckoutLineCountableEdgeKeySpecifier
->;
-export interface CheckoutLineCountableEdgeFieldPolicy {
+};
+export type CheckoutLineCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | CheckoutLineCountableEdgeKeySpecifier
+)[];
+export type CheckoutLineCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CheckoutLineDeleteKeySpecifier = Array<
-  "checkout" | "checkoutErrors" | "errors" | CheckoutLineDeleteKeySpecifier
->;
-export interface CheckoutLineDeleteFieldPolicy {
+};
+export type CheckoutLineDeleteKeySpecifier = (
+  | "checkout"
+  | "checkoutErrors"
+  | "errors"
+  | CheckoutLineDeleteKeySpecifier
+)[];
+export type CheckoutLineDeleteFieldPolicy = {
   checkout?: FieldPolicy<any> | FieldReadFunction<any>;
   checkoutErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CheckoutLinesAddKeySpecifier = Array<
-  "checkout" | "checkoutErrors" | "errors" | CheckoutLinesAddKeySpecifier
->;
-export interface CheckoutLinesAddFieldPolicy {
+};
+export type CheckoutLinesAddKeySpecifier = (
+  | "checkout"
+  | "checkoutErrors"
+  | "errors"
+  | CheckoutLinesAddKeySpecifier
+)[];
+export type CheckoutLinesAddFieldPolicy = {
   checkout?: FieldPolicy<any> | FieldReadFunction<any>;
   checkoutErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CheckoutLinesDeleteKeySpecifier = Array<
-  "checkout" | "errors" | CheckoutLinesDeleteKeySpecifier
->;
-export interface CheckoutLinesDeleteFieldPolicy {
+};
+export type CheckoutLinesDeleteKeySpecifier = (
+  | "checkout"
+  | "errors"
+  | CheckoutLinesDeleteKeySpecifier
+)[];
+export type CheckoutLinesDeleteFieldPolicy = {
   checkout?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CheckoutLinesUpdateKeySpecifier = Array<
-  "checkout" | "checkoutErrors" | "errors" | CheckoutLinesUpdateKeySpecifier
->;
-export interface CheckoutLinesUpdateFieldPolicy {
+};
+export type CheckoutLinesUpdateKeySpecifier = (
+  | "checkout"
+  | "checkoutErrors"
+  | "errors"
+  | CheckoutLinesUpdateKeySpecifier
+)[];
+export type CheckoutLinesUpdateFieldPolicy = {
   checkout?: FieldPolicy<any> | FieldReadFunction<any>;
   checkoutErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CheckoutPaymentCreateKeySpecifier = Array<
+};
+export type CheckoutPaymentCreateKeySpecifier = (
   | "checkout"
   | "payment"
   | "paymentErrors"
   | "errors"
   | CheckoutPaymentCreateKeySpecifier
->;
-export interface CheckoutPaymentCreateFieldPolicy {
+)[];
+export type CheckoutPaymentCreateFieldPolicy = {
   checkout?: FieldPolicy<any> | FieldReadFunction<any>;
   payment?: FieldPolicy<any> | FieldReadFunction<any>;
   paymentErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CheckoutRemovePromoCodeKeySpecifier = Array<
-  "checkout" | "checkoutErrors" | "errors" | CheckoutRemovePromoCodeKeySpecifier
->;
-export interface CheckoutRemovePromoCodeFieldPolicy {
+};
+export type CheckoutRemovePromoCodeKeySpecifier = (
+  | "checkout"
+  | "checkoutErrors"
+  | "errors"
+  | CheckoutRemovePromoCodeKeySpecifier
+)[];
+export type CheckoutRemovePromoCodeFieldPolicy = {
   checkout?: FieldPolicy<any> | FieldReadFunction<any>;
   checkoutErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CheckoutShippingAddressUpdateKeySpecifier = Array<
+};
+export type CheckoutShippingAddressUpdateKeySpecifier = (
   | "checkout"
   | "checkoutErrors"
   | "errors"
   | CheckoutShippingAddressUpdateKeySpecifier
->;
-export interface CheckoutShippingAddressUpdateFieldPolicy {
+)[];
+export type CheckoutShippingAddressUpdateFieldPolicy = {
   checkout?: FieldPolicy<any> | FieldReadFunction<any>;
   checkoutErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CheckoutShippingMethodUpdateKeySpecifier = Array<
+};
+export type CheckoutShippingMethodUpdateKeySpecifier = (
   | "checkout"
   | "checkoutErrors"
   | "errors"
   | CheckoutShippingMethodUpdateKeySpecifier
->;
-export interface CheckoutShippingMethodUpdateFieldPolicy {
+)[];
+export type CheckoutShippingMethodUpdateFieldPolicy = {
   checkout?: FieldPolicy<any> | FieldReadFunction<any>;
   checkoutErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ChoiceValueKeySpecifier = Array<
-  "raw" | "verbose" | ChoiceValueKeySpecifier
->;
-export interface ChoiceValueFieldPolicy {
+};
+export type ChoiceValueKeySpecifier = (
+  | "raw"
+  | "verbose"
+  | ChoiceValueKeySpecifier
+)[];
+export type ChoiceValueFieldPolicy = {
   raw?: FieldPolicy<any> | FieldReadFunction<any>;
   verbose?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CollectionKeySpecifier = Array<
+};
+export type CollectionKeySpecifier = (
   | "id"
   | "privateMetadata"
   | "metadata"
@@ -1306,8 +1500,8 @@ export type CollectionKeySpecifier = Array<
   | "translation"
   | "channelListings"
   | CollectionKeySpecifier
->;
-export interface CollectionFieldPolicy {
+)[];
+export type CollectionFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1322,40 +1516,43 @@ export interface CollectionFieldPolicy {
   backgroundImage?: FieldPolicy<any> | FieldReadFunction<any>;
   translation?: FieldPolicy<any> | FieldReadFunction<any>;
   channelListings?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CollectionAddProductsKeySpecifier = Array<
+};
+export type CollectionAddProductsKeySpecifier = (
   | "collection"
   | "collectionErrors"
   | "errors"
   | CollectionAddProductsKeySpecifier
->;
-export interface CollectionAddProductsFieldPolicy {
+)[];
+export type CollectionAddProductsFieldPolicy = {
   collection?: FieldPolicy<any> | FieldReadFunction<any>;
   collectionErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CollectionBulkDeleteKeySpecifier = Array<
-  "count" | "collectionErrors" | "errors" | CollectionBulkDeleteKeySpecifier
->;
-export interface CollectionBulkDeleteFieldPolicy {
+};
+export type CollectionBulkDeleteKeySpecifier = (
+  | "count"
+  | "collectionErrors"
+  | "errors"
+  | CollectionBulkDeleteKeySpecifier
+)[];
+export type CollectionBulkDeleteFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   collectionErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CollectionChannelListingKeySpecifier = Array<
+};
+export type CollectionChannelListingKeySpecifier = (
   | "id"
   | "publicationDate"
   | "isPublished"
   | "channel"
   | CollectionChannelListingKeySpecifier
->;
-export interface CollectionChannelListingFieldPolicy {
+)[];
+export type CollectionChannelListingFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   publicationDate?: FieldPolicy<any> | FieldReadFunction<any>;
   isPublished?: FieldPolicy<any> | FieldReadFunction<any>;
   channel?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CollectionChannelListingErrorKeySpecifier = Array<
+};
+export type CollectionChannelListingErrorKeySpecifier = (
   | "field"
   | "message"
   | "code"
@@ -1363,92 +1560,104 @@ export type CollectionChannelListingErrorKeySpecifier = Array<
   | "values"
   | "channels"
   | CollectionChannelListingErrorKeySpecifier
->;
-export interface CollectionChannelListingErrorFieldPolicy {
+)[];
+export type CollectionChannelListingErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
   attributes?: FieldPolicy<any> | FieldReadFunction<any>;
   values?: FieldPolicy<any> | FieldReadFunction<any>;
   channels?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CollectionChannelListingUpdateKeySpecifier = Array<
+};
+export type CollectionChannelListingUpdateKeySpecifier = (
   | "collection"
   | "collectionChannelListingErrors"
   | "errors"
   | CollectionChannelListingUpdateKeySpecifier
->;
-export interface CollectionChannelListingUpdateFieldPolicy {
+)[];
+export type CollectionChannelListingUpdateFieldPolicy = {
   collection?: FieldPolicy<any> | FieldReadFunction<any>;
   collectionChannelListingErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CollectionCountableConnectionKeySpecifier = Array<
+};
+export type CollectionCountableConnectionKeySpecifier = (
   | "pageInfo"
   | "edges"
   | "totalCount"
   | CollectionCountableConnectionKeySpecifier
->;
-export interface CollectionCountableConnectionFieldPolicy {
+)[];
+export type CollectionCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CollectionCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | CollectionCountableEdgeKeySpecifier
->;
-export interface CollectionCountableEdgeFieldPolicy {
+};
+export type CollectionCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | CollectionCountableEdgeKeySpecifier
+)[];
+export type CollectionCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CollectionCreateKeySpecifier = Array<
-  "collectionErrors" | "errors" | "collection" | CollectionCreateKeySpecifier
->;
-export interface CollectionCreateFieldPolicy {
+};
+export type CollectionCreateKeySpecifier = (
+  | "collectionErrors"
+  | "errors"
+  | "collection"
+  | CollectionCreateKeySpecifier
+)[];
+export type CollectionCreateFieldPolicy = {
   collectionErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   collection?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CollectionDeleteKeySpecifier = Array<
-  "collectionErrors" | "errors" | "collection" | CollectionDeleteKeySpecifier
->;
-export interface CollectionDeleteFieldPolicy {
+};
+export type CollectionDeleteKeySpecifier = (
+  | "collectionErrors"
+  | "errors"
+  | "collection"
+  | CollectionDeleteKeySpecifier
+)[];
+export type CollectionDeleteFieldPolicy = {
   collectionErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   collection?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CollectionErrorKeySpecifier = Array<
-  "field" | "message" | "products" | "code" | CollectionErrorKeySpecifier
->;
-export interface CollectionErrorFieldPolicy {
+};
+export type CollectionErrorKeySpecifier = (
+  | "field"
+  | "message"
+  | "products"
+  | "code"
+  | CollectionErrorKeySpecifier
+)[];
+export type CollectionErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   products?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CollectionRemoveProductsKeySpecifier = Array<
+};
+export type CollectionRemoveProductsKeySpecifier = (
   | "collection"
   | "collectionErrors"
   | "errors"
   | CollectionRemoveProductsKeySpecifier
->;
-export interface CollectionRemoveProductsFieldPolicy {
+)[];
+export type CollectionRemoveProductsFieldPolicy = {
   collection?: FieldPolicy<any> | FieldReadFunction<any>;
   collectionErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CollectionReorderProductsKeySpecifier = Array<
+};
+export type CollectionReorderProductsKeySpecifier = (
   | "collection"
   | "collectionErrors"
   | "errors"
   | CollectionReorderProductsKeySpecifier
->;
-export interface CollectionReorderProductsFieldPolicy {
+)[];
+export type CollectionReorderProductsFieldPolicy = {
   collection?: FieldPolicy<any> | FieldReadFunction<any>;
   collectionErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CollectionTranslatableContentKeySpecifier = Array<
+};
+export type CollectionTranslatableContentKeySpecifier = (
   | "id"
   | "seoTitle"
   | "seoDescription"
@@ -1458,8 +1667,8 @@ export type CollectionTranslatableContentKeySpecifier = Array<
   | "translation"
   | "collection"
   | CollectionTranslatableContentKeySpecifier
->;
-export interface CollectionTranslatableContentFieldPolicy {
+)[];
+export type CollectionTranslatableContentFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   seoTitle?: FieldPolicy<any> | FieldReadFunction<any>;
   seoDescription?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1468,19 +1677,19 @@ export interface CollectionTranslatableContentFieldPolicy {
   descriptionJson?: FieldPolicy<any> | FieldReadFunction<any>;
   translation?: FieldPolicy<any> | FieldReadFunction<any>;
   collection?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CollectionTranslateKeySpecifier = Array<
+};
+export type CollectionTranslateKeySpecifier = (
   | "translationErrors"
   | "errors"
   | "collection"
   | CollectionTranslateKeySpecifier
->;
-export interface CollectionTranslateFieldPolicy {
+)[];
+export type CollectionTranslateFieldPolicy = {
   translationErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   collection?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CollectionTranslationKeySpecifier = Array<
+};
+export type CollectionTranslationKeySpecifier = (
   | "id"
   | "language"
   | "seoTitle"
@@ -1489,8 +1698,8 @@ export type CollectionTranslationKeySpecifier = Array<
   | "description"
   | "descriptionJson"
   | CollectionTranslationKeySpecifier
->;
-export interface CollectionTranslationFieldPolicy {
+)[];
+export type CollectionTranslationFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   language?: FieldPolicy<any> | FieldReadFunction<any>;
   seoTitle?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1498,55 +1707,67 @@ export interface CollectionTranslationFieldPolicy {
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   description?: FieldPolicy<any> | FieldReadFunction<any>;
   descriptionJson?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CollectionUpdateKeySpecifier = Array<
-  "collectionErrors" | "errors" | "collection" | CollectionUpdateKeySpecifier
->;
-export interface CollectionUpdateFieldPolicy {
+};
+export type CollectionUpdateKeySpecifier = (
+  | "collectionErrors"
+  | "errors"
+  | "collection"
+  | CollectionUpdateKeySpecifier
+)[];
+export type CollectionUpdateFieldPolicy = {
   collectionErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   collection?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ConfigurationItemKeySpecifier = Array<
+};
+export type ConfigurationItemKeySpecifier = (
   | "name"
   | "value"
   | "type"
   | "helpText"
   | "label"
   | ConfigurationItemKeySpecifier
->;
-export interface ConfigurationItemFieldPolicy {
+)[];
+export type ConfigurationItemFieldPolicy = {
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   value?: FieldPolicy<any> | FieldReadFunction<any>;
   type?: FieldPolicy<any> | FieldReadFunction<any>;
   helpText?: FieldPolicy<any> | FieldReadFunction<any>;
   label?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ConfirmAccountKeySpecifier = Array<
-  "user" | "accountErrors" | "errors" | ConfirmAccountKeySpecifier
->;
-export interface ConfirmAccountFieldPolicy {
+};
+export type ConfirmAccountKeySpecifier = (
+  | "user"
+  | "accountErrors"
+  | "errors"
+  | ConfirmAccountKeySpecifier
+)[];
+export type ConfirmAccountFieldPolicy = {
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ConfirmEmailChangeKeySpecifier = Array<
-  "user" | "accountErrors" | "errors" | ConfirmEmailChangeKeySpecifier
->;
-export interface ConfirmEmailChangeFieldPolicy {
+};
+export type ConfirmEmailChangeKeySpecifier = (
+  | "user"
+  | "accountErrors"
+  | "errors"
+  | ConfirmEmailChangeKeySpecifier
+)[];
+export type ConfirmEmailChangeFieldPolicy = {
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CountryDisplayKeySpecifier = Array<
-  "code" | "country" | "vat" | CountryDisplayKeySpecifier
->;
-export interface CountryDisplayFieldPolicy {
+};
+export type CountryDisplayKeySpecifier = (
+  | "code"
+  | "country"
+  | "vat"
+  | CountryDisplayKeySpecifier
+)[];
+export type CountryDisplayFieldPolicy = {
   code?: FieldPolicy<any> | FieldReadFunction<any>;
   country?: FieldPolicy<any> | FieldReadFunction<any>;
   vat?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CreateTokenKeySpecifier = Array<
+};
+export type CreateTokenKeySpecifier = (
   | "token"
   | "refreshToken"
   | "csrfToken"
@@ -1554,55 +1775,64 @@ export type CreateTokenKeySpecifier = Array<
   | "accountErrors"
   | "errors"
   | CreateTokenKeySpecifier
->;
-export interface CreateTokenFieldPolicy {
+)[];
+export type CreateTokenFieldPolicy = {
   token?: FieldPolicy<any> | FieldReadFunction<any>;
   refreshToken?: FieldPolicy<any> | FieldReadFunction<any>;
   csrfToken?: FieldPolicy<any> | FieldReadFunction<any>;
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CreditCardKeySpecifier = Array<
+};
+export type CreditCardKeySpecifier = (
   | "brand"
   | "firstDigits"
   | "lastDigits"
   | "expMonth"
   | "expYear"
   | CreditCardKeySpecifier
->;
-export interface CreditCardFieldPolicy {
+)[];
+export type CreditCardFieldPolicy = {
   brand?: FieldPolicy<any> | FieldReadFunction<any>;
   firstDigits?: FieldPolicy<any> | FieldReadFunction<any>;
   lastDigits?: FieldPolicy<any> | FieldReadFunction<any>;
   expMonth?: FieldPolicy<any> | FieldReadFunction<any>;
   expYear?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CustomerBulkDeleteKeySpecifier = Array<
-  "count" | "accountErrors" | "errors" | CustomerBulkDeleteKeySpecifier
->;
-export interface CustomerBulkDeleteFieldPolicy {
+};
+export type CustomerBulkDeleteKeySpecifier = (
+  | "count"
+  | "accountErrors"
+  | "errors"
+  | CustomerBulkDeleteKeySpecifier
+)[];
+export type CustomerBulkDeleteFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CustomerCreateKeySpecifier = Array<
-  "accountErrors" | "errors" | "user" | CustomerCreateKeySpecifier
->;
-export interface CustomerCreateFieldPolicy {
+};
+export type CustomerCreateKeySpecifier = (
+  | "accountErrors"
+  | "errors"
+  | "user"
+  | CustomerCreateKeySpecifier
+)[];
+export type CustomerCreateFieldPolicy = {
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   user?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CustomerDeleteKeySpecifier = Array<
-  "accountErrors" | "errors" | "user" | CustomerDeleteKeySpecifier
->;
-export interface CustomerDeleteFieldPolicy {
+};
+export type CustomerDeleteKeySpecifier = (
+  | "accountErrors"
+  | "errors"
+  | "user"
+  | CustomerDeleteKeySpecifier
+)[];
+export type CustomerDeleteFieldPolicy = {
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   user?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CustomerEventKeySpecifier = Array<
+};
+export type CustomerEventKeySpecifier = (
   | "id"
   | "date"
   | "type"
@@ -1613,8 +1843,8 @@ export type CustomerEventKeySpecifier = Array<
   | "order"
   | "orderLine"
   | CustomerEventKeySpecifier
->;
-export interface CustomerEventFieldPolicy {
+)[];
+export type CustomerEventFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   date?: FieldPolicy<any> | FieldReadFunction<any>;
   type?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1624,39 +1854,50 @@ export interface CustomerEventFieldPolicy {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   orderLine?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type CustomerUpdateKeySpecifier = Array<
-  "accountErrors" | "errors" | "user" | CustomerUpdateKeySpecifier
->;
-export interface CustomerUpdateFieldPolicy {
+};
+export type CustomerUpdateKeySpecifier = (
+  | "accountErrors"
+  | "errors"
+  | "user"
+  | CustomerUpdateKeySpecifier
+)[];
+export type CustomerUpdateFieldPolicy = {
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   user?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type DeactivateAllUserTokensKeySpecifier = Array<
-  "accountErrors" | "errors" | DeactivateAllUserTokensKeySpecifier
->;
-export interface DeactivateAllUserTokensFieldPolicy {
+};
+export type DeactivateAllUserTokensKeySpecifier = (
+  | "accountErrors"
+  | "errors"
+  | DeactivateAllUserTokensKeySpecifier
+)[];
+export type DeactivateAllUserTokensFieldPolicy = {
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type DeleteMetadataKeySpecifier = Array<
-  "metadataErrors" | "errors" | "item" | DeleteMetadataKeySpecifier
->;
-export interface DeleteMetadataFieldPolicy {
+};
+export type DeleteMetadataKeySpecifier = (
+  | "metadataErrors"
+  | "errors"
+  | "item"
+  | DeleteMetadataKeySpecifier
+)[];
+export type DeleteMetadataFieldPolicy = {
   metadataErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   item?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type DeletePrivateMetadataKeySpecifier = Array<
-  "metadataErrors" | "errors" | "item" | DeletePrivateMetadataKeySpecifier
->;
-export interface DeletePrivateMetadataFieldPolicy {
+};
+export type DeletePrivateMetadataKeySpecifier = (
+  | "metadataErrors"
+  | "errors"
+  | "item"
+  | DeletePrivateMetadataKeySpecifier
+)[];
+export type DeletePrivateMetadataFieldPolicy = {
   metadataErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   item?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type DigitalContentKeySpecifier = Array<
+};
+export type DigitalContentKeySpecifier = (
   | "id"
   | "privateMetadata"
   | "metadata"
@@ -1668,8 +1909,8 @@ export type DigitalContentKeySpecifier = Array<
   | "urls"
   | "productVariant"
   | DigitalContentKeySpecifier
->;
-export interface DigitalContentFieldPolicy {
+)[];
+export type DigitalContentFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1680,60 +1921,65 @@ export interface DigitalContentFieldPolicy {
   urlValidDays?: FieldPolicy<any> | FieldReadFunction<any>;
   urls?: FieldPolicy<any> | FieldReadFunction<any>;
   productVariant?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type DigitalContentCountableConnectionKeySpecifier = Array<
+};
+export type DigitalContentCountableConnectionKeySpecifier = (
   | "pageInfo"
   | "edges"
   | "totalCount"
   | DigitalContentCountableConnectionKeySpecifier
->;
-export interface DigitalContentCountableConnectionFieldPolicy {
+)[];
+export type DigitalContentCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type DigitalContentCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | DigitalContentCountableEdgeKeySpecifier
->;
-export interface DigitalContentCountableEdgeFieldPolicy {
+};
+export type DigitalContentCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | DigitalContentCountableEdgeKeySpecifier
+)[];
+export type DigitalContentCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type DigitalContentCreateKeySpecifier = Array<
+};
+export type DigitalContentCreateKeySpecifier = (
   | "variant"
   | "content"
   | "productErrors"
   | "errors"
   | DigitalContentCreateKeySpecifier
->;
-export interface DigitalContentCreateFieldPolicy {
+)[];
+export type DigitalContentCreateFieldPolicy = {
   variant?: FieldPolicy<any> | FieldReadFunction<any>;
   content?: FieldPolicy<any> | FieldReadFunction<any>;
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type DigitalContentDeleteKeySpecifier = Array<
-  "variant" | "productErrors" | "errors" | DigitalContentDeleteKeySpecifier
->;
-export interface DigitalContentDeleteFieldPolicy {
+};
+export type DigitalContentDeleteKeySpecifier = (
+  | "variant"
+  | "productErrors"
+  | "errors"
+  | DigitalContentDeleteKeySpecifier
+)[];
+export type DigitalContentDeleteFieldPolicy = {
   variant?: FieldPolicy<any> | FieldReadFunction<any>;
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type DigitalContentUpdateKeySpecifier = Array<
+};
+export type DigitalContentUpdateKeySpecifier = (
   | "variant"
   | "content"
   | "productErrors"
   | "errors"
   | DigitalContentUpdateKeySpecifier
->;
-export interface DigitalContentUpdateFieldPolicy {
+)[];
+export type DigitalContentUpdateFieldPolicy = {
   variant?: FieldPolicy<any> | FieldReadFunction<any>;
   content?: FieldPolicy<any> | FieldReadFunction<any>;
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type DigitalContentUrlKeySpecifier = Array<
+};
+export type DigitalContentUrlKeySpecifier = (
   | "id"
   | "content"
   | "created"
@@ -1741,98 +1987,119 @@ export type DigitalContentUrlKeySpecifier = Array<
   | "url"
   | "token"
   | DigitalContentUrlKeySpecifier
->;
-export interface DigitalContentUrlFieldPolicy {
+)[];
+export type DigitalContentUrlFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   content?: FieldPolicy<any> | FieldReadFunction<any>;
   created?: FieldPolicy<any> | FieldReadFunction<any>;
   downloadNum?: FieldPolicy<any> | FieldReadFunction<any>;
   url?: FieldPolicy<any> | FieldReadFunction<any>;
   token?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type DigitalContentUrlCreateKeySpecifier = Array<
+};
+export type DigitalContentUrlCreateKeySpecifier = (
   | "productErrors"
   | "errors"
   | "digitalContentUrl"
   | DigitalContentUrlCreateKeySpecifier
->;
-export interface DigitalContentUrlCreateFieldPolicy {
+)[];
+export type DigitalContentUrlCreateFieldPolicy = {
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   digitalContentUrl?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type DiscountErrorKeySpecifier = Array<
+};
+export type DiscountErrorKeySpecifier = (
   | "field"
   | "message"
   | "products"
   | "code"
   | "channels"
   | DiscountErrorKeySpecifier
->;
-export interface DiscountErrorFieldPolicy {
+)[];
+export type DiscountErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   products?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
   channels?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type DomainKeySpecifier = Array<
-  "host" | "sslEnabled" | "url" | DomainKeySpecifier
->;
-export interface DomainFieldPolicy {
+};
+export type DomainKeySpecifier = (
+  | "host"
+  | "sslEnabled"
+  | "url"
+  | DomainKeySpecifier
+)[];
+export type DomainFieldPolicy = {
   host?: FieldPolicy<any> | FieldReadFunction<any>;
   sslEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
   url?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type DraftOrderBulkDeleteKeySpecifier = Array<
-  "count" | "orderErrors" | "errors" | DraftOrderBulkDeleteKeySpecifier
->;
-export interface DraftOrderBulkDeleteFieldPolicy {
+};
+export type DraftOrderBulkDeleteKeySpecifier = (
+  | "count"
+  | "orderErrors"
+  | "errors"
+  | DraftOrderBulkDeleteKeySpecifier
+)[];
+export type DraftOrderBulkDeleteFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type DraftOrderCompleteKeySpecifier = Array<
-  "order" | "orderErrors" | "errors" | DraftOrderCompleteKeySpecifier
->;
-export interface DraftOrderCompleteFieldPolicy {
+};
+export type DraftOrderCompleteKeySpecifier = (
+  | "order"
+  | "orderErrors"
+  | "errors"
+  | DraftOrderCompleteKeySpecifier
+)[];
+export type DraftOrderCompleteFieldPolicy = {
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type DraftOrderCreateKeySpecifier = Array<
-  "orderErrors" | "errors" | "order" | DraftOrderCreateKeySpecifier
->;
-export interface DraftOrderCreateFieldPolicy {
+};
+export type DraftOrderCreateKeySpecifier = (
+  | "orderErrors"
+  | "errors"
+  | "order"
+  | DraftOrderCreateKeySpecifier
+)[];
+export type DraftOrderCreateFieldPolicy = {
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   order?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type DraftOrderDeleteKeySpecifier = Array<
-  "orderErrors" | "errors" | "order" | DraftOrderDeleteKeySpecifier
->;
-export interface DraftOrderDeleteFieldPolicy {
+};
+export type DraftOrderDeleteKeySpecifier = (
+  | "orderErrors"
+  | "errors"
+  | "order"
+  | DraftOrderDeleteKeySpecifier
+)[];
+export type DraftOrderDeleteFieldPolicy = {
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   order?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type DraftOrderLinesBulkDeleteKeySpecifier = Array<
-  "count" | "orderErrors" | "errors" | DraftOrderLinesBulkDeleteKeySpecifier
->;
-export interface DraftOrderLinesBulkDeleteFieldPolicy {
+};
+export type DraftOrderLinesBulkDeleteKeySpecifier = (
+  | "count"
+  | "orderErrors"
+  | "errors"
+  | DraftOrderLinesBulkDeleteKeySpecifier
+)[];
+export type DraftOrderLinesBulkDeleteFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type DraftOrderUpdateKeySpecifier = Array<
-  "orderErrors" | "errors" | "order" | DraftOrderUpdateKeySpecifier
->;
-export interface DraftOrderUpdateFieldPolicy {
+};
+export type DraftOrderUpdateKeySpecifier = (
+  | "orderErrors"
+  | "errors"
+  | "order"
+  | DraftOrderUpdateKeySpecifier
+)[];
+export type DraftOrderUpdateFieldPolicy = {
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   order?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type EventDeliveryKeySpecifier = Array<
+};
+export type EventDeliveryKeySpecifier = (
   | "id"
   | "createdAt"
   | "status"
@@ -1840,16 +2107,16 @@ export type EventDeliveryKeySpecifier = Array<
   | "attempts"
   | "payload"
   | EventDeliveryKeySpecifier
->;
-export interface EventDeliveryFieldPolicy {
+)[];
+export type EventDeliveryFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   createdAt?: FieldPolicy<any> | FieldReadFunction<any>;
   status?: FieldPolicy<any> | FieldReadFunction<any>;
   eventType?: FieldPolicy<any> | FieldReadFunction<any>;
   attempts?: FieldPolicy<any> | FieldReadFunction<any>;
   payload?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type EventDeliveryAttemptKeySpecifier = Array<
+};
+export type EventDeliveryAttemptKeySpecifier = (
   | "id"
   | "createdAt"
   | "taskId"
@@ -1859,8 +2126,8 @@ export type EventDeliveryAttemptKeySpecifier = Array<
   | "requestHeaders"
   | "status"
   | EventDeliveryAttemptKeySpecifier
->;
-export interface EventDeliveryAttemptFieldPolicy {
+)[];
+export type EventDeliveryAttemptFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   createdAt?: FieldPolicy<any> | FieldReadFunction<any>;
   taskId?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1869,70 +2136,85 @@ export interface EventDeliveryAttemptFieldPolicy {
   responseHeaders?: FieldPolicy<any> | FieldReadFunction<any>;
   requestHeaders?: FieldPolicy<any> | FieldReadFunction<any>;
   status?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type EventDeliveryAttemptCountableConnectionKeySpecifier = Array<
+};
+export type EventDeliveryAttemptCountableConnectionKeySpecifier = (
   | "pageInfo"
   | "edges"
   | "totalCount"
   | EventDeliveryAttemptCountableConnectionKeySpecifier
->;
-export interface EventDeliveryAttemptCountableConnectionFieldPolicy {
+)[];
+export type EventDeliveryAttemptCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type EventDeliveryAttemptCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | EventDeliveryAttemptCountableEdgeKeySpecifier
->;
-export interface EventDeliveryAttemptCountableEdgeFieldPolicy {
+};
+export type EventDeliveryAttemptCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | EventDeliveryAttemptCountableEdgeKeySpecifier
+)[];
+export type EventDeliveryAttemptCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type EventDeliveryCountableConnectionKeySpecifier = Array<
+};
+export type EventDeliveryCountableConnectionKeySpecifier = (
   | "pageInfo"
   | "edges"
   | "totalCount"
   | EventDeliveryCountableConnectionKeySpecifier
->;
-export interface EventDeliveryCountableConnectionFieldPolicy {
+)[];
+export type EventDeliveryCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type EventDeliveryCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | EventDeliveryCountableEdgeKeySpecifier
->;
-export interface EventDeliveryCountableEdgeFieldPolicy {
+};
+export type EventDeliveryCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | EventDeliveryCountableEdgeKeySpecifier
+)[];
+export type EventDeliveryCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type EventDeliveryRetryKeySpecifier = Array<
-  "delivery" | "errors" | EventDeliveryRetryKeySpecifier
->;
-export interface EventDeliveryRetryFieldPolicy {
+};
+export type EventDeliveryRetryKeySpecifier = (
+  | "delivery"
+  | "errors"
+  | EventDeliveryRetryKeySpecifier
+)[];
+export type EventDeliveryRetryFieldPolicy = {
   delivery?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ExportErrorKeySpecifier = Array<
-  "field" | "message" | "code" | ExportErrorKeySpecifier
->;
-export interface ExportErrorFieldPolicy {
+};
+export type ExportErrorKeySpecifier = (
+  | "field"
+  | "message"
+  | "code"
+  | ExportErrorKeySpecifier
+)[];
+export type ExportErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ExportEventKeySpecifier = Array<
-  "id" | "date" | "type" | "user" | "app" | "message" | ExportEventKeySpecifier
->;
-export interface ExportEventFieldPolicy {
+};
+export type ExportEventKeySpecifier = (
+  | "id"
+  | "date"
+  | "type"
+  | "user"
+  | "app"
+  | "message"
+  | ExportEventKeySpecifier
+)[];
+export type ExportEventFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   date?: FieldPolicy<any> | FieldReadFunction<any>;
   type?: FieldPolicy<any> | FieldReadFunction<any>;
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   app?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ExportFileKeySpecifier = Array<
+};
+export type ExportFileKeySpecifier = (
   | "id"
   | "status"
   | "createdAt"
@@ -1943,8 +2225,8 @@ export type ExportFileKeySpecifier = Array<
   | "user"
   | "app"
   | ExportFileKeySpecifier
->;
-export interface ExportFileFieldPolicy {
+)[];
+export type ExportFileFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   status?: FieldPolicy<any> | FieldReadFunction<any>;
   createdAt?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1954,81 +2236,97 @@ export interface ExportFileFieldPolicy {
   events?: FieldPolicy<any> | FieldReadFunction<any>;
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   app?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ExportFileCountableConnectionKeySpecifier = Array<
+};
+export type ExportFileCountableConnectionKeySpecifier = (
   | "pageInfo"
   | "edges"
   | "totalCount"
   | ExportFileCountableConnectionKeySpecifier
->;
-export interface ExportFileCountableConnectionFieldPolicy {
+)[];
+export type ExportFileCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ExportFileCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | ExportFileCountableEdgeKeySpecifier
->;
-export interface ExportFileCountableEdgeFieldPolicy {
+};
+export type ExportFileCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | ExportFileCountableEdgeKeySpecifier
+)[];
+export type ExportFileCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ExportGiftCardsKeySpecifier = Array<
-  "exportFile" | "errors" | ExportGiftCardsKeySpecifier
->;
-export interface ExportGiftCardsFieldPolicy {
+};
+export type ExportGiftCardsKeySpecifier = (
+  | "exportFile"
+  | "errors"
+  | ExportGiftCardsKeySpecifier
+)[];
+export type ExportGiftCardsFieldPolicy = {
   exportFile?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ExportProductsKeySpecifier = Array<
-  "exportFile" | "exportErrors" | "errors" | ExportProductsKeySpecifier
->;
-export interface ExportProductsFieldPolicy {
+};
+export type ExportProductsKeySpecifier = (
+  | "exportFile"
+  | "exportErrors"
+  | "errors"
+  | ExportProductsKeySpecifier
+)[];
+export type ExportProductsFieldPolicy = {
   exportFile?: FieldPolicy<any> | FieldReadFunction<any>;
   exportErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ExternalAuthenticationKeySpecifier = Array<
-  "id" | "name" | ExternalAuthenticationKeySpecifier
->;
-export interface ExternalAuthenticationFieldPolicy {
+};
+export type ExternalAuthenticationKeySpecifier = (
+  | "id"
+  | "name"
+  | ExternalAuthenticationKeySpecifier
+)[];
+export type ExternalAuthenticationFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ExternalAuthenticationUrlKeySpecifier = Array<
+};
+export type ExternalAuthenticationUrlKeySpecifier = (
   | "authenticationData"
   | "accountErrors"
   | "errors"
   | ExternalAuthenticationUrlKeySpecifier
->;
-export interface ExternalAuthenticationUrlFieldPolicy {
+)[];
+export type ExternalAuthenticationUrlFieldPolicy = {
   authenticationData?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ExternalLogoutKeySpecifier = Array<
-  "logoutData" | "accountErrors" | "errors" | ExternalLogoutKeySpecifier
->;
-export interface ExternalLogoutFieldPolicy {
+};
+export type ExternalLogoutKeySpecifier = (
+  | "logoutData"
+  | "accountErrors"
+  | "errors"
+  | ExternalLogoutKeySpecifier
+)[];
+export type ExternalLogoutFieldPolicy = {
   logoutData?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ExternalNotificationErrorKeySpecifier = Array<
-  "field" | "message" | "code" | ExternalNotificationErrorKeySpecifier
->;
-export interface ExternalNotificationErrorFieldPolicy {
+};
+export type ExternalNotificationErrorKeySpecifier = (
+  | "field"
+  | "message"
+  | "code"
+  | ExternalNotificationErrorKeySpecifier
+)[];
+export type ExternalNotificationErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ExternalNotificationTriggerKeySpecifier = Array<
-  "errors" | ExternalNotificationTriggerKeySpecifier
->;
-export interface ExternalNotificationTriggerFieldPolicy {
+};
+export type ExternalNotificationTriggerKeySpecifier = (
+  | "errors"
+  | ExternalNotificationTriggerKeySpecifier
+)[];
+export type ExternalNotificationTriggerFieldPolicy = {
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ExternalObtainAccessTokensKeySpecifier = Array<
+};
+export type ExternalObtainAccessTokensKeySpecifier = (
   | "token"
   | "refreshToken"
   | "csrfToken"
@@ -2036,16 +2334,16 @@ export type ExternalObtainAccessTokensKeySpecifier = Array<
   | "accountErrors"
   | "errors"
   | ExternalObtainAccessTokensKeySpecifier
->;
-export interface ExternalObtainAccessTokensFieldPolicy {
+)[];
+export type ExternalObtainAccessTokensFieldPolicy = {
   token?: FieldPolicy<any> | FieldReadFunction<any>;
   refreshToken?: FieldPolicy<any> | FieldReadFunction<any>;
   csrfToken?: FieldPolicy<any> | FieldReadFunction<any>;
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ExternalRefreshKeySpecifier = Array<
+};
+export type ExternalRefreshKeySpecifier = (
   | "token"
   | "refreshToken"
   | "csrfToken"
@@ -2053,44 +2351,47 @@ export type ExternalRefreshKeySpecifier = Array<
   | "accountErrors"
   | "errors"
   | ExternalRefreshKeySpecifier
->;
-export interface ExternalRefreshFieldPolicy {
+)[];
+export type ExternalRefreshFieldPolicy = {
   token?: FieldPolicy<any> | FieldReadFunction<any>;
   refreshToken?: FieldPolicy<any> | FieldReadFunction<any>;
   csrfToken?: FieldPolicy<any> | FieldReadFunction<any>;
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ExternalVerifyKeySpecifier = Array<
+};
+export type ExternalVerifyKeySpecifier = (
   | "user"
   | "isValid"
   | "verifyData"
   | "accountErrors"
   | "errors"
   | ExternalVerifyKeySpecifier
->;
-export interface ExternalVerifyFieldPolicy {
+)[];
+export type ExternalVerifyFieldPolicy = {
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   isValid?: FieldPolicy<any> | FieldReadFunction<any>;
   verifyData?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type FileKeySpecifier = Array<"url" | "contentType" | FileKeySpecifier>;
-export interface FileFieldPolicy {
+};
+export type FileKeySpecifier = ("url" | "contentType" | FileKeySpecifier)[];
+export type FileFieldPolicy = {
   url?: FieldPolicy<any> | FieldReadFunction<any>;
   contentType?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type FileUploadKeySpecifier = Array<
-  "uploadedFile" | "uploadErrors" | "errors" | FileUploadKeySpecifier
->;
-export interface FileUploadFieldPolicy {
+};
+export type FileUploadKeySpecifier = (
+  | "uploadedFile"
+  | "uploadErrors"
+  | "errors"
+  | FileUploadKeySpecifier
+)[];
+export type FileUploadFieldPolicy = {
   uploadedFile?: FieldPolicy<any> | FieldReadFunction<any>;
   uploadErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type FulfillmentKeySpecifier = Array<
+};
+export type FulfillmentKeySpecifier = (
   | "id"
   | "privateMetadata"
   | "metadata"
@@ -2102,8 +2403,8 @@ export type FulfillmentKeySpecifier = Array<
   | "statusDisplay"
   | "warehouse"
   | FulfillmentKeySpecifier
->;
-export interface FulfillmentFieldPolicy {
+)[];
+export type FulfillmentFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -2114,55 +2415,58 @@ export interface FulfillmentFieldPolicy {
   lines?: FieldPolicy<any> | FieldReadFunction<any>;
   statusDisplay?: FieldPolicy<any> | FieldReadFunction<any>;
   warehouse?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type FulfillmentApproveKeySpecifier = Array<
+};
+export type FulfillmentApproveKeySpecifier = (
   | "fulfillment"
   | "order"
   | "orderErrors"
   | "errors"
   | FulfillmentApproveKeySpecifier
->;
-export interface FulfillmentApproveFieldPolicy {
+)[];
+export type FulfillmentApproveFieldPolicy = {
   fulfillment?: FieldPolicy<any> | FieldReadFunction<any>;
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type FulfillmentCancelKeySpecifier = Array<
+};
+export type FulfillmentCancelKeySpecifier = (
   | "fulfillment"
   | "order"
   | "orderErrors"
   | "errors"
   | FulfillmentCancelKeySpecifier
->;
-export interface FulfillmentCancelFieldPolicy {
+)[];
+export type FulfillmentCancelFieldPolicy = {
   fulfillment?: FieldPolicy<any> | FieldReadFunction<any>;
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type FulfillmentLineKeySpecifier = Array<
-  "id" | "quantity" | "orderLine" | FulfillmentLineKeySpecifier
->;
-export interface FulfillmentLineFieldPolicy {
+};
+export type FulfillmentLineKeySpecifier = (
+  | "id"
+  | "quantity"
+  | "orderLine"
+  | FulfillmentLineKeySpecifier
+)[];
+export type FulfillmentLineFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   quantity?: FieldPolicy<any> | FieldReadFunction<any>;
   orderLine?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type FulfillmentRefundProductsKeySpecifier = Array<
+};
+export type FulfillmentRefundProductsKeySpecifier = (
   | "fulfillment"
   | "order"
   | "orderErrors"
   | "errors"
   | FulfillmentRefundProductsKeySpecifier
->;
-export interface FulfillmentRefundProductsFieldPolicy {
+)[];
+export type FulfillmentRefundProductsFieldPolicy = {
   fulfillment?: FieldPolicy<any> | FieldReadFunction<any>;
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type FulfillmentReturnProductsKeySpecifier = Array<
+};
+export type FulfillmentReturnProductsKeySpecifier = (
   | "returnFulfillment"
   | "replaceFulfillment"
   | "order"
@@ -2170,36 +2474,38 @@ export type FulfillmentReturnProductsKeySpecifier = Array<
   | "orderErrors"
   | "errors"
   | FulfillmentReturnProductsKeySpecifier
->;
-export interface FulfillmentReturnProductsFieldPolicy {
+)[];
+export type FulfillmentReturnProductsFieldPolicy = {
   returnFulfillment?: FieldPolicy<any> | FieldReadFunction<any>;
   replaceFulfillment?: FieldPolicy<any> | FieldReadFunction<any>;
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   replaceOrder?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type FulfillmentUpdateTrackingKeySpecifier = Array<
+};
+export type FulfillmentUpdateTrackingKeySpecifier = (
   | "fulfillment"
   | "order"
   | "orderErrors"
   | "errors"
   | FulfillmentUpdateTrackingKeySpecifier
->;
-export interface FulfillmentUpdateTrackingFieldPolicy {
+)[];
+export type FulfillmentUpdateTrackingFieldPolicy = {
   fulfillment?: FieldPolicy<any> | FieldReadFunction<any>;
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GatewayConfigLineKeySpecifier = Array<
-  "field" | "value" | GatewayConfigLineKeySpecifier
->;
-export interface GatewayConfigLineFieldPolicy {
+};
+export type GatewayConfigLineKeySpecifier = (
+  | "field"
+  | "value"
+  | GatewayConfigLineKeySpecifier
+)[];
+export type GatewayConfigLineFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   value?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GiftCardKeySpecifier = Array<
+};
+export type GiftCardKeySpecifier = (
   | "id"
   | "privateMetadata"
   | "metadata"
@@ -2225,8 +2531,8 @@ export type GiftCardKeySpecifier = Array<
   | "endDate"
   | "startDate"
   | GiftCardKeySpecifier
->;
-export interface GiftCardFieldPolicy {
+)[];
+export type GiftCardFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -2251,101 +2557,134 @@ export interface GiftCardFieldPolicy {
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   endDate?: FieldPolicy<any> | FieldReadFunction<any>;
   startDate?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GiftCardActivateKeySpecifier = Array<
-  "giftCard" | "giftCardErrors" | "errors" | GiftCardActivateKeySpecifier
->;
-export interface GiftCardActivateFieldPolicy {
+};
+export type GiftCardActivateKeySpecifier = (
+  | "giftCard"
+  | "giftCardErrors"
+  | "errors"
+  | GiftCardActivateKeySpecifier
+)[];
+export type GiftCardActivateFieldPolicy = {
   giftCard?: FieldPolicy<any> | FieldReadFunction<any>;
   giftCardErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GiftCardAddNoteKeySpecifier = Array<
-  "giftCard" | "event" | "errors" | GiftCardAddNoteKeySpecifier
->;
-export interface GiftCardAddNoteFieldPolicy {
+};
+export type GiftCardAddNoteKeySpecifier = (
+  | "giftCard"
+  | "event"
+  | "errors"
+  | GiftCardAddNoteKeySpecifier
+)[];
+export type GiftCardAddNoteFieldPolicy = {
   giftCard?: FieldPolicy<any> | FieldReadFunction<any>;
   event?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GiftCardBulkActivateKeySpecifier = Array<
-  "count" | "errors" | GiftCardBulkActivateKeySpecifier
->;
-export interface GiftCardBulkActivateFieldPolicy {
+};
+export type GiftCardBulkActivateKeySpecifier = (
+  | "count"
+  | "errors"
+  | GiftCardBulkActivateKeySpecifier
+)[];
+export type GiftCardBulkActivateFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GiftCardBulkCreateKeySpecifier = Array<
-  "count" | "giftCards" | "errors" | GiftCardBulkCreateKeySpecifier
->;
-export interface GiftCardBulkCreateFieldPolicy {
+};
+export type GiftCardBulkCreateKeySpecifier = (
+  | "count"
+  | "giftCards"
+  | "errors"
+  | GiftCardBulkCreateKeySpecifier
+)[];
+export type GiftCardBulkCreateFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   giftCards?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GiftCardBulkDeactivateKeySpecifier = Array<
-  "count" | "errors" | GiftCardBulkDeactivateKeySpecifier
->;
-export interface GiftCardBulkDeactivateFieldPolicy {
+};
+export type GiftCardBulkDeactivateKeySpecifier = (
+  | "count"
+  | "errors"
+  | GiftCardBulkDeactivateKeySpecifier
+)[];
+export type GiftCardBulkDeactivateFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GiftCardBulkDeleteKeySpecifier = Array<
-  "count" | "errors" | GiftCardBulkDeleteKeySpecifier
->;
-export interface GiftCardBulkDeleteFieldPolicy {
+};
+export type GiftCardBulkDeleteKeySpecifier = (
+  | "count"
+  | "errors"
+  | GiftCardBulkDeleteKeySpecifier
+)[];
+export type GiftCardBulkDeleteFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GiftCardCountableConnectionKeySpecifier = Array<
-  "pageInfo" | "edges" | "totalCount" | GiftCardCountableConnectionKeySpecifier
->;
-export interface GiftCardCountableConnectionFieldPolicy {
+};
+export type GiftCardCountableConnectionKeySpecifier = (
+  | "pageInfo"
+  | "edges"
+  | "totalCount"
+  | GiftCardCountableConnectionKeySpecifier
+)[];
+export type GiftCardCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GiftCardCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | GiftCardCountableEdgeKeySpecifier
->;
-export interface GiftCardCountableEdgeFieldPolicy {
+};
+export type GiftCardCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | GiftCardCountableEdgeKeySpecifier
+)[];
+export type GiftCardCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GiftCardCreateKeySpecifier = Array<
-  "giftCardErrors" | "errors" | "giftCard" | GiftCardCreateKeySpecifier
->;
-export interface GiftCardCreateFieldPolicy {
+};
+export type GiftCardCreateKeySpecifier = (
+  | "giftCardErrors"
+  | "errors"
+  | "giftCard"
+  | GiftCardCreateKeySpecifier
+)[];
+export type GiftCardCreateFieldPolicy = {
   giftCardErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   giftCard?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GiftCardDeactivateKeySpecifier = Array<
-  "giftCard" | "giftCardErrors" | "errors" | GiftCardDeactivateKeySpecifier
->;
-export interface GiftCardDeactivateFieldPolicy {
+};
+export type GiftCardDeactivateKeySpecifier = (
+  | "giftCard"
+  | "giftCardErrors"
+  | "errors"
+  | GiftCardDeactivateKeySpecifier
+)[];
+export type GiftCardDeactivateFieldPolicy = {
   giftCard?: FieldPolicy<any> | FieldReadFunction<any>;
   giftCardErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GiftCardDeleteKeySpecifier = Array<
-  "giftCardErrors" | "errors" | "giftCard" | GiftCardDeleteKeySpecifier
->;
-export interface GiftCardDeleteFieldPolicy {
+};
+export type GiftCardDeleteKeySpecifier = (
+  | "giftCardErrors"
+  | "errors"
+  | "giftCard"
+  | GiftCardDeleteKeySpecifier
+)[];
+export type GiftCardDeleteFieldPolicy = {
   giftCardErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   giftCard?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GiftCardErrorKeySpecifier = Array<
-  "field" | "message" | "code" | "tags" | GiftCardErrorKeySpecifier
->;
-export interface GiftCardErrorFieldPolicy {
+};
+export type GiftCardErrorKeySpecifier = (
+  | "field"
+  | "message"
+  | "code"
+  | "tags"
+  | GiftCardErrorKeySpecifier
+)[];
+export type GiftCardErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
   tags?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GiftCardEventKeySpecifier = Array<
+};
+export type GiftCardEventKeySpecifier = (
   | "id"
   | "date"
   | "type"
@@ -2361,8 +2700,8 @@ export type GiftCardEventKeySpecifier = Array<
   | "expiryDate"
   | "oldExpiryDate"
   | GiftCardEventKeySpecifier
->;
-export interface GiftCardEventFieldPolicy {
+)[];
+export type GiftCardEventFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   date?: FieldPolicy<any> | FieldReadFunction<any>;
   type?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -2377,113 +2716,139 @@ export interface GiftCardEventFieldPolicy {
   balance?: FieldPolicy<any> | FieldReadFunction<any>;
   expiryDate?: FieldPolicy<any> | FieldReadFunction<any>;
   oldExpiryDate?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GiftCardEventBalanceKeySpecifier = Array<
+};
+export type GiftCardEventBalanceKeySpecifier = (
   | "initialBalance"
   | "currentBalance"
   | "oldInitialBalance"
   | "oldCurrentBalance"
   | GiftCardEventBalanceKeySpecifier
->;
-export interface GiftCardEventBalanceFieldPolicy {
+)[];
+export type GiftCardEventBalanceFieldPolicy = {
   initialBalance?: FieldPolicy<any> | FieldReadFunction<any>;
   currentBalance?: FieldPolicy<any> | FieldReadFunction<any>;
   oldInitialBalance?: FieldPolicy<any> | FieldReadFunction<any>;
   oldCurrentBalance?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GiftCardResendKeySpecifier = Array<
-  "giftCard" | "errors" | GiftCardResendKeySpecifier
->;
-export interface GiftCardResendFieldPolicy {
+};
+export type GiftCardResendKeySpecifier = (
+  | "giftCard"
+  | "errors"
+  | GiftCardResendKeySpecifier
+)[];
+export type GiftCardResendFieldPolicy = {
   giftCard?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GiftCardSettingsKeySpecifier = Array<
-  "expiryType" | "expiryPeriod" | GiftCardSettingsKeySpecifier
->;
-export interface GiftCardSettingsFieldPolicy {
+};
+export type GiftCardSettingsKeySpecifier = (
+  | "expiryType"
+  | "expiryPeriod"
+  | GiftCardSettingsKeySpecifier
+)[];
+export type GiftCardSettingsFieldPolicy = {
   expiryType?: FieldPolicy<any> | FieldReadFunction<any>;
   expiryPeriod?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GiftCardSettingsErrorKeySpecifier = Array<
-  "field" | "message" | "code" | GiftCardSettingsErrorKeySpecifier
->;
-export interface GiftCardSettingsErrorFieldPolicy {
+};
+export type GiftCardSettingsErrorKeySpecifier = (
+  | "field"
+  | "message"
+  | "code"
+  | GiftCardSettingsErrorKeySpecifier
+)[];
+export type GiftCardSettingsErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GiftCardSettingsUpdateKeySpecifier = Array<
-  "giftCardSettings" | "errors" | GiftCardSettingsUpdateKeySpecifier
->;
-export interface GiftCardSettingsUpdateFieldPolicy {
+};
+export type GiftCardSettingsUpdateKeySpecifier = (
+  | "giftCardSettings"
+  | "errors"
+  | GiftCardSettingsUpdateKeySpecifier
+)[];
+export type GiftCardSettingsUpdateFieldPolicy = {
   giftCardSettings?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GiftCardTagKeySpecifier = Array<
-  "id" | "name" | GiftCardTagKeySpecifier
->;
-export interface GiftCardTagFieldPolicy {
+};
+export type GiftCardTagKeySpecifier = (
+  | "id"
+  | "name"
+  | GiftCardTagKeySpecifier
+)[];
+export type GiftCardTagFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GiftCardTagCountableConnectionKeySpecifier = Array<
+};
+export type GiftCardTagCountableConnectionKeySpecifier = (
   | "pageInfo"
   | "edges"
   | "totalCount"
   | GiftCardTagCountableConnectionKeySpecifier
->;
-export interface GiftCardTagCountableConnectionFieldPolicy {
+)[];
+export type GiftCardTagCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GiftCardTagCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | GiftCardTagCountableEdgeKeySpecifier
->;
-export interface GiftCardTagCountableEdgeFieldPolicy {
+};
+export type GiftCardTagCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | GiftCardTagCountableEdgeKeySpecifier
+)[];
+export type GiftCardTagCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GiftCardUpdateKeySpecifier = Array<
-  "giftCardErrors" | "errors" | "giftCard" | GiftCardUpdateKeySpecifier
->;
-export interface GiftCardUpdateFieldPolicy {
+};
+export type GiftCardUpdateKeySpecifier = (
+  | "giftCardErrors"
+  | "errors"
+  | "giftCard"
+  | GiftCardUpdateKeySpecifier
+)[];
+export type GiftCardUpdateFieldPolicy = {
   giftCardErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   giftCard?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GroupKeySpecifier = Array<
-  "id" | "name" | "users" | "permissions" | "userCanManage" | GroupKeySpecifier
->;
-export interface GroupFieldPolicy {
+};
+export type GroupKeySpecifier = (
+  | "id"
+  | "name"
+  | "users"
+  | "permissions"
+  | "userCanManage"
+  | GroupKeySpecifier
+)[];
+export type GroupFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   users?: FieldPolicy<any> | FieldReadFunction<any>;
   permissions?: FieldPolicy<any> | FieldReadFunction<any>;
   userCanManage?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GroupCountableConnectionKeySpecifier = Array<
-  "pageInfo" | "edges" | "totalCount" | GroupCountableConnectionKeySpecifier
->;
-export interface GroupCountableConnectionFieldPolicy {
+};
+export type GroupCountableConnectionKeySpecifier = (
+  | "pageInfo"
+  | "edges"
+  | "totalCount"
+  | GroupCountableConnectionKeySpecifier
+)[];
+export type GroupCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type GroupCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | GroupCountableEdgeKeySpecifier
->;
-export interface GroupCountableEdgeFieldPolicy {
+};
+export type GroupCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | GroupCountableEdgeKeySpecifier
+)[];
+export type GroupCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ImageKeySpecifier = Array<"url" | "alt" | ImageKeySpecifier>;
-export interface ImageFieldPolicy {
+};
+export type ImageKeySpecifier = ("url" | "alt" | ImageKeySpecifier)[];
+export type ImageFieldPolicy = {
   url?: FieldPolicy<any> | FieldReadFunction<any>;
   alt?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type InvoiceKeySpecifier = Array<
+};
+export type InvoiceKeySpecifier = (
   | "privateMetadata"
   | "metadata"
   | "status"
@@ -2495,8 +2860,8 @@ export type InvoiceKeySpecifier = Array<
   | "externalUrl"
   | "url"
   | InvoiceKeySpecifier
->;
-export interface InvoiceFieldPolicy {
+)[];
+export type InvoiceFieldPolicy = {
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
   status?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -2507,103 +2872,133 @@ export interface InvoiceFieldPolicy {
   number?: FieldPolicy<any> | FieldReadFunction<any>;
   externalUrl?: FieldPolicy<any> | FieldReadFunction<any>;
   url?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type InvoiceCreateKeySpecifier = Array<
-  "invoiceErrors" | "errors" | "invoice" | InvoiceCreateKeySpecifier
->;
-export interface InvoiceCreateFieldPolicy {
+};
+export type InvoiceCreateKeySpecifier = (
+  | "invoiceErrors"
+  | "errors"
+  | "invoice"
+  | InvoiceCreateKeySpecifier
+)[];
+export type InvoiceCreateFieldPolicy = {
   invoiceErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   invoice?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type InvoiceDeleteKeySpecifier = Array<
-  "invoiceErrors" | "errors" | "invoice" | InvoiceDeleteKeySpecifier
->;
-export interface InvoiceDeleteFieldPolicy {
+};
+export type InvoiceDeleteKeySpecifier = (
+  | "invoiceErrors"
+  | "errors"
+  | "invoice"
+  | InvoiceDeleteKeySpecifier
+)[];
+export type InvoiceDeleteFieldPolicy = {
   invoiceErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   invoice?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type InvoiceErrorKeySpecifier = Array<
-  "field" | "message" | "code" | InvoiceErrorKeySpecifier
->;
-export interface InvoiceErrorFieldPolicy {
+};
+export type InvoiceErrorKeySpecifier = (
+  | "field"
+  | "message"
+  | "code"
+  | InvoiceErrorKeySpecifier
+)[];
+export type InvoiceErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type InvoiceRequestKeySpecifier = Array<
-  "order" | "invoiceErrors" | "errors" | "invoice" | InvoiceRequestKeySpecifier
->;
-export interface InvoiceRequestFieldPolicy {
+};
+export type InvoiceRequestKeySpecifier = (
+  | "order"
+  | "invoiceErrors"
+  | "errors"
+  | "invoice"
+  | InvoiceRequestKeySpecifier
+)[];
+export type InvoiceRequestFieldPolicy = {
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   invoiceErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   invoice?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type InvoiceRequestDeleteKeySpecifier = Array<
-  "invoiceErrors" | "errors" | "invoice" | InvoiceRequestDeleteKeySpecifier
->;
-export interface InvoiceRequestDeleteFieldPolicy {
+};
+export type InvoiceRequestDeleteKeySpecifier = (
+  | "invoiceErrors"
+  | "errors"
+  | "invoice"
+  | InvoiceRequestDeleteKeySpecifier
+)[];
+export type InvoiceRequestDeleteFieldPolicy = {
   invoiceErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   invoice?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type InvoiceSendNotificationKeySpecifier = Array<
-  "invoiceErrors" | "errors" | "invoice" | InvoiceSendNotificationKeySpecifier
->;
-export interface InvoiceSendNotificationFieldPolicy {
+};
+export type InvoiceSendNotificationKeySpecifier = (
+  | "invoiceErrors"
+  | "errors"
+  | "invoice"
+  | InvoiceSendNotificationKeySpecifier
+)[];
+export type InvoiceSendNotificationFieldPolicy = {
   invoiceErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   invoice?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type InvoiceUpdateKeySpecifier = Array<
-  "invoiceErrors" | "errors" | "invoice" | InvoiceUpdateKeySpecifier
->;
-export interface InvoiceUpdateFieldPolicy {
+};
+export type InvoiceUpdateKeySpecifier = (
+  | "invoiceErrors"
+  | "errors"
+  | "invoice"
+  | InvoiceUpdateKeySpecifier
+)[];
+export type InvoiceUpdateFieldPolicy = {
   invoiceErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   invoice?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type JobKeySpecifier = Array<
-  "status" | "createdAt" | "updatedAt" | "message" | JobKeySpecifier
->;
-export interface JobFieldPolicy {
+};
+export type JobKeySpecifier = (
+  | "status"
+  | "createdAt"
+  | "updatedAt"
+  | "message"
+  | JobKeySpecifier
+)[];
+export type JobFieldPolicy = {
   status?: FieldPolicy<any> | FieldReadFunction<any>;
   createdAt?: FieldPolicy<any> | FieldReadFunction<any>;
   updatedAt?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type LanguageDisplayKeySpecifier = Array<
-  "code" | "language" | LanguageDisplayKeySpecifier
->;
-export interface LanguageDisplayFieldPolicy {
+};
+export type LanguageDisplayKeySpecifier = (
+  | "code"
+  | "language"
+  | LanguageDisplayKeySpecifier
+)[];
+export type LanguageDisplayFieldPolicy = {
   code?: FieldPolicy<any> | FieldReadFunction<any>;
   language?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type LimitInfoKeySpecifier = Array<
-  "currentUsage" | "allowedUsage" | LimitInfoKeySpecifier
->;
-export interface LimitInfoFieldPolicy {
+};
+export type LimitInfoKeySpecifier = (
+  | "currentUsage"
+  | "allowedUsage"
+  | LimitInfoKeySpecifier
+)[];
+export type LimitInfoFieldPolicy = {
   currentUsage?: FieldPolicy<any> | FieldReadFunction<any>;
   allowedUsage?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type LimitsKeySpecifier = Array<
+};
+export type LimitsKeySpecifier = (
   | "channels"
   | "orders"
   | "productVariants"
   | "staffUsers"
   | "warehouses"
   | LimitsKeySpecifier
->;
-export interface LimitsFieldPolicy {
+)[];
+export type LimitsFieldPolicy = {
   channels?: FieldPolicy<any> | FieldReadFunction<any>;
   orders?: FieldPolicy<any> | FieldReadFunction<any>;
   productVariants?: FieldPolicy<any> | FieldReadFunction<any>;
   staffUsers?: FieldPolicy<any> | FieldReadFunction<any>;
   warehouses?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ManifestKeySpecifier = Array<
+};
+export type ManifestKeySpecifier = (
   | "identifier"
   | "version"
   | "name"
@@ -2618,8 +3013,8 @@ export type ManifestKeySpecifier = Array<
   | "supportUrl"
   | "extensions"
   | ManifestKeySpecifier
->;
-export interface ManifestFieldPolicy {
+)[];
+export type ManifestFieldPolicy = {
   identifier?: FieldPolicy<any> | FieldReadFunction<any>;
   version?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -2633,13 +3028,13 @@ export interface ManifestFieldPolicy {
   homepageUrl?: FieldPolicy<any> | FieldReadFunction<any>;
   supportUrl?: FieldPolicy<any> | FieldReadFunction<any>;
   extensions?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type MarginKeySpecifier = Array<"start" | "stop" | MarginKeySpecifier>;
-export interface MarginFieldPolicy {
+};
+export type MarginKeySpecifier = ("start" | "stop" | MarginKeySpecifier)[];
+export type MarginFieldPolicy = {
   start?: FieldPolicy<any> | FieldReadFunction<any>;
   stop?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type MenuKeySpecifier = Array<
+};
+export type MenuKeySpecifier = (
   | "id"
   | "privateMetadata"
   | "metadata"
@@ -2647,63 +3042,80 @@ export type MenuKeySpecifier = Array<
   | "slug"
   | "items"
   | MenuKeySpecifier
->;
-export interface MenuFieldPolicy {
+)[];
+export type MenuFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   slug?: FieldPolicy<any> | FieldReadFunction<any>;
   items?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type MenuBulkDeleteKeySpecifier = Array<
-  "count" | "menuErrors" | "errors" | MenuBulkDeleteKeySpecifier
->;
-export interface MenuBulkDeleteFieldPolicy {
+};
+export type MenuBulkDeleteKeySpecifier = (
+  | "count"
+  | "menuErrors"
+  | "errors"
+  | MenuBulkDeleteKeySpecifier
+)[];
+export type MenuBulkDeleteFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   menuErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type MenuCountableConnectionKeySpecifier = Array<
-  "pageInfo" | "edges" | "totalCount" | MenuCountableConnectionKeySpecifier
->;
-export interface MenuCountableConnectionFieldPolicy {
+};
+export type MenuCountableConnectionKeySpecifier = (
+  | "pageInfo"
+  | "edges"
+  | "totalCount"
+  | MenuCountableConnectionKeySpecifier
+)[];
+export type MenuCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type MenuCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | MenuCountableEdgeKeySpecifier
->;
-export interface MenuCountableEdgeFieldPolicy {
+};
+export type MenuCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | MenuCountableEdgeKeySpecifier
+)[];
+export type MenuCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type MenuCreateKeySpecifier = Array<
-  "menuErrors" | "errors" | "menu" | MenuCreateKeySpecifier
->;
-export interface MenuCreateFieldPolicy {
+};
+export type MenuCreateKeySpecifier = (
+  | "menuErrors"
+  | "errors"
+  | "menu"
+  | MenuCreateKeySpecifier
+)[];
+export type MenuCreateFieldPolicy = {
   menuErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   menu?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type MenuDeleteKeySpecifier = Array<
-  "menuErrors" | "errors" | "menu" | MenuDeleteKeySpecifier
->;
-export interface MenuDeleteFieldPolicy {
+};
+export type MenuDeleteKeySpecifier = (
+  | "menuErrors"
+  | "errors"
+  | "menu"
+  | MenuDeleteKeySpecifier
+)[];
+export type MenuDeleteFieldPolicy = {
   menuErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   menu?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type MenuErrorKeySpecifier = Array<
-  "field" | "message" | "code" | MenuErrorKeySpecifier
->;
-export interface MenuErrorFieldPolicy {
+};
+export type MenuErrorKeySpecifier = (
+  | "field"
+  | "message"
+  | "code"
+  | MenuErrorKeySpecifier
+)[];
+export type MenuErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type MenuItemKeySpecifier = Array<
+};
+export type MenuItemKeySpecifier = (
   | "id"
   | "privateMetadata"
   | "metadata"
@@ -2718,8 +3130,8 @@ export type MenuItemKeySpecifier = Array<
   | "url"
   | "translation"
   | MenuItemKeySpecifier
->;
-export interface MenuItemFieldPolicy {
+)[];
+export type MenuItemFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -2733,129 +3145,163 @@ export interface MenuItemFieldPolicy {
   children?: FieldPolicy<any> | FieldReadFunction<any>;
   url?: FieldPolicy<any> | FieldReadFunction<any>;
   translation?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type MenuItemBulkDeleteKeySpecifier = Array<
-  "count" | "menuErrors" | "errors" | MenuItemBulkDeleteKeySpecifier
->;
-export interface MenuItemBulkDeleteFieldPolicy {
+};
+export type MenuItemBulkDeleteKeySpecifier = (
+  | "count"
+  | "menuErrors"
+  | "errors"
+  | MenuItemBulkDeleteKeySpecifier
+)[];
+export type MenuItemBulkDeleteFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   menuErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type MenuItemCountableConnectionKeySpecifier = Array<
-  "pageInfo" | "edges" | "totalCount" | MenuItemCountableConnectionKeySpecifier
->;
-export interface MenuItemCountableConnectionFieldPolicy {
+};
+export type MenuItemCountableConnectionKeySpecifier = (
+  | "pageInfo"
+  | "edges"
+  | "totalCount"
+  | MenuItemCountableConnectionKeySpecifier
+)[];
+export type MenuItemCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type MenuItemCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | MenuItemCountableEdgeKeySpecifier
->;
-export interface MenuItemCountableEdgeFieldPolicy {
+};
+export type MenuItemCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | MenuItemCountableEdgeKeySpecifier
+)[];
+export type MenuItemCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type MenuItemCreateKeySpecifier = Array<
-  "menuErrors" | "errors" | "menuItem" | MenuItemCreateKeySpecifier
->;
-export interface MenuItemCreateFieldPolicy {
+};
+export type MenuItemCreateKeySpecifier = (
+  | "menuErrors"
+  | "errors"
+  | "menuItem"
+  | MenuItemCreateKeySpecifier
+)[];
+export type MenuItemCreateFieldPolicy = {
   menuErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   menuItem?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type MenuItemDeleteKeySpecifier = Array<
-  "menuErrors" | "errors" | "menuItem" | MenuItemDeleteKeySpecifier
->;
-export interface MenuItemDeleteFieldPolicy {
+};
+export type MenuItemDeleteKeySpecifier = (
+  | "menuErrors"
+  | "errors"
+  | "menuItem"
+  | MenuItemDeleteKeySpecifier
+)[];
+export type MenuItemDeleteFieldPolicy = {
   menuErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   menuItem?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type MenuItemMoveKeySpecifier = Array<
-  "menu" | "menuErrors" | "errors" | MenuItemMoveKeySpecifier
->;
-export interface MenuItemMoveFieldPolicy {
+};
+export type MenuItemMoveKeySpecifier = (
+  | "menu"
+  | "menuErrors"
+  | "errors"
+  | MenuItemMoveKeySpecifier
+)[];
+export type MenuItemMoveFieldPolicy = {
   menu?: FieldPolicy<any> | FieldReadFunction<any>;
   menuErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type MenuItemTranslatableContentKeySpecifier = Array<
+};
+export type MenuItemTranslatableContentKeySpecifier = (
   | "id"
   | "name"
   | "translation"
   | "menuItem"
   | MenuItemTranslatableContentKeySpecifier
->;
-export interface MenuItemTranslatableContentFieldPolicy {
+)[];
+export type MenuItemTranslatableContentFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   translation?: FieldPolicy<any> | FieldReadFunction<any>;
   menuItem?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type MenuItemTranslateKeySpecifier = Array<
-  "translationErrors" | "errors" | "menuItem" | MenuItemTranslateKeySpecifier
->;
-export interface MenuItemTranslateFieldPolicy {
+};
+export type MenuItemTranslateKeySpecifier = (
+  | "translationErrors"
+  | "errors"
+  | "menuItem"
+  | MenuItemTranslateKeySpecifier
+)[];
+export type MenuItemTranslateFieldPolicy = {
   translationErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   menuItem?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type MenuItemTranslationKeySpecifier = Array<
-  "id" | "language" | "name" | MenuItemTranslationKeySpecifier
->;
-export interface MenuItemTranslationFieldPolicy {
+};
+export type MenuItemTranslationKeySpecifier = (
+  | "id"
+  | "language"
+  | "name"
+  | MenuItemTranslationKeySpecifier
+)[];
+export type MenuItemTranslationFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   language?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type MenuItemUpdateKeySpecifier = Array<
-  "menuErrors" | "errors" | "menuItem" | MenuItemUpdateKeySpecifier
->;
-export interface MenuItemUpdateFieldPolicy {
+};
+export type MenuItemUpdateKeySpecifier = (
+  | "menuErrors"
+  | "errors"
+  | "menuItem"
+  | MenuItemUpdateKeySpecifier
+)[];
+export type MenuItemUpdateFieldPolicy = {
   menuErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   menuItem?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type MenuUpdateKeySpecifier = Array<
-  "menuErrors" | "errors" | "menu" | MenuUpdateKeySpecifier
->;
-export interface MenuUpdateFieldPolicy {
+};
+export type MenuUpdateKeySpecifier = (
+  | "menuErrors"
+  | "errors"
+  | "menu"
+  | MenuUpdateKeySpecifier
+)[];
+export type MenuUpdateFieldPolicy = {
   menuErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   menu?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type MetadataErrorKeySpecifier = Array<
-  "field" | "message" | "code" | MetadataErrorKeySpecifier
->;
-export interface MetadataErrorFieldPolicy {
+};
+export type MetadataErrorKeySpecifier = (
+  | "field"
+  | "message"
+  | "code"
+  | MetadataErrorKeySpecifier
+)[];
+export type MetadataErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type MetadataItemKeySpecifier = Array<
-  "key" | "value" | MetadataItemKeySpecifier
->;
-export interface MetadataItemFieldPolicy {
+};
+export type MetadataItemKeySpecifier = (
+  | "key"
+  | "value"
+  | MetadataItemKeySpecifier
+)[];
+export type MetadataItemFieldPolicy = {
   key?: FieldPolicy<any> | FieldReadFunction<any>;
   value?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type MoneyKeySpecifier = Array<
-  "currency" | "amount" | MoneyKeySpecifier
->;
-export interface MoneyFieldPolicy {
+};
+export type MoneyKeySpecifier = ("currency" | "amount" | MoneyKeySpecifier)[];
+export type MoneyFieldPolicy = {
   currency?: FieldPolicy<any> | FieldReadFunction<any>;
   amount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type MoneyRangeKeySpecifier = Array<
-  "start" | "stop" | MoneyRangeKeySpecifier
->;
-export interface MoneyRangeFieldPolicy {
+};
+export type MoneyRangeKeySpecifier = (
+  | "start"
+  | "stop"
+  | MoneyRangeKeySpecifier
+)[];
+export type MoneyRangeFieldPolicy = {
   start?: FieldPolicy<any> | FieldReadFunction<any>;
   stop?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type MutationKeySpecifier = Array<
+};
+export type MutationKeySpecifier = (
   | "webhookCreate"
   | "webhookDelete"
   | "webhookUpdate"
@@ -3130,8 +3576,8 @@ export type MutationKeySpecifier = Array<
   | "permissionGroupUpdate"
   | "permissionGroupDelete"
   | MutationKeySpecifier
->;
-export interface MutationFieldPolicy {
+)[];
+export type MutationFieldPolicy = {
   webhookCreate?: FieldPolicy<any> | FieldReadFunction<any>;
   webhookDelete?: FieldPolicy<any> | FieldReadFunction<any>;
   webhookUpdate?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -3413,19 +3859,21 @@ export interface MutationFieldPolicy {
   permissionGroupCreate?: FieldPolicy<any> | FieldReadFunction<any>;
   permissionGroupUpdate?: FieldPolicy<any> | FieldReadFunction<any>;
   permissionGroupDelete?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type NodeKeySpecifier = Array<"id" | NodeKeySpecifier>;
-export interface NodeFieldPolicy {
+};
+export type NodeKeySpecifier = ("id" | NodeKeySpecifier)[];
+export type NodeFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ObjectWithMetadataKeySpecifier = Array<
-  "privateMetadata" | "metadata" | ObjectWithMetadataKeySpecifier
->;
-export interface ObjectWithMetadataFieldPolicy {
+};
+export type ObjectWithMetadataKeySpecifier = (
+  | "privateMetadata"
+  | "metadata"
+  | ObjectWithMetadataKeySpecifier
+)[];
+export type ObjectWithMetadataFieldPolicy = {
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderKeySpecifier = Array<
+};
+export type OrderKeySpecifier = (
   | "id"
   | "privateMetadata"
   | "metadata"
@@ -3482,8 +3930,8 @@ export type OrderKeySpecifier = Array<
   | "discounts"
   | "errors"
   | OrderKeySpecifier
->;
-export interface OrderFieldPolicy {
+)[];
+export type OrderFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -3539,64 +3987,85 @@ export interface OrderFieldPolicy {
   translatedDiscountName?: FieldPolicy<any> | FieldReadFunction<any>;
   discounts?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderAddNoteKeySpecifier = Array<
-  "order" | "event" | "orderErrors" | "errors" | OrderAddNoteKeySpecifier
->;
-export interface OrderAddNoteFieldPolicy {
+};
+export type OrderAddNoteKeySpecifier = (
+  | "order"
+  | "event"
+  | "orderErrors"
+  | "errors"
+  | OrderAddNoteKeySpecifier
+)[];
+export type OrderAddNoteFieldPolicy = {
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   event?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderBulkCancelKeySpecifier = Array<
-  "count" | "orderErrors" | "errors" | OrderBulkCancelKeySpecifier
->;
-export interface OrderBulkCancelFieldPolicy {
+};
+export type OrderBulkCancelKeySpecifier = (
+  | "count"
+  | "orderErrors"
+  | "errors"
+  | OrderBulkCancelKeySpecifier
+)[];
+export type OrderBulkCancelFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderCancelKeySpecifier = Array<
-  "order" | "orderErrors" | "errors" | OrderCancelKeySpecifier
->;
-export interface OrderCancelFieldPolicy {
+};
+export type OrderCancelKeySpecifier = (
+  | "order"
+  | "orderErrors"
+  | "errors"
+  | OrderCancelKeySpecifier
+)[];
+export type OrderCancelFieldPolicy = {
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderCaptureKeySpecifier = Array<
-  "order" | "orderErrors" | "errors" | OrderCaptureKeySpecifier
->;
-export interface OrderCaptureFieldPolicy {
+};
+export type OrderCaptureKeySpecifier = (
+  | "order"
+  | "orderErrors"
+  | "errors"
+  | OrderCaptureKeySpecifier
+)[];
+export type OrderCaptureFieldPolicy = {
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderConfirmKeySpecifier = Array<
-  "order" | "orderErrors" | "errors" | OrderConfirmKeySpecifier
->;
-export interface OrderConfirmFieldPolicy {
+};
+export type OrderConfirmKeySpecifier = (
+  | "order"
+  | "orderErrors"
+  | "errors"
+  | OrderConfirmKeySpecifier
+)[];
+export type OrderConfirmFieldPolicy = {
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderCountableConnectionKeySpecifier = Array<
-  "pageInfo" | "edges" | "totalCount" | OrderCountableConnectionKeySpecifier
->;
-export interface OrderCountableConnectionFieldPolicy {
+};
+export type OrderCountableConnectionKeySpecifier = (
+  | "pageInfo"
+  | "edges"
+  | "totalCount"
+  | OrderCountableConnectionKeySpecifier
+)[];
+export type OrderCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | OrderCountableEdgeKeySpecifier
->;
-export interface OrderCountableEdgeFieldPolicy {
+};
+export type OrderCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | OrderCountableEdgeKeySpecifier
+)[];
+export type OrderCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderDiscountKeySpecifier = Array<
+};
+export type OrderDiscountKeySpecifier = (
   | "id"
   | "type"
   | "name"
@@ -3606,8 +4075,8 @@ export type OrderDiscountKeySpecifier = Array<
   | "reason"
   | "amount"
   | OrderDiscountKeySpecifier
->;
-export interface OrderDiscountFieldPolicy {
+)[];
+export type OrderDiscountFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   type?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -3616,32 +4085,41 @@ export interface OrderDiscountFieldPolicy {
   value?: FieldPolicy<any> | FieldReadFunction<any>;
   reason?: FieldPolicy<any> | FieldReadFunction<any>;
   amount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderDiscountAddKeySpecifier = Array<
-  "order" | "orderErrors" | "errors" | OrderDiscountAddKeySpecifier
->;
-export interface OrderDiscountAddFieldPolicy {
+};
+export type OrderDiscountAddKeySpecifier = (
+  | "order"
+  | "orderErrors"
+  | "errors"
+  | OrderDiscountAddKeySpecifier
+)[];
+export type OrderDiscountAddFieldPolicy = {
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderDiscountDeleteKeySpecifier = Array<
-  "order" | "orderErrors" | "errors" | OrderDiscountDeleteKeySpecifier
->;
-export interface OrderDiscountDeleteFieldPolicy {
+};
+export type OrderDiscountDeleteKeySpecifier = (
+  | "order"
+  | "orderErrors"
+  | "errors"
+  | OrderDiscountDeleteKeySpecifier
+)[];
+export type OrderDiscountDeleteFieldPolicy = {
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderDiscountUpdateKeySpecifier = Array<
-  "order" | "orderErrors" | "errors" | OrderDiscountUpdateKeySpecifier
->;
-export interface OrderDiscountUpdateFieldPolicy {
+};
+export type OrderDiscountUpdateKeySpecifier = (
+  | "order"
+  | "orderErrors"
+  | "errors"
+  | OrderDiscountUpdateKeySpecifier
+)[];
+export type OrderDiscountUpdateFieldPolicy = {
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderErrorKeySpecifier = Array<
+};
+export type OrderErrorKeySpecifier = (
   | "field"
   | "message"
   | "code"
@@ -3650,8 +4128,8 @@ export type OrderErrorKeySpecifier = Array<
   | "variants"
   | "addressType"
   | OrderErrorKeySpecifier
->;
-export interface OrderErrorFieldPolicy {
+)[];
+export type OrderErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -3659,8 +4137,8 @@ export interface OrderErrorFieldPolicy {
   orderLines?: FieldPolicy<any> | FieldReadFunction<any>;
   variants?: FieldPolicy<any> | FieldReadFunction<any>;
   addressType?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderEventKeySpecifier = Array<
+};
+export type OrderEventKeySpecifier = (
   | "id"
   | "date"
   | "type"
@@ -3685,8 +4163,8 @@ export type OrderEventKeySpecifier = Array<
   | "relatedOrder"
   | "discount"
   | OrderEventKeySpecifier
->;
-export interface OrderEventFieldPolicy {
+)[];
+export type OrderEventFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   date?: FieldPolicy<any> | FieldReadFunction<any>;
   type?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -3710,26 +4188,28 @@ export interface OrderEventFieldPolicy {
   shippingCostsIncluded?: FieldPolicy<any> | FieldReadFunction<any>;
   relatedOrder?: FieldPolicy<any> | FieldReadFunction<any>;
   discount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderEventCountableConnectionKeySpecifier = Array<
+};
+export type OrderEventCountableConnectionKeySpecifier = (
   | "pageInfo"
   | "edges"
   | "totalCount"
   | OrderEventCountableConnectionKeySpecifier
->;
-export interface OrderEventCountableConnectionFieldPolicy {
+)[];
+export type OrderEventCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderEventCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | OrderEventCountableEdgeKeySpecifier
->;
-export interface OrderEventCountableEdgeFieldPolicy {
+};
+export type OrderEventCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | OrderEventCountableEdgeKeySpecifier
+)[];
+export type OrderEventCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderEventDiscountObjectKeySpecifier = Array<
+};
+export type OrderEventDiscountObjectKeySpecifier = (
   | "valueType"
   | "value"
   | "reason"
@@ -3738,8 +4218,8 @@ export type OrderEventDiscountObjectKeySpecifier = Array<
   | "oldValue"
   | "oldAmount"
   | OrderEventDiscountObjectKeySpecifier
->;
-export interface OrderEventDiscountObjectFieldPolicy {
+)[];
+export type OrderEventDiscountObjectFieldPolicy = {
   valueType?: FieldPolicy<any> | FieldReadFunction<any>;
   value?: FieldPolicy<any> | FieldReadFunction<any>;
   reason?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -3747,30 +4227,34 @@ export interface OrderEventDiscountObjectFieldPolicy {
   oldValueType?: FieldPolicy<any> | FieldReadFunction<any>;
   oldValue?: FieldPolicy<any> | FieldReadFunction<any>;
   oldAmount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderEventOrderLineObjectKeySpecifier = Array<
+};
+export type OrderEventOrderLineObjectKeySpecifier = (
   | "quantity"
   | "orderLine"
   | "itemName"
   | "discount"
   | OrderEventOrderLineObjectKeySpecifier
->;
-export interface OrderEventOrderLineObjectFieldPolicy {
+)[];
+export type OrderEventOrderLineObjectFieldPolicy = {
   quantity?: FieldPolicy<any> | FieldReadFunction<any>;
   orderLine?: FieldPolicy<any> | FieldReadFunction<any>;
   itemName?: FieldPolicy<any> | FieldReadFunction<any>;
   discount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderFulfillKeySpecifier = Array<
-  "fulfillments" | "order" | "orderErrors" | "errors" | OrderFulfillKeySpecifier
->;
-export interface OrderFulfillFieldPolicy {
+};
+export type OrderFulfillKeySpecifier = (
+  | "fulfillments"
+  | "order"
+  | "orderErrors"
+  | "errors"
+  | OrderFulfillKeySpecifier
+)[];
+export type OrderFulfillFieldPolicy = {
   fulfillments?: FieldPolicy<any> | FieldReadFunction<any>;
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderLineKeySpecifier = Array<
+};
+export type OrderLineKeySpecifier = (
   | "id"
   | "productName"
   | "variantName"
@@ -3795,8 +4279,8 @@ export type OrderLineKeySpecifier = Array<
   | "quantityToFulfill"
   | "unitDiscountType"
   | OrderLineKeySpecifier
->;
-export interface OrderLineFieldPolicy {
+)[];
+export type OrderLineFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   productName?: FieldPolicy<any> | FieldReadFunction<any>;
   variantName?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -3820,135 +4304,161 @@ export interface OrderLineFieldPolicy {
   allocations?: FieldPolicy<any> | FieldReadFunction<any>;
   quantityToFulfill?: FieldPolicy<any> | FieldReadFunction<any>;
   unitDiscountType?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderLineDeleteKeySpecifier = Array<
-  "order" | "orderLine" | "orderErrors" | "errors" | OrderLineDeleteKeySpecifier
->;
-export interface OrderLineDeleteFieldPolicy {
+};
+export type OrderLineDeleteKeySpecifier = (
+  | "order"
+  | "orderLine"
+  | "orderErrors"
+  | "errors"
+  | OrderLineDeleteKeySpecifier
+)[];
+export type OrderLineDeleteFieldPolicy = {
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   orderLine?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderLineDiscountRemoveKeySpecifier = Array<
+};
+export type OrderLineDiscountRemoveKeySpecifier = (
   | "orderLine"
   | "order"
   | "orderErrors"
   | "errors"
   | OrderLineDiscountRemoveKeySpecifier
->;
-export interface OrderLineDiscountRemoveFieldPolicy {
+)[];
+export type OrderLineDiscountRemoveFieldPolicy = {
   orderLine?: FieldPolicy<any> | FieldReadFunction<any>;
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderLineDiscountUpdateKeySpecifier = Array<
+};
+export type OrderLineDiscountUpdateKeySpecifier = (
   | "orderLine"
   | "order"
   | "orderErrors"
   | "errors"
   | OrderLineDiscountUpdateKeySpecifier
->;
-export interface OrderLineDiscountUpdateFieldPolicy {
+)[];
+export type OrderLineDiscountUpdateFieldPolicy = {
   orderLine?: FieldPolicy<any> | FieldReadFunction<any>;
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderLineUpdateKeySpecifier = Array<
-  "order" | "orderErrors" | "errors" | "orderLine" | OrderLineUpdateKeySpecifier
->;
-export interface OrderLineUpdateFieldPolicy {
+};
+export type OrderLineUpdateKeySpecifier = (
+  | "order"
+  | "orderErrors"
+  | "errors"
+  | "orderLine"
+  | OrderLineUpdateKeySpecifier
+)[];
+export type OrderLineUpdateFieldPolicy = {
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   orderLine?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderLinesCreateKeySpecifier = Array<
+};
+export type OrderLinesCreateKeySpecifier = (
   | "order"
   | "orderLines"
   | "orderErrors"
   | "errors"
   | OrderLinesCreateKeySpecifier
->;
-export interface OrderLinesCreateFieldPolicy {
+)[];
+export type OrderLinesCreateFieldPolicy = {
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   orderLines?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderMarkAsPaidKeySpecifier = Array<
-  "order" | "orderErrors" | "errors" | OrderMarkAsPaidKeySpecifier
->;
-export interface OrderMarkAsPaidFieldPolicy {
+};
+export type OrderMarkAsPaidKeySpecifier = (
+  | "order"
+  | "orderErrors"
+  | "errors"
+  | OrderMarkAsPaidKeySpecifier
+)[];
+export type OrderMarkAsPaidFieldPolicy = {
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderRefundKeySpecifier = Array<
-  "order" | "orderErrors" | "errors" | OrderRefundKeySpecifier
->;
-export interface OrderRefundFieldPolicy {
+};
+export type OrderRefundKeySpecifier = (
+  | "order"
+  | "orderErrors"
+  | "errors"
+  | OrderRefundKeySpecifier
+)[];
+export type OrderRefundFieldPolicy = {
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderSettingsKeySpecifier = Array<
+};
+export type OrderSettingsKeySpecifier = (
   | "automaticallyConfirmAllNewOrders"
   | "automaticallyFulfillNonShippableGiftCard"
   | OrderSettingsKeySpecifier
->;
-export interface OrderSettingsFieldPolicy {
+)[];
+export type OrderSettingsFieldPolicy = {
   automaticallyConfirmAllNewOrders?: FieldPolicy<any> | FieldReadFunction<any>;
   automaticallyFulfillNonShippableGiftCard?:
     | FieldPolicy<any>
     | FieldReadFunction<any>;
-}
-export type OrderSettingsErrorKeySpecifier = Array<
-  "field" | "message" | "code" | OrderSettingsErrorKeySpecifier
->;
-export interface OrderSettingsErrorFieldPolicy {
+};
+export type OrderSettingsErrorKeySpecifier = (
+  | "field"
+  | "message"
+  | "code"
+  | OrderSettingsErrorKeySpecifier
+)[];
+export type OrderSettingsErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderSettingsUpdateKeySpecifier = Array<
+};
+export type OrderSettingsUpdateKeySpecifier = (
   | "orderSettings"
   | "orderSettingsErrors"
   | "errors"
   | OrderSettingsUpdateKeySpecifier
->;
-export interface OrderSettingsUpdateFieldPolicy {
+)[];
+export type OrderSettingsUpdateFieldPolicy = {
   orderSettings?: FieldPolicy<any> | FieldReadFunction<any>;
   orderSettingsErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderUpdateKeySpecifier = Array<
-  "orderErrors" | "errors" | "order" | OrderUpdateKeySpecifier
->;
-export interface OrderUpdateFieldPolicy {
+};
+export type OrderUpdateKeySpecifier = (
+  | "orderErrors"
+  | "errors"
+  | "order"
+  | OrderUpdateKeySpecifier
+)[];
+export type OrderUpdateFieldPolicy = {
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   order?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderUpdateShippingKeySpecifier = Array<
-  "order" | "orderErrors" | "errors" | OrderUpdateShippingKeySpecifier
->;
-export interface OrderUpdateShippingFieldPolicy {
+};
+export type OrderUpdateShippingKeySpecifier = (
+  | "order"
+  | "orderErrors"
+  | "errors"
+  | OrderUpdateShippingKeySpecifier
+)[];
+export type OrderUpdateShippingFieldPolicy = {
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type OrderVoidKeySpecifier = Array<
-  "order" | "orderErrors" | "errors" | OrderVoidKeySpecifier
->;
-export interface OrderVoidFieldPolicy {
+};
+export type OrderVoidKeySpecifier = (
+  | "order"
+  | "orderErrors"
+  | "errors"
+  | OrderVoidKeySpecifier
+)[];
+export type OrderVoidFieldPolicy = {
   order?: FieldPolicy<any> | FieldReadFunction<any>;
   orderErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PageKeySpecifier = Array<
+};
+export type PageKeySpecifier = (
   | "id"
   | "privateMetadata"
   | "metadata"
@@ -3965,8 +4475,8 @@ export type PageKeySpecifier = Array<
   | "translation"
   | "attributes"
   | PageKeySpecifier
->;
-export interface PageFieldPolicy {
+)[];
+export type PageFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -3982,102 +4492,133 @@ export interface PageFieldPolicy {
   contentJson?: FieldPolicy<any> | FieldReadFunction<any>;
   translation?: FieldPolicy<any> | FieldReadFunction<any>;
   attributes?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PageAttributeAssignKeySpecifier = Array<
-  "pageType" | "pageErrors" | "errors" | PageAttributeAssignKeySpecifier
->;
-export interface PageAttributeAssignFieldPolicy {
+};
+export type PageAttributeAssignKeySpecifier = (
+  | "pageType"
+  | "pageErrors"
+  | "errors"
+  | PageAttributeAssignKeySpecifier
+)[];
+export type PageAttributeAssignFieldPolicy = {
   pageType?: FieldPolicy<any> | FieldReadFunction<any>;
   pageErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PageAttributeUnassignKeySpecifier = Array<
-  "pageType" | "pageErrors" | "errors" | PageAttributeUnassignKeySpecifier
->;
-export interface PageAttributeUnassignFieldPolicy {
+};
+export type PageAttributeUnassignKeySpecifier = (
+  | "pageType"
+  | "pageErrors"
+  | "errors"
+  | PageAttributeUnassignKeySpecifier
+)[];
+export type PageAttributeUnassignFieldPolicy = {
   pageType?: FieldPolicy<any> | FieldReadFunction<any>;
   pageErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PageBulkDeleteKeySpecifier = Array<
-  "count" | "pageErrors" | "errors" | PageBulkDeleteKeySpecifier
->;
-export interface PageBulkDeleteFieldPolicy {
+};
+export type PageBulkDeleteKeySpecifier = (
+  | "count"
+  | "pageErrors"
+  | "errors"
+  | PageBulkDeleteKeySpecifier
+)[];
+export type PageBulkDeleteFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   pageErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PageBulkPublishKeySpecifier = Array<
-  "count" | "pageErrors" | "errors" | PageBulkPublishKeySpecifier
->;
-export interface PageBulkPublishFieldPolicy {
+};
+export type PageBulkPublishKeySpecifier = (
+  | "count"
+  | "pageErrors"
+  | "errors"
+  | PageBulkPublishKeySpecifier
+)[];
+export type PageBulkPublishFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   pageErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PageCountableConnectionKeySpecifier = Array<
-  "pageInfo" | "edges" | "totalCount" | PageCountableConnectionKeySpecifier
->;
-export interface PageCountableConnectionFieldPolicy {
+};
+export type PageCountableConnectionKeySpecifier = (
+  | "pageInfo"
+  | "edges"
+  | "totalCount"
+  | PageCountableConnectionKeySpecifier
+)[];
+export type PageCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PageCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | PageCountableEdgeKeySpecifier
->;
-export interface PageCountableEdgeFieldPolicy {
+};
+export type PageCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | PageCountableEdgeKeySpecifier
+)[];
+export type PageCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PageCreateKeySpecifier = Array<
-  "pageErrors" | "errors" | "page" | PageCreateKeySpecifier
->;
-export interface PageCreateFieldPolicy {
+};
+export type PageCreateKeySpecifier = (
+  | "pageErrors"
+  | "errors"
+  | "page"
+  | PageCreateKeySpecifier
+)[];
+export type PageCreateFieldPolicy = {
   pageErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   page?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PageDeleteKeySpecifier = Array<
-  "pageErrors" | "errors" | "page" | PageDeleteKeySpecifier
->;
-export interface PageDeleteFieldPolicy {
+};
+export type PageDeleteKeySpecifier = (
+  | "pageErrors"
+  | "errors"
+  | "page"
+  | PageDeleteKeySpecifier
+)[];
+export type PageDeleteFieldPolicy = {
   pageErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   page?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PageErrorKeySpecifier = Array<
-  "field" | "message" | "code" | "attributes" | "values" | PageErrorKeySpecifier
->;
-export interface PageErrorFieldPolicy {
+};
+export type PageErrorKeySpecifier = (
+  | "field"
+  | "message"
+  | "code"
+  | "attributes"
+  | "values"
+  | PageErrorKeySpecifier
+)[];
+export type PageErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
   attributes?: FieldPolicy<any> | FieldReadFunction<any>;
   values?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PageInfoKeySpecifier = Array<
+};
+export type PageInfoKeySpecifier = (
   | "hasNextPage"
   | "hasPreviousPage"
   | "startCursor"
   | "endCursor"
   | PageInfoKeySpecifier
->;
-export interface PageInfoFieldPolicy {
+)[];
+export type PageInfoFieldPolicy = {
   hasNextPage?: FieldPolicy<any> | FieldReadFunction<any>;
   hasPreviousPage?: FieldPolicy<any> | FieldReadFunction<any>;
   startCursor?: FieldPolicy<any> | FieldReadFunction<any>;
   endCursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PageReorderAttributeValuesKeySpecifier = Array<
-  "page" | "pageErrors" | "errors" | PageReorderAttributeValuesKeySpecifier
->;
-export interface PageReorderAttributeValuesFieldPolicy {
+};
+export type PageReorderAttributeValuesKeySpecifier = (
+  | "page"
+  | "pageErrors"
+  | "errors"
+  | PageReorderAttributeValuesKeySpecifier
+)[];
+export type PageReorderAttributeValuesFieldPolicy = {
   page?: FieldPolicy<any> | FieldReadFunction<any>;
   pageErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PageTranslatableContentKeySpecifier = Array<
+};
+export type PageTranslatableContentKeySpecifier = (
   | "id"
   | "seoTitle"
   | "seoDescription"
@@ -4088,8 +4629,8 @@ export type PageTranslatableContentKeySpecifier = Array<
   | "page"
   | "attributeValues"
   | PageTranslatableContentKeySpecifier
->;
-export interface PageTranslatableContentFieldPolicy {
+)[];
+export type PageTranslatableContentFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   seoTitle?: FieldPolicy<any> | FieldReadFunction<any>;
   seoDescription?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -4099,16 +4640,19 @@ export interface PageTranslatableContentFieldPolicy {
   translation?: FieldPolicy<any> | FieldReadFunction<any>;
   page?: FieldPolicy<any> | FieldReadFunction<any>;
   attributeValues?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PageTranslateKeySpecifier = Array<
-  "translationErrors" | "errors" | "page" | PageTranslateKeySpecifier
->;
-export interface PageTranslateFieldPolicy {
+};
+export type PageTranslateKeySpecifier = (
+  | "translationErrors"
+  | "errors"
+  | "page"
+  | PageTranslateKeySpecifier
+)[];
+export type PageTranslateFieldPolicy = {
   translationErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   page?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PageTranslationKeySpecifier = Array<
+};
+export type PageTranslationKeySpecifier = (
   | "id"
   | "language"
   | "seoTitle"
@@ -4117,8 +4661,8 @@ export type PageTranslationKeySpecifier = Array<
   | "content"
   | "contentJson"
   | PageTranslationKeySpecifier
->;
-export interface PageTranslationFieldPolicy {
+)[];
+export type PageTranslationFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   language?: FieldPolicy<any> | FieldReadFunction<any>;
   seoTitle?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -4126,8 +4670,8 @@ export interface PageTranslationFieldPolicy {
   title?: FieldPolicy<any> | FieldReadFunction<any>;
   content?: FieldPolicy<any> | FieldReadFunction<any>;
   contentJson?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PageTypeKeySpecifier = Array<
+};
+export type PageTypeKeySpecifier = (
   | "id"
   | "privateMetadata"
   | "metadata"
@@ -4137,8 +4681,8 @@ export type PageTypeKeySpecifier = Array<
   | "availableAttributes"
   | "hasPages"
   | PageTypeKeySpecifier
->;
-export interface PageTypeFieldPolicy {
+)[];
+export type PageTypeFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -4147,79 +4691,105 @@ export interface PageTypeFieldPolicy {
   attributes?: FieldPolicy<any> | FieldReadFunction<any>;
   availableAttributes?: FieldPolicy<any> | FieldReadFunction<any>;
   hasPages?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PageTypeBulkDeleteKeySpecifier = Array<
-  "count" | "pageErrors" | "errors" | PageTypeBulkDeleteKeySpecifier
->;
-export interface PageTypeBulkDeleteFieldPolicy {
+};
+export type PageTypeBulkDeleteKeySpecifier = (
+  | "count"
+  | "pageErrors"
+  | "errors"
+  | PageTypeBulkDeleteKeySpecifier
+)[];
+export type PageTypeBulkDeleteFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   pageErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PageTypeCountableConnectionKeySpecifier = Array<
-  "pageInfo" | "edges" | "totalCount" | PageTypeCountableConnectionKeySpecifier
->;
-export interface PageTypeCountableConnectionFieldPolicy {
+};
+export type PageTypeCountableConnectionKeySpecifier = (
+  | "pageInfo"
+  | "edges"
+  | "totalCount"
+  | PageTypeCountableConnectionKeySpecifier
+)[];
+export type PageTypeCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PageTypeCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | PageTypeCountableEdgeKeySpecifier
->;
-export interface PageTypeCountableEdgeFieldPolicy {
+};
+export type PageTypeCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | PageTypeCountableEdgeKeySpecifier
+)[];
+export type PageTypeCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PageTypeCreateKeySpecifier = Array<
-  "pageErrors" | "errors" | "pageType" | PageTypeCreateKeySpecifier
->;
-export interface PageTypeCreateFieldPolicy {
+};
+export type PageTypeCreateKeySpecifier = (
+  | "pageErrors"
+  | "errors"
+  | "pageType"
+  | PageTypeCreateKeySpecifier
+)[];
+export type PageTypeCreateFieldPolicy = {
   pageErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   pageType?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PageTypeDeleteKeySpecifier = Array<
-  "pageErrors" | "errors" | "pageType" | PageTypeDeleteKeySpecifier
->;
-export interface PageTypeDeleteFieldPolicy {
+};
+export type PageTypeDeleteKeySpecifier = (
+  | "pageErrors"
+  | "errors"
+  | "pageType"
+  | PageTypeDeleteKeySpecifier
+)[];
+export type PageTypeDeleteFieldPolicy = {
   pageErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   pageType?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PageTypeReorderAttributesKeySpecifier = Array<
-  "pageType" | "pageErrors" | "errors" | PageTypeReorderAttributesKeySpecifier
->;
-export interface PageTypeReorderAttributesFieldPolicy {
+};
+export type PageTypeReorderAttributesKeySpecifier = (
+  | "pageType"
+  | "pageErrors"
+  | "errors"
+  | PageTypeReorderAttributesKeySpecifier
+)[];
+export type PageTypeReorderAttributesFieldPolicy = {
   pageType?: FieldPolicy<any> | FieldReadFunction<any>;
   pageErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PageTypeUpdateKeySpecifier = Array<
-  "pageErrors" | "errors" | "pageType" | PageTypeUpdateKeySpecifier
->;
-export interface PageTypeUpdateFieldPolicy {
+};
+export type PageTypeUpdateKeySpecifier = (
+  | "pageErrors"
+  | "errors"
+  | "pageType"
+  | PageTypeUpdateKeySpecifier
+)[];
+export type PageTypeUpdateFieldPolicy = {
   pageErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   pageType?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PageUpdateKeySpecifier = Array<
-  "pageErrors" | "errors" | "page" | PageUpdateKeySpecifier
->;
-export interface PageUpdateFieldPolicy {
+};
+export type PageUpdateKeySpecifier = (
+  | "pageErrors"
+  | "errors"
+  | "page"
+  | PageUpdateKeySpecifier
+)[];
+export type PageUpdateFieldPolicy = {
   pageErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   page?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PasswordChangeKeySpecifier = Array<
-  "user" | "accountErrors" | "errors" | PasswordChangeKeySpecifier
->;
-export interface PasswordChangeFieldPolicy {
+};
+export type PasswordChangeKeySpecifier = (
+  | "user"
+  | "accountErrors"
+  | "errors"
+  | PasswordChangeKeySpecifier
+)[];
+export type PasswordChangeFieldPolicy = {
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PaymentKeySpecifier = Array<
+};
+export type PaymentKeySpecifier = (
   | "id"
   | "privateMetadata"
   | "metadata"
@@ -4241,8 +4811,8 @@ export type PaymentKeySpecifier = Array<
   | "availableRefundAmount"
   | "creditCard"
   | PaymentKeySpecifier
->;
-export interface PaymentFieldPolicy {
+)[];
+export type PaymentFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -4263,228 +4833,276 @@ export interface PaymentFieldPolicy {
   availableCaptureAmount?: FieldPolicy<any> | FieldReadFunction<any>;
   availableRefundAmount?: FieldPolicy<any> | FieldReadFunction<any>;
   creditCard?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PaymentCaptureKeySpecifier = Array<
-  "payment" | "paymentErrors" | "errors" | PaymentCaptureKeySpecifier
->;
-export interface PaymentCaptureFieldPolicy {
+};
+export type PaymentCaptureKeySpecifier = (
+  | "payment"
+  | "paymentErrors"
+  | "errors"
+  | PaymentCaptureKeySpecifier
+)[];
+export type PaymentCaptureFieldPolicy = {
   payment?: FieldPolicy<any> | FieldReadFunction<any>;
   paymentErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PaymentCheckBalanceKeySpecifier = Array<
-  "data" | "paymentErrors" | "errors" | PaymentCheckBalanceKeySpecifier
->;
-export interface PaymentCheckBalanceFieldPolicy {
+};
+export type PaymentCheckBalanceKeySpecifier = (
+  | "data"
+  | "paymentErrors"
+  | "errors"
+  | PaymentCheckBalanceKeySpecifier
+)[];
+export type PaymentCheckBalanceFieldPolicy = {
   data?: FieldPolicy<any> | FieldReadFunction<any>;
   paymentErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PaymentCountableConnectionKeySpecifier = Array<
-  "pageInfo" | "edges" | "totalCount" | PaymentCountableConnectionKeySpecifier
->;
-export interface PaymentCountableConnectionFieldPolicy {
+};
+export type PaymentCountableConnectionKeySpecifier = (
+  | "pageInfo"
+  | "edges"
+  | "totalCount"
+  | PaymentCountableConnectionKeySpecifier
+)[];
+export type PaymentCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PaymentCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | PaymentCountableEdgeKeySpecifier
->;
-export interface PaymentCountableEdgeFieldPolicy {
+};
+export type PaymentCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | PaymentCountableEdgeKeySpecifier
+)[];
+export type PaymentCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PaymentErrorKeySpecifier = Array<
-  "field" | "message" | "code" | PaymentErrorKeySpecifier
->;
-export interface PaymentErrorFieldPolicy {
+};
+export type PaymentErrorKeySpecifier = (
+  | "field"
+  | "message"
+  | "code"
+  | PaymentErrorKeySpecifier
+)[];
+export type PaymentErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PaymentGatewayKeySpecifier = Array<
-  "name" | "id" | "config" | "currencies" | PaymentGatewayKeySpecifier
->;
-export interface PaymentGatewayFieldPolicy {
+};
+export type PaymentGatewayKeySpecifier = (
+  | "name"
+  | "id"
+  | "config"
+  | "currencies"
+  | PaymentGatewayKeySpecifier
+)[];
+export type PaymentGatewayFieldPolicy = {
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   config?: FieldPolicy<any> | FieldReadFunction<any>;
   currencies?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PaymentInitializeKeySpecifier = Array<
+};
+export type PaymentInitializeKeySpecifier = (
   | "initializedPayment"
   | "paymentErrors"
   | "errors"
   | PaymentInitializeKeySpecifier
->;
-export interface PaymentInitializeFieldPolicy {
+)[];
+export type PaymentInitializeFieldPolicy = {
   initializedPayment?: FieldPolicy<any> | FieldReadFunction<any>;
   paymentErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PaymentInitializedKeySpecifier = Array<
-  "gateway" | "name" | "data" | PaymentInitializedKeySpecifier
->;
-export interface PaymentInitializedFieldPolicy {
+};
+export type PaymentInitializedKeySpecifier = (
+  | "gateway"
+  | "name"
+  | "data"
+  | PaymentInitializedKeySpecifier
+)[];
+export type PaymentInitializedFieldPolicy = {
   gateway?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   data?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PaymentRefundKeySpecifier = Array<
-  "payment" | "paymentErrors" | "errors" | PaymentRefundKeySpecifier
->;
-export interface PaymentRefundFieldPolicy {
+};
+export type PaymentRefundKeySpecifier = (
+  | "payment"
+  | "paymentErrors"
+  | "errors"
+  | PaymentRefundKeySpecifier
+)[];
+export type PaymentRefundFieldPolicy = {
   payment?: FieldPolicy<any> | FieldReadFunction<any>;
   paymentErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PaymentSourceKeySpecifier = Array<
+};
+export type PaymentSourceKeySpecifier = (
   | "gateway"
   | "paymentMethodId"
   | "creditCardInfo"
   | "metadata"
   | PaymentSourceKeySpecifier
->;
-export interface PaymentSourceFieldPolicy {
+)[];
+export type PaymentSourceFieldPolicy = {
   gateway?: FieldPolicy<any> | FieldReadFunction<any>;
   paymentMethodId?: FieldPolicy<any> | FieldReadFunction<any>;
   creditCardInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PaymentVoidKeySpecifier = Array<
-  "payment" | "paymentErrors" | "errors" | PaymentVoidKeySpecifier
->;
-export interface PaymentVoidFieldPolicy {
+};
+export type PaymentVoidKeySpecifier = (
+  | "payment"
+  | "paymentErrors"
+  | "errors"
+  | PaymentVoidKeySpecifier
+)[];
+export type PaymentVoidFieldPolicy = {
   payment?: FieldPolicy<any> | FieldReadFunction<any>;
   paymentErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PermissionKeySpecifier = Array<
-  "code" | "name" | PermissionKeySpecifier
->;
-export interface PermissionFieldPolicy {
+};
+export type PermissionKeySpecifier = (
+  | "code"
+  | "name"
+  | PermissionKeySpecifier
+)[];
+export type PermissionFieldPolicy = {
   code?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PermissionGroupCreateKeySpecifier = Array<
+};
+export type PermissionGroupCreateKeySpecifier = (
   | "permissionGroupErrors"
   | "errors"
   | "group"
   | PermissionGroupCreateKeySpecifier
->;
-export interface PermissionGroupCreateFieldPolicy {
+)[];
+export type PermissionGroupCreateFieldPolicy = {
   permissionGroupErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   group?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PermissionGroupDeleteKeySpecifier = Array<
+};
+export type PermissionGroupDeleteKeySpecifier = (
   | "permissionGroupErrors"
   | "errors"
   | "group"
   | PermissionGroupDeleteKeySpecifier
->;
-export interface PermissionGroupDeleteFieldPolicy {
+)[];
+export type PermissionGroupDeleteFieldPolicy = {
   permissionGroupErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   group?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PermissionGroupErrorKeySpecifier = Array<
+};
+export type PermissionGroupErrorKeySpecifier = (
   | "field"
   | "message"
   | "code"
   | "permissions"
   | "users"
   | PermissionGroupErrorKeySpecifier
->;
-export interface PermissionGroupErrorFieldPolicy {
+)[];
+export type PermissionGroupErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
   permissions?: FieldPolicy<any> | FieldReadFunction<any>;
   users?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PermissionGroupUpdateKeySpecifier = Array<
+};
+export type PermissionGroupUpdateKeySpecifier = (
   | "permissionGroupErrors"
   | "errors"
   | "group"
   | PermissionGroupUpdateKeySpecifier
->;
-export interface PermissionGroupUpdateFieldPolicy {
+)[];
+export type PermissionGroupUpdateFieldPolicy = {
   permissionGroupErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   group?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PluginKeySpecifier = Array<
+};
+export type PluginKeySpecifier = (
   | "id"
   | "name"
   | "description"
   | "globalConfiguration"
   | "channelConfigurations"
   | PluginKeySpecifier
->;
-export interface PluginFieldPolicy {
+)[];
+export type PluginFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   description?: FieldPolicy<any> | FieldReadFunction<any>;
   globalConfiguration?: FieldPolicy<any> | FieldReadFunction<any>;
   channelConfigurations?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PluginConfigurationKeySpecifier = Array<
-  "active" | "channel" | "configuration" | PluginConfigurationKeySpecifier
->;
-export interface PluginConfigurationFieldPolicy {
+};
+export type PluginConfigurationKeySpecifier = (
+  | "active"
+  | "channel"
+  | "configuration"
+  | PluginConfigurationKeySpecifier
+)[];
+export type PluginConfigurationFieldPolicy = {
   active?: FieldPolicy<any> | FieldReadFunction<any>;
   channel?: FieldPolicy<any> | FieldReadFunction<any>;
   configuration?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PluginCountableConnectionKeySpecifier = Array<
-  "pageInfo" | "edges" | "totalCount" | PluginCountableConnectionKeySpecifier
->;
-export interface PluginCountableConnectionFieldPolicy {
+};
+export type PluginCountableConnectionKeySpecifier = (
+  | "pageInfo"
+  | "edges"
+  | "totalCount"
+  | PluginCountableConnectionKeySpecifier
+)[];
+export type PluginCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PluginCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | PluginCountableEdgeKeySpecifier
->;
-export interface PluginCountableEdgeFieldPolicy {
+};
+export type PluginCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | PluginCountableEdgeKeySpecifier
+)[];
+export type PluginCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PluginErrorKeySpecifier = Array<
-  "field" | "message" | "code" | PluginErrorKeySpecifier
->;
-export interface PluginErrorFieldPolicy {
+};
+export type PluginErrorKeySpecifier = (
+  | "field"
+  | "message"
+  | "code"
+  | PluginErrorKeySpecifier
+)[];
+export type PluginErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PluginUpdateKeySpecifier = Array<
-  "plugin" | "pluginsErrors" | "errors" | PluginUpdateKeySpecifier
->;
-export interface PluginUpdateFieldPolicy {
+};
+export type PluginUpdateKeySpecifier = (
+  | "plugin"
+  | "pluginsErrors"
+  | "errors"
+  | PluginUpdateKeySpecifier
+)[];
+export type PluginUpdateFieldPolicy = {
   plugin?: FieldPolicy<any> | FieldReadFunction<any>;
   pluginsErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PreorderDataKeySpecifier = Array<
-  "globalThreshold" | "globalSoldUnits" | "endDate" | PreorderDataKeySpecifier
->;
-export interface PreorderDataFieldPolicy {
+};
+export type PreorderDataKeySpecifier = (
+  | "globalThreshold"
+  | "globalSoldUnits"
+  | "endDate"
+  | PreorderDataKeySpecifier
+)[];
+export type PreorderDataFieldPolicy = {
   globalThreshold?: FieldPolicy<any> | FieldReadFunction<any>;
   globalSoldUnits?: FieldPolicy<any> | FieldReadFunction<any>;
   endDate?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type PreorderThresholdKeySpecifier = Array<
-  "quantity" | "soldUnits" | PreorderThresholdKeySpecifier
->;
-export interface PreorderThresholdFieldPolicy {
+};
+export type PreorderThresholdKeySpecifier = (
+  | "quantity"
+  | "soldUnits"
+  | PreorderThresholdKeySpecifier
+)[];
+export type PreorderThresholdFieldPolicy = {
   quantity?: FieldPolicy<any> | FieldReadFunction<any>;
   soldUnits?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductKeySpecifier = Array<
+};
+export type ProductKeySpecifier = (
   | "id"
   | "privateMetadata"
   | "metadata"
@@ -4518,8 +5136,8 @@ export type ProductKeySpecifier = Array<
   | "availableForPurchase"
   | "isAvailableForPurchase"
   | ProductKeySpecifier
->;
-export interface ProductFieldPolicy {
+)[];
+export type ProductFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -4552,49 +5170,52 @@ export interface ProductFieldPolicy {
   translation?: FieldPolicy<any> | FieldReadFunction<any>;
   availableForPurchase?: FieldPolicy<any> | FieldReadFunction<any>;
   isAvailableForPurchase?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductAttributeAssignKeySpecifier = Array<
+};
+export type ProductAttributeAssignKeySpecifier = (
   | "productType"
   | "productErrors"
   | "errors"
   | ProductAttributeAssignKeySpecifier
->;
-export interface ProductAttributeAssignFieldPolicy {
+)[];
+export type ProductAttributeAssignFieldPolicy = {
   productType?: FieldPolicy<any> | FieldReadFunction<any>;
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductAttributeAssignmentUpdateKeySpecifier = Array<
+};
+export type ProductAttributeAssignmentUpdateKeySpecifier = (
   | "productType"
   | "productErrors"
   | "errors"
   | ProductAttributeAssignmentUpdateKeySpecifier
->;
-export interface ProductAttributeAssignmentUpdateFieldPolicy {
+)[];
+export type ProductAttributeAssignmentUpdateFieldPolicy = {
   productType?: FieldPolicy<any> | FieldReadFunction<any>;
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductAttributeUnassignKeySpecifier = Array<
+};
+export type ProductAttributeUnassignKeySpecifier = (
   | "productType"
   | "productErrors"
   | "errors"
   | ProductAttributeUnassignKeySpecifier
->;
-export interface ProductAttributeUnassignFieldPolicy {
+)[];
+export type ProductAttributeUnassignFieldPolicy = {
   productType?: FieldPolicy<any> | FieldReadFunction<any>;
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductBulkDeleteKeySpecifier = Array<
-  "count" | "productErrors" | "errors" | ProductBulkDeleteKeySpecifier
->;
-export interface ProductBulkDeleteFieldPolicy {
+};
+export type ProductBulkDeleteKeySpecifier = (
+  | "count"
+  | "productErrors"
+  | "errors"
+  | ProductBulkDeleteKeySpecifier
+)[];
+export type ProductBulkDeleteFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductChannelListingKeySpecifier = Array<
+};
+export type ProductChannelListingKeySpecifier = (
   | "id"
   | "publicationDate"
   | "isPublished"
@@ -4607,8 +5228,8 @@ export type ProductChannelListingKeySpecifier = Array<
   | "isAvailableForPurchase"
   | "pricing"
   | ProductChannelListingKeySpecifier
->;
-export interface ProductChannelListingFieldPolicy {
+)[];
+export type ProductChannelListingFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   publicationDate?: FieldPolicy<any> | FieldReadFunction<any>;
   isPublished?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -4620,8 +5241,8 @@ export interface ProductChannelListingFieldPolicy {
   margin?: FieldPolicy<any> | FieldReadFunction<any>;
   isAvailableForPurchase?: FieldPolicy<any> | FieldReadFunction<any>;
   pricing?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductChannelListingErrorKeySpecifier = Array<
+};
+export type ProductChannelListingErrorKeySpecifier = (
   | "field"
   | "message"
   | "code"
@@ -4630,8 +5251,8 @@ export type ProductChannelListingErrorKeySpecifier = Array<
   | "channels"
   | "variants"
   | ProductChannelListingErrorKeySpecifier
->;
-export interface ProductChannelListingErrorFieldPolicy {
+)[];
+export type ProductChannelListingErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -4639,74 +5260,89 @@ export interface ProductChannelListingErrorFieldPolicy {
   values?: FieldPolicy<any> | FieldReadFunction<any>;
   channels?: FieldPolicy<any> | FieldReadFunction<any>;
   variants?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductChannelListingUpdateKeySpecifier = Array<
+};
+export type ProductChannelListingUpdateKeySpecifier = (
   | "product"
   | "productChannelListingErrors"
   | "errors"
   | ProductChannelListingUpdateKeySpecifier
->;
-export interface ProductChannelListingUpdateFieldPolicy {
+)[];
+export type ProductChannelListingUpdateFieldPolicy = {
   product?: FieldPolicy<any> | FieldReadFunction<any>;
   productChannelListingErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductCountableConnectionKeySpecifier = Array<
-  "pageInfo" | "edges" | "totalCount" | ProductCountableConnectionKeySpecifier
->;
-export interface ProductCountableConnectionFieldPolicy {
+};
+export type ProductCountableConnectionKeySpecifier = (
+  | "pageInfo"
+  | "edges"
+  | "totalCount"
+  | ProductCountableConnectionKeySpecifier
+)[];
+export type ProductCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | ProductCountableEdgeKeySpecifier
->;
-export interface ProductCountableEdgeFieldPolicy {
+};
+export type ProductCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | ProductCountableEdgeKeySpecifier
+)[];
+export type ProductCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductCreateKeySpecifier = Array<
-  "productErrors" | "errors" | "product" | ProductCreateKeySpecifier
->;
-export interface ProductCreateFieldPolicy {
+};
+export type ProductCreateKeySpecifier = (
+  | "productErrors"
+  | "errors"
+  | "product"
+  | ProductCreateKeySpecifier
+)[];
+export type ProductCreateFieldPolicy = {
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   product?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductDeleteKeySpecifier = Array<
-  "productErrors" | "errors" | "product" | ProductDeleteKeySpecifier
->;
-export interface ProductDeleteFieldPolicy {
+};
+export type ProductDeleteKeySpecifier = (
+  | "productErrors"
+  | "errors"
+  | "product"
+  | ProductDeleteKeySpecifier
+)[];
+export type ProductDeleteFieldPolicy = {
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   product?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductErrorKeySpecifier = Array<
+};
+export type ProductErrorKeySpecifier = (
   | "field"
   | "message"
   | "code"
   | "attributes"
   | "values"
   | ProductErrorKeySpecifier
->;
-export interface ProductErrorFieldPolicy {
+)[];
+export type ProductErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
   attributes?: FieldPolicy<any> | FieldReadFunction<any>;
   values?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductImageKeySpecifier = Array<
-  "id" | "alt" | "sortOrder" | "url" | ProductImageKeySpecifier
->;
-export interface ProductImageFieldPolicy {
+};
+export type ProductImageKeySpecifier = (
+  | "id"
+  | "alt"
+  | "sortOrder"
+  | "url"
+  | ProductImageKeySpecifier
+)[];
+export type ProductImageFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   alt?: FieldPolicy<any> | FieldReadFunction<any>;
   sortOrder?: FieldPolicy<any> | FieldReadFunction<any>;
   url?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductMediaKeySpecifier = Array<
+};
+export type ProductMediaKeySpecifier = (
   | "id"
   | "sortOrder"
   | "alt"
@@ -4714,76 +5350,79 @@ export type ProductMediaKeySpecifier = Array<
   | "oembedData"
   | "url"
   | ProductMediaKeySpecifier
->;
-export interface ProductMediaFieldPolicy {
+)[];
+export type ProductMediaFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   sortOrder?: FieldPolicy<any> | FieldReadFunction<any>;
   alt?: FieldPolicy<any> | FieldReadFunction<any>;
   type?: FieldPolicy<any> | FieldReadFunction<any>;
   oembedData?: FieldPolicy<any> | FieldReadFunction<any>;
   url?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductMediaBulkDeleteKeySpecifier = Array<
-  "count" | "productErrors" | "errors" | ProductMediaBulkDeleteKeySpecifier
->;
-export interface ProductMediaBulkDeleteFieldPolicy {
+};
+export type ProductMediaBulkDeleteKeySpecifier = (
+  | "count"
+  | "productErrors"
+  | "errors"
+  | ProductMediaBulkDeleteKeySpecifier
+)[];
+export type ProductMediaBulkDeleteFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductMediaCreateKeySpecifier = Array<
+};
+export type ProductMediaCreateKeySpecifier = (
   | "product"
   | "media"
   | "productErrors"
   | "errors"
   | ProductMediaCreateKeySpecifier
->;
-export interface ProductMediaCreateFieldPolicy {
+)[];
+export type ProductMediaCreateFieldPolicy = {
   product?: FieldPolicy<any> | FieldReadFunction<any>;
   media?: FieldPolicy<any> | FieldReadFunction<any>;
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductMediaDeleteKeySpecifier = Array<
+};
+export type ProductMediaDeleteKeySpecifier = (
   | "product"
   | "media"
   | "productErrors"
   | "errors"
   | ProductMediaDeleteKeySpecifier
->;
-export interface ProductMediaDeleteFieldPolicy {
+)[];
+export type ProductMediaDeleteFieldPolicy = {
   product?: FieldPolicy<any> | FieldReadFunction<any>;
   media?: FieldPolicy<any> | FieldReadFunction<any>;
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductMediaReorderKeySpecifier = Array<
+};
+export type ProductMediaReorderKeySpecifier = (
   | "product"
   | "media"
   | "productErrors"
   | "errors"
   | ProductMediaReorderKeySpecifier
->;
-export interface ProductMediaReorderFieldPolicy {
+)[];
+export type ProductMediaReorderFieldPolicy = {
   product?: FieldPolicy<any> | FieldReadFunction<any>;
   media?: FieldPolicy<any> | FieldReadFunction<any>;
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductMediaUpdateKeySpecifier = Array<
+};
+export type ProductMediaUpdateKeySpecifier = (
   | "product"
   | "media"
   | "productErrors"
   | "errors"
   | ProductMediaUpdateKeySpecifier
->;
-export interface ProductMediaUpdateFieldPolicy {
+)[];
+export type ProductMediaUpdateFieldPolicy = {
   product?: FieldPolicy<any> | FieldReadFunction<any>;
   media?: FieldPolicy<any> | FieldReadFunction<any>;
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductPricingInfoKeySpecifier = Array<
+};
+export type ProductPricingInfoKeySpecifier = (
   | "onSale"
   | "discount"
   | "discountLocalCurrency"
@@ -4791,27 +5430,27 @@ export type ProductPricingInfoKeySpecifier = Array<
   | "priceRangeUndiscounted"
   | "priceRangeLocalCurrency"
   | ProductPricingInfoKeySpecifier
->;
-export interface ProductPricingInfoFieldPolicy {
+)[];
+export type ProductPricingInfoFieldPolicy = {
   onSale?: FieldPolicy<any> | FieldReadFunction<any>;
   discount?: FieldPolicy<any> | FieldReadFunction<any>;
   discountLocalCurrency?: FieldPolicy<any> | FieldReadFunction<any>;
   priceRange?: FieldPolicy<any> | FieldReadFunction<any>;
   priceRangeUndiscounted?: FieldPolicy<any> | FieldReadFunction<any>;
   priceRangeLocalCurrency?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductReorderAttributeValuesKeySpecifier = Array<
+};
+export type ProductReorderAttributeValuesKeySpecifier = (
   | "product"
   | "productErrors"
   | "errors"
   | ProductReorderAttributeValuesKeySpecifier
->;
-export interface ProductReorderAttributeValuesFieldPolicy {
+)[];
+export type ProductReorderAttributeValuesFieldPolicy = {
   product?: FieldPolicy<any> | FieldReadFunction<any>;
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductTranslatableContentKeySpecifier = Array<
+};
+export type ProductTranslatableContentKeySpecifier = (
   | "id"
   | "seoTitle"
   | "seoDescription"
@@ -4822,8 +5461,8 @@ export type ProductTranslatableContentKeySpecifier = Array<
   | "product"
   | "attributeValues"
   | ProductTranslatableContentKeySpecifier
->;
-export interface ProductTranslatableContentFieldPolicy {
+)[];
+export type ProductTranslatableContentFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   seoTitle?: FieldPolicy<any> | FieldReadFunction<any>;
   seoDescription?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -4833,16 +5472,19 @@ export interface ProductTranslatableContentFieldPolicy {
   translation?: FieldPolicy<any> | FieldReadFunction<any>;
   product?: FieldPolicy<any> | FieldReadFunction<any>;
   attributeValues?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductTranslateKeySpecifier = Array<
-  "translationErrors" | "errors" | "product" | ProductTranslateKeySpecifier
->;
-export interface ProductTranslateFieldPolicy {
+};
+export type ProductTranslateKeySpecifier = (
+  | "translationErrors"
+  | "errors"
+  | "product"
+  | ProductTranslateKeySpecifier
+)[];
+export type ProductTranslateFieldPolicy = {
   translationErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   product?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductTranslationKeySpecifier = Array<
+};
+export type ProductTranslationKeySpecifier = (
   | "id"
   | "language"
   | "seoTitle"
@@ -4851,8 +5493,8 @@ export type ProductTranslationKeySpecifier = Array<
   | "description"
   | "descriptionJson"
   | ProductTranslationKeySpecifier
->;
-export interface ProductTranslationFieldPolicy {
+)[];
+export type ProductTranslationFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   language?: FieldPolicy<any> | FieldReadFunction<any>;
   seoTitle?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -4860,8 +5502,8 @@ export interface ProductTranslationFieldPolicy {
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   description?: FieldPolicy<any> | FieldReadFunction<any>;
   descriptionJson?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductTypeKeySpecifier = Array<
+};
+export type ProductTypeKeySpecifier = (
   | "id"
   | "privateMetadata"
   | "metadata"
@@ -4879,8 +5521,8 @@ export type ProductTypeKeySpecifier = Array<
   | "productAttributes"
   | "availableAttributes"
   | ProductTypeKeySpecifier
->;
-export interface ProductTypeFieldPolicy {
+)[];
+export type ProductTypeFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -4897,77 +5539,94 @@ export interface ProductTypeFieldPolicy {
   assignedVariantAttributes?: FieldPolicy<any> | FieldReadFunction<any>;
   productAttributes?: FieldPolicy<any> | FieldReadFunction<any>;
   availableAttributes?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductTypeBulkDeleteKeySpecifier = Array<
-  "count" | "productErrors" | "errors" | ProductTypeBulkDeleteKeySpecifier
->;
-export interface ProductTypeBulkDeleteFieldPolicy {
+};
+export type ProductTypeBulkDeleteKeySpecifier = (
+  | "count"
+  | "productErrors"
+  | "errors"
+  | ProductTypeBulkDeleteKeySpecifier
+)[];
+export type ProductTypeBulkDeleteFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductTypeCountableConnectionKeySpecifier = Array<
+};
+export type ProductTypeCountableConnectionKeySpecifier = (
   | "pageInfo"
   | "edges"
   | "totalCount"
   | ProductTypeCountableConnectionKeySpecifier
->;
-export interface ProductTypeCountableConnectionFieldPolicy {
+)[];
+export type ProductTypeCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductTypeCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | ProductTypeCountableEdgeKeySpecifier
->;
-export interface ProductTypeCountableEdgeFieldPolicy {
+};
+export type ProductTypeCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | ProductTypeCountableEdgeKeySpecifier
+)[];
+export type ProductTypeCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductTypeCreateKeySpecifier = Array<
-  "productErrors" | "errors" | "productType" | ProductTypeCreateKeySpecifier
->;
-export interface ProductTypeCreateFieldPolicy {
+};
+export type ProductTypeCreateKeySpecifier = (
+  | "productErrors"
+  | "errors"
+  | "productType"
+  | ProductTypeCreateKeySpecifier
+)[];
+export type ProductTypeCreateFieldPolicy = {
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   productType?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductTypeDeleteKeySpecifier = Array<
-  "productErrors" | "errors" | "productType" | ProductTypeDeleteKeySpecifier
->;
-export interface ProductTypeDeleteFieldPolicy {
+};
+export type ProductTypeDeleteKeySpecifier = (
+  | "productErrors"
+  | "errors"
+  | "productType"
+  | ProductTypeDeleteKeySpecifier
+)[];
+export type ProductTypeDeleteFieldPolicy = {
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   productType?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductTypeReorderAttributesKeySpecifier = Array<
+};
+export type ProductTypeReorderAttributesKeySpecifier = (
   | "productType"
   | "productErrors"
   | "errors"
   | ProductTypeReorderAttributesKeySpecifier
->;
-export interface ProductTypeReorderAttributesFieldPolicy {
+)[];
+export type ProductTypeReorderAttributesFieldPolicy = {
   productType?: FieldPolicy<any> | FieldReadFunction<any>;
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductTypeUpdateKeySpecifier = Array<
-  "productErrors" | "errors" | "productType" | ProductTypeUpdateKeySpecifier
->;
-export interface ProductTypeUpdateFieldPolicy {
+};
+export type ProductTypeUpdateKeySpecifier = (
+  | "productErrors"
+  | "errors"
+  | "productType"
+  | ProductTypeUpdateKeySpecifier
+)[];
+export type ProductTypeUpdateFieldPolicy = {
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   productType?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductUpdateKeySpecifier = Array<
-  "productErrors" | "errors" | "product" | ProductUpdateKeySpecifier
->;
-export interface ProductUpdateFieldPolicy {
+};
+export type ProductUpdateKeySpecifier = (
+  | "productErrors"
+  | "errors"
+  | "product"
+  | ProductUpdateKeySpecifier
+)[];
+export type ProductUpdateFieldPolicy = {
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   product?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductVariantKeySpecifier = Array<
+};
+export type ProductVariantKeySpecifier = (
   | "id"
   | "privateMetadata"
   | "metadata"
@@ -4992,8 +5651,8 @@ export type ProductVariantKeySpecifier = Array<
   | "quantityAvailable"
   | "preorder"
   | ProductVariantKeySpecifier
->;
-export interface ProductVariantFieldPolicy {
+)[];
+export type ProductVariantFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -5017,29 +5676,32 @@ export interface ProductVariantFieldPolicy {
   stocks?: FieldPolicy<any> | FieldReadFunction<any>;
   quantityAvailable?: FieldPolicy<any> | FieldReadFunction<any>;
   preorder?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductVariantBulkCreateKeySpecifier = Array<
+};
+export type ProductVariantBulkCreateKeySpecifier = (
   | "count"
   | "productVariants"
   | "bulkProductErrors"
   | "errors"
   | ProductVariantBulkCreateKeySpecifier
->;
-export interface ProductVariantBulkCreateFieldPolicy {
+)[];
+export type ProductVariantBulkCreateFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   productVariants?: FieldPolicy<any> | FieldReadFunction<any>;
   bulkProductErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductVariantBulkDeleteKeySpecifier = Array<
-  "count" | "productErrors" | "errors" | ProductVariantBulkDeleteKeySpecifier
->;
-export interface ProductVariantBulkDeleteFieldPolicy {
+};
+export type ProductVariantBulkDeleteKeySpecifier = (
+  | "count"
+  | "productErrors"
+  | "errors"
+  | ProductVariantBulkDeleteKeySpecifier
+)[];
+export type ProductVariantBulkDeleteFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductVariantChannelListingKeySpecifier = Array<
+};
+export type ProductVariantChannelListingKeySpecifier = (
   | "id"
   | "channel"
   | "price"
@@ -5047,179 +5709,192 @@ export type ProductVariantChannelListingKeySpecifier = Array<
   | "margin"
   | "preorderThreshold"
   | ProductVariantChannelListingKeySpecifier
->;
-export interface ProductVariantChannelListingFieldPolicy {
+)[];
+export type ProductVariantChannelListingFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   channel?: FieldPolicy<any> | FieldReadFunction<any>;
   price?: FieldPolicy<any> | FieldReadFunction<any>;
   costPrice?: FieldPolicy<any> | FieldReadFunction<any>;
   margin?: FieldPolicy<any> | FieldReadFunction<any>;
   preorderThreshold?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductVariantChannelListingUpdateKeySpecifier = Array<
+};
+export type ProductVariantChannelListingUpdateKeySpecifier = (
   | "variant"
   | "productChannelListingErrors"
   | "errors"
   | ProductVariantChannelListingUpdateKeySpecifier
->;
-export interface ProductVariantChannelListingUpdateFieldPolicy {
+)[];
+export type ProductVariantChannelListingUpdateFieldPolicy = {
   variant?: FieldPolicy<any> | FieldReadFunction<any>;
   productChannelListingErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductVariantCountableConnectionKeySpecifier = Array<
+};
+export type ProductVariantCountableConnectionKeySpecifier = (
   | "pageInfo"
   | "edges"
   | "totalCount"
   | ProductVariantCountableConnectionKeySpecifier
->;
-export interface ProductVariantCountableConnectionFieldPolicy {
+)[];
+export type ProductVariantCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductVariantCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | ProductVariantCountableEdgeKeySpecifier
->;
-export interface ProductVariantCountableEdgeFieldPolicy {
+};
+export type ProductVariantCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | ProductVariantCountableEdgeKeySpecifier
+)[];
+export type ProductVariantCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductVariantCreateKeySpecifier = Array<
+};
+export type ProductVariantCreateKeySpecifier = (
   | "productErrors"
   | "errors"
   | "productVariant"
   | ProductVariantCreateKeySpecifier
->;
-export interface ProductVariantCreateFieldPolicy {
+)[];
+export type ProductVariantCreateFieldPolicy = {
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   productVariant?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductVariantDeleteKeySpecifier = Array<
+};
+export type ProductVariantDeleteKeySpecifier = (
   | "productErrors"
   | "errors"
   | "productVariant"
   | ProductVariantDeleteKeySpecifier
->;
-export interface ProductVariantDeleteFieldPolicy {
+)[];
+export type ProductVariantDeleteFieldPolicy = {
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   productVariant?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductVariantPreorderDeactivateKeySpecifier = Array<
-  "productVariant" | "errors" | ProductVariantPreorderDeactivateKeySpecifier
->;
-export interface ProductVariantPreorderDeactivateFieldPolicy {
+};
+export type ProductVariantPreorderDeactivateKeySpecifier = (
+  | "productVariant"
+  | "errors"
+  | ProductVariantPreorderDeactivateKeySpecifier
+)[];
+export type ProductVariantPreorderDeactivateFieldPolicy = {
   productVariant?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductVariantReorderKeySpecifier = Array<
-  "product" | "productErrors" | "errors" | ProductVariantReorderKeySpecifier
->;
-export interface ProductVariantReorderFieldPolicy {
+};
+export type ProductVariantReorderKeySpecifier = (
+  | "product"
+  | "productErrors"
+  | "errors"
+  | ProductVariantReorderKeySpecifier
+)[];
+export type ProductVariantReorderFieldPolicy = {
   product?: FieldPolicy<any> | FieldReadFunction<any>;
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductVariantReorderAttributeValuesKeySpecifier = Array<
+};
+export type ProductVariantReorderAttributeValuesKeySpecifier = (
   | "productVariant"
   | "productErrors"
   | "errors"
   | ProductVariantReorderAttributeValuesKeySpecifier
->;
-export interface ProductVariantReorderAttributeValuesFieldPolicy {
+)[];
+export type ProductVariantReorderAttributeValuesFieldPolicy = {
   productVariant?: FieldPolicy<any> | FieldReadFunction<any>;
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductVariantSetDefaultKeySpecifier = Array<
-  "product" | "productErrors" | "errors" | ProductVariantSetDefaultKeySpecifier
->;
-export interface ProductVariantSetDefaultFieldPolicy {
+};
+export type ProductVariantSetDefaultKeySpecifier = (
+  | "product"
+  | "productErrors"
+  | "errors"
+  | ProductVariantSetDefaultKeySpecifier
+)[];
+export type ProductVariantSetDefaultFieldPolicy = {
   product?: FieldPolicy<any> | FieldReadFunction<any>;
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductVariantStocksCreateKeySpecifier = Array<
+};
+export type ProductVariantStocksCreateKeySpecifier = (
   | "productVariant"
   | "bulkStockErrors"
   | "errors"
   | ProductVariantStocksCreateKeySpecifier
->;
-export interface ProductVariantStocksCreateFieldPolicy {
+)[];
+export type ProductVariantStocksCreateFieldPolicy = {
   productVariant?: FieldPolicy<any> | FieldReadFunction<any>;
   bulkStockErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductVariantStocksDeleteKeySpecifier = Array<
+};
+export type ProductVariantStocksDeleteKeySpecifier = (
   | "productVariant"
   | "stockErrors"
   | "errors"
   | ProductVariantStocksDeleteKeySpecifier
->;
-export interface ProductVariantStocksDeleteFieldPolicy {
+)[];
+export type ProductVariantStocksDeleteFieldPolicy = {
   productVariant?: FieldPolicy<any> | FieldReadFunction<any>;
   stockErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductVariantStocksUpdateKeySpecifier = Array<
+};
+export type ProductVariantStocksUpdateKeySpecifier = (
   | "productVariant"
   | "bulkStockErrors"
   | "errors"
   | ProductVariantStocksUpdateKeySpecifier
->;
-export interface ProductVariantStocksUpdateFieldPolicy {
+)[];
+export type ProductVariantStocksUpdateFieldPolicy = {
   productVariant?: FieldPolicy<any> | FieldReadFunction<any>;
   bulkStockErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductVariantTranslatableContentKeySpecifier = Array<
+};
+export type ProductVariantTranslatableContentKeySpecifier = (
   | "id"
   | "name"
   | "translation"
   | "productVariant"
   | "attributeValues"
   | ProductVariantTranslatableContentKeySpecifier
->;
-export interface ProductVariantTranslatableContentFieldPolicy {
+)[];
+export type ProductVariantTranslatableContentFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   translation?: FieldPolicy<any> | FieldReadFunction<any>;
   productVariant?: FieldPolicy<any> | FieldReadFunction<any>;
   attributeValues?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductVariantTranslateKeySpecifier = Array<
+};
+export type ProductVariantTranslateKeySpecifier = (
   | "translationErrors"
   | "errors"
   | "productVariant"
   | ProductVariantTranslateKeySpecifier
->;
-export interface ProductVariantTranslateFieldPolicy {
+)[];
+export type ProductVariantTranslateFieldPolicy = {
   translationErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   productVariant?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductVariantTranslationKeySpecifier = Array<
-  "id" | "language" | "name" | ProductVariantTranslationKeySpecifier
->;
-export interface ProductVariantTranslationFieldPolicy {
+};
+export type ProductVariantTranslationKeySpecifier = (
+  | "id"
+  | "language"
+  | "name"
+  | ProductVariantTranslationKeySpecifier
+)[];
+export type ProductVariantTranslationFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   language?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ProductVariantUpdateKeySpecifier = Array<
+};
+export type ProductVariantUpdateKeySpecifier = (
   | "productErrors"
   | "errors"
   | "productVariant"
   | ProductVariantUpdateKeySpecifier
->;
-export interface ProductVariantUpdateFieldPolicy {
+)[];
+export type ProductVariantUpdateFieldPolicy = {
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   productVariant?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type QueryKeySpecifier = Array<
+};
+export type QueryKeySpecifier = (
   | "webhook"
   | "webhookEvents"
   | "webhookSamplePayload"
@@ -5299,8 +5974,8 @@ export type QueryKeySpecifier = Array<
   | "_entities"
   | "_service"
   | QueryKeySpecifier
->;
-export interface QueryFieldPolicy {
+)[];
+export type QueryFieldPolicy = {
   webhook?: FieldPolicy<any> | FieldReadFunction<any>;
   webhookEvents?: FieldPolicy<any> | FieldReadFunction<any>;
   webhookSamplePayload?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -5379,39 +6054,50 @@ export interface QueryFieldPolicy {
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   _entities?: FieldPolicy<any> | FieldReadFunction<any>;
   _service?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ReducedRateKeySpecifier = Array<
-  "rate" | "rateType" | ReducedRateKeySpecifier
->;
-export interface ReducedRateFieldPolicy {
+};
+export type ReducedRateKeySpecifier = (
+  | "rate"
+  | "rateType"
+  | ReducedRateKeySpecifier
+)[];
+export type ReducedRateFieldPolicy = {
   rate?: FieldPolicy<any> | FieldReadFunction<any>;
   rateType?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type RefreshTokenKeySpecifier = Array<
-  "token" | "user" | "accountErrors" | "errors" | RefreshTokenKeySpecifier
->;
-export interface RefreshTokenFieldPolicy {
+};
+export type RefreshTokenKeySpecifier = (
+  | "token"
+  | "user"
+  | "accountErrors"
+  | "errors"
+  | RefreshTokenKeySpecifier
+)[];
+export type RefreshTokenFieldPolicy = {
   token?: FieldPolicy<any> | FieldReadFunction<any>;
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type RequestEmailChangeKeySpecifier = Array<
-  "user" | "accountErrors" | "errors" | RequestEmailChangeKeySpecifier
->;
-export interface RequestEmailChangeFieldPolicy {
+};
+export type RequestEmailChangeKeySpecifier = (
+  | "user"
+  | "accountErrors"
+  | "errors"
+  | RequestEmailChangeKeySpecifier
+)[];
+export type RequestEmailChangeFieldPolicy = {
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type RequestPasswordResetKeySpecifier = Array<
-  "accountErrors" | "errors" | RequestPasswordResetKeySpecifier
->;
-export interface RequestPasswordResetFieldPolicy {
+};
+export type RequestPasswordResetKeySpecifier = (
+  | "accountErrors"
+  | "errors"
+  | RequestPasswordResetKeySpecifier
+)[];
+export type RequestPasswordResetFieldPolicy = {
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type SaleKeySpecifier = Array<
+};
+export type SaleKeySpecifier = (
   | "id"
   | "privateMetadata"
   | "metadata"
@@ -5428,8 +6114,8 @@ export type SaleKeySpecifier = Array<
   | "discountValue"
   | "currency"
   | SaleKeySpecifier
->;
-export interface SaleFieldPolicy {
+)[];
+export type SaleFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -5445,124 +6131,162 @@ export interface SaleFieldPolicy {
   channelListings?: FieldPolicy<any> | FieldReadFunction<any>;
   discountValue?: FieldPolicy<any> | FieldReadFunction<any>;
   currency?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type SaleAddCataloguesKeySpecifier = Array<
-  "sale" | "discountErrors" | "errors" | SaleAddCataloguesKeySpecifier
->;
-export interface SaleAddCataloguesFieldPolicy {
+};
+export type SaleAddCataloguesKeySpecifier = (
+  | "sale"
+  | "discountErrors"
+  | "errors"
+  | SaleAddCataloguesKeySpecifier
+)[];
+export type SaleAddCataloguesFieldPolicy = {
   sale?: FieldPolicy<any> | FieldReadFunction<any>;
   discountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type SaleBulkDeleteKeySpecifier = Array<
-  "count" | "discountErrors" | "errors" | SaleBulkDeleteKeySpecifier
->;
-export interface SaleBulkDeleteFieldPolicy {
+};
+export type SaleBulkDeleteKeySpecifier = (
+  | "count"
+  | "discountErrors"
+  | "errors"
+  | SaleBulkDeleteKeySpecifier
+)[];
+export type SaleBulkDeleteFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   discountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type SaleChannelListingKeySpecifier = Array<
+};
+export type SaleChannelListingKeySpecifier = (
   | "id"
   | "channel"
   | "discountValue"
   | "currency"
   | SaleChannelListingKeySpecifier
->;
-export interface SaleChannelListingFieldPolicy {
+)[];
+export type SaleChannelListingFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   channel?: FieldPolicy<any> | FieldReadFunction<any>;
   discountValue?: FieldPolicy<any> | FieldReadFunction<any>;
   currency?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type SaleChannelListingUpdateKeySpecifier = Array<
-  "sale" | "discountErrors" | "errors" | SaleChannelListingUpdateKeySpecifier
->;
-export interface SaleChannelListingUpdateFieldPolicy {
+};
+export type SaleChannelListingUpdateKeySpecifier = (
+  | "sale"
+  | "discountErrors"
+  | "errors"
+  | SaleChannelListingUpdateKeySpecifier
+)[];
+export type SaleChannelListingUpdateFieldPolicy = {
   sale?: FieldPolicy<any> | FieldReadFunction<any>;
   discountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type SaleCountableConnectionKeySpecifier = Array<
-  "pageInfo" | "edges" | "totalCount" | SaleCountableConnectionKeySpecifier
->;
-export interface SaleCountableConnectionFieldPolicy {
+};
+export type SaleCountableConnectionKeySpecifier = (
+  | "pageInfo"
+  | "edges"
+  | "totalCount"
+  | SaleCountableConnectionKeySpecifier
+)[];
+export type SaleCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type SaleCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | SaleCountableEdgeKeySpecifier
->;
-export interface SaleCountableEdgeFieldPolicy {
+};
+export type SaleCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | SaleCountableEdgeKeySpecifier
+)[];
+export type SaleCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type SaleCreateKeySpecifier = Array<
-  "discountErrors" | "errors" | "sale" | SaleCreateKeySpecifier
->;
-export interface SaleCreateFieldPolicy {
+};
+export type SaleCreateKeySpecifier = (
+  | "discountErrors"
+  | "errors"
+  | "sale"
+  | SaleCreateKeySpecifier
+)[];
+export type SaleCreateFieldPolicy = {
   discountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   sale?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type SaleDeleteKeySpecifier = Array<
-  "discountErrors" | "errors" | "sale" | SaleDeleteKeySpecifier
->;
-export interface SaleDeleteFieldPolicy {
+};
+export type SaleDeleteKeySpecifier = (
+  | "discountErrors"
+  | "errors"
+  | "sale"
+  | SaleDeleteKeySpecifier
+)[];
+export type SaleDeleteFieldPolicy = {
   discountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   sale?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type SaleRemoveCataloguesKeySpecifier = Array<
-  "sale" | "discountErrors" | "errors" | SaleRemoveCataloguesKeySpecifier
->;
-export interface SaleRemoveCataloguesFieldPolicy {
+};
+export type SaleRemoveCataloguesKeySpecifier = (
+  | "sale"
+  | "discountErrors"
+  | "errors"
+  | SaleRemoveCataloguesKeySpecifier
+)[];
+export type SaleRemoveCataloguesFieldPolicy = {
   sale?: FieldPolicy<any> | FieldReadFunction<any>;
   discountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type SaleTranslatableContentKeySpecifier = Array<
-  "id" | "name" | "translation" | "sale" | SaleTranslatableContentKeySpecifier
->;
-export interface SaleTranslatableContentFieldPolicy {
+};
+export type SaleTranslatableContentKeySpecifier = (
+  | "id"
+  | "name"
+  | "translation"
+  | "sale"
+  | SaleTranslatableContentKeySpecifier
+)[];
+export type SaleTranslatableContentFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   translation?: FieldPolicy<any> | FieldReadFunction<any>;
   sale?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type SaleTranslateKeySpecifier = Array<
-  "translationErrors" | "errors" | "sale" | SaleTranslateKeySpecifier
->;
-export interface SaleTranslateFieldPolicy {
+};
+export type SaleTranslateKeySpecifier = (
+  | "translationErrors"
+  | "errors"
+  | "sale"
+  | SaleTranslateKeySpecifier
+)[];
+export type SaleTranslateFieldPolicy = {
   translationErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   sale?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type SaleTranslationKeySpecifier = Array<
-  "id" | "language" | "name" | SaleTranslationKeySpecifier
->;
-export interface SaleTranslationFieldPolicy {
+};
+export type SaleTranslationKeySpecifier = (
+  | "id"
+  | "language"
+  | "name"
+  | SaleTranslationKeySpecifier
+)[];
+export type SaleTranslationFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   language?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type SaleUpdateKeySpecifier = Array<
-  "discountErrors" | "errors" | "sale" | SaleUpdateKeySpecifier
->;
-export interface SaleUpdateFieldPolicy {
+};
+export type SaleUpdateKeySpecifier = (
+  | "discountErrors"
+  | "errors"
+  | "sale"
+  | SaleUpdateKeySpecifier
+)[];
+export type SaleUpdateFieldPolicy = {
   discountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   sale?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type SelectedAttributeKeySpecifier = Array<
-  "attribute" | "values" | SelectedAttributeKeySpecifier
->;
-export interface SelectedAttributeFieldPolicy {
+};
+export type SelectedAttributeKeySpecifier = (
+  | "attribute"
+  | "values"
+  | SelectedAttributeKeySpecifier
+)[];
+export type SelectedAttributeFieldPolicy = {
   attribute?: FieldPolicy<any> | FieldReadFunction<any>;
   values?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type SetPasswordKeySpecifier = Array<
+};
+export type SetPasswordKeySpecifier = (
   | "token"
   | "refreshToken"
   | "csrfToken"
@@ -5570,31 +6294,31 @@ export type SetPasswordKeySpecifier = Array<
   | "accountErrors"
   | "errors"
   | SetPasswordKeySpecifier
->;
-export interface SetPasswordFieldPolicy {
+)[];
+export type SetPasswordFieldPolicy = {
   token?: FieldPolicy<any> | FieldReadFunction<any>;
   refreshToken?: FieldPolicy<any> | FieldReadFunction<any>;
   csrfToken?: FieldPolicy<any> | FieldReadFunction<any>;
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShippingErrorKeySpecifier = Array<
+};
+export type ShippingErrorKeySpecifier = (
   | "field"
   | "message"
   | "code"
   | "warehouses"
   | "channels"
   | ShippingErrorKeySpecifier
->;
-export interface ShippingErrorFieldPolicy {
+)[];
+export type ShippingErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
   warehouses?: FieldPolicy<any> | FieldReadFunction<any>;
   channels?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShippingMethodKeySpecifier = Array<
+};
+export type ShippingMethodKeySpecifier = (
   | "id"
   | "privateMetadata"
   | "metadata"
@@ -5612,8 +6336,8 @@ export type ShippingMethodKeySpecifier = Array<
   | "active"
   | "message"
   | ShippingMethodKeySpecifier
->;
-export interface ShippingMethodFieldPolicy {
+)[];
+export type ShippingMethodFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -5630,75 +6354,75 @@ export interface ShippingMethodFieldPolicy {
   minimumOrderPrice?: FieldPolicy<any> | FieldReadFunction<any>;
   active?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShippingMethodChannelListingKeySpecifier = Array<
+};
+export type ShippingMethodChannelListingKeySpecifier = (
   | "id"
   | "channel"
   | "maximumOrderPrice"
   | "minimumOrderPrice"
   | "price"
   | ShippingMethodChannelListingKeySpecifier
->;
-export interface ShippingMethodChannelListingFieldPolicy {
+)[];
+export type ShippingMethodChannelListingFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   channel?: FieldPolicy<any> | FieldReadFunction<any>;
   maximumOrderPrice?: FieldPolicy<any> | FieldReadFunction<any>;
   minimumOrderPrice?: FieldPolicy<any> | FieldReadFunction<any>;
   price?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShippingMethodChannelListingUpdateKeySpecifier = Array<
+};
+export type ShippingMethodChannelListingUpdateKeySpecifier = (
   | "shippingMethod"
   | "shippingErrors"
   | "errors"
   | ShippingMethodChannelListingUpdateKeySpecifier
->;
-export interface ShippingMethodChannelListingUpdateFieldPolicy {
+)[];
+export type ShippingMethodChannelListingUpdateFieldPolicy = {
   shippingMethod?: FieldPolicy<any> | FieldReadFunction<any>;
   shippingErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShippingMethodPostalCodeRuleKeySpecifier = Array<
+};
+export type ShippingMethodPostalCodeRuleKeySpecifier = (
   | "id"
   | "start"
   | "end"
   | "inclusionType"
   | ShippingMethodPostalCodeRuleKeySpecifier
->;
-export interface ShippingMethodPostalCodeRuleFieldPolicy {
+)[];
+export type ShippingMethodPostalCodeRuleFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   start?: FieldPolicy<any> | FieldReadFunction<any>;
   end?: FieldPolicy<any> | FieldReadFunction<any>;
   inclusionType?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShippingMethodTranslatableContentKeySpecifier = Array<
+};
+export type ShippingMethodTranslatableContentKeySpecifier = (
   | "id"
   | "name"
   | "description"
   | "translation"
   | "shippingMethod"
   | ShippingMethodTranslatableContentKeySpecifier
->;
-export interface ShippingMethodTranslatableContentFieldPolicy {
+)[];
+export type ShippingMethodTranslatableContentFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   description?: FieldPolicy<any> | FieldReadFunction<any>;
   translation?: FieldPolicy<any> | FieldReadFunction<any>;
   shippingMethod?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShippingMethodTranslationKeySpecifier = Array<
+};
+export type ShippingMethodTranslationKeySpecifier = (
   | "id"
   | "language"
   | "name"
   | "description"
   | ShippingMethodTranslationKeySpecifier
->;
-export interface ShippingMethodTranslationFieldPolicy {
+)[];
+export type ShippingMethodTranslationFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   language?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   description?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShippingMethodTypeKeySpecifier = Array<
+};
+export type ShippingMethodTypeKeySpecifier = (
   | "id"
   | "privateMetadata"
   | "metadata"
@@ -5716,8 +6440,8 @@ export type ShippingMethodTypeKeySpecifier = Array<
   | "maximumDeliveryDays"
   | "minimumDeliveryDays"
   | ShippingMethodTypeKeySpecifier
->;
-export interface ShippingMethodTypeFieldPolicy {
+)[];
+export type ShippingMethodTypeFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -5734,88 +6458,91 @@ export interface ShippingMethodTypeFieldPolicy {
   maximumOrderWeight?: FieldPolicy<any> | FieldReadFunction<any>;
   maximumDeliveryDays?: FieldPolicy<any> | FieldReadFunction<any>;
   minimumDeliveryDays?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShippingPriceBulkDeleteKeySpecifier = Array<
-  "count" | "shippingErrors" | "errors" | ShippingPriceBulkDeleteKeySpecifier
->;
-export interface ShippingPriceBulkDeleteFieldPolicy {
+};
+export type ShippingPriceBulkDeleteKeySpecifier = (
+  | "count"
+  | "shippingErrors"
+  | "errors"
+  | ShippingPriceBulkDeleteKeySpecifier
+)[];
+export type ShippingPriceBulkDeleteFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   shippingErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShippingPriceCreateKeySpecifier = Array<
+};
+export type ShippingPriceCreateKeySpecifier = (
   | "shippingZone"
   | "shippingMethod"
   | "shippingErrors"
   | "errors"
   | ShippingPriceCreateKeySpecifier
->;
-export interface ShippingPriceCreateFieldPolicy {
+)[];
+export type ShippingPriceCreateFieldPolicy = {
   shippingZone?: FieldPolicy<any> | FieldReadFunction<any>;
   shippingMethod?: FieldPolicy<any> | FieldReadFunction<any>;
   shippingErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShippingPriceDeleteKeySpecifier = Array<
+};
+export type ShippingPriceDeleteKeySpecifier = (
   | "shippingMethod"
   | "shippingZone"
   | "shippingErrors"
   | "errors"
   | ShippingPriceDeleteKeySpecifier
->;
-export interface ShippingPriceDeleteFieldPolicy {
+)[];
+export type ShippingPriceDeleteFieldPolicy = {
   shippingMethod?: FieldPolicy<any> | FieldReadFunction<any>;
   shippingZone?: FieldPolicy<any> | FieldReadFunction<any>;
   shippingErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShippingPriceExcludeProductsKeySpecifier = Array<
+};
+export type ShippingPriceExcludeProductsKeySpecifier = (
   | "shippingMethod"
   | "shippingErrors"
   | "errors"
   | ShippingPriceExcludeProductsKeySpecifier
->;
-export interface ShippingPriceExcludeProductsFieldPolicy {
+)[];
+export type ShippingPriceExcludeProductsFieldPolicy = {
   shippingMethod?: FieldPolicy<any> | FieldReadFunction<any>;
   shippingErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShippingPriceRemoveProductFromExcludeKeySpecifier = Array<
+};
+export type ShippingPriceRemoveProductFromExcludeKeySpecifier = (
   | "shippingMethod"
   | "shippingErrors"
   | "errors"
   | ShippingPriceRemoveProductFromExcludeKeySpecifier
->;
-export interface ShippingPriceRemoveProductFromExcludeFieldPolicy {
+)[];
+export type ShippingPriceRemoveProductFromExcludeFieldPolicy = {
   shippingMethod?: FieldPolicy<any> | FieldReadFunction<any>;
   shippingErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShippingPriceTranslateKeySpecifier = Array<
+};
+export type ShippingPriceTranslateKeySpecifier = (
   | "translationErrors"
   | "errors"
   | "shippingMethod"
   | ShippingPriceTranslateKeySpecifier
->;
-export interface ShippingPriceTranslateFieldPolicy {
+)[];
+export type ShippingPriceTranslateFieldPolicy = {
   translationErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   shippingMethod?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShippingPriceUpdateKeySpecifier = Array<
+};
+export type ShippingPriceUpdateKeySpecifier = (
   | "shippingZone"
   | "shippingMethod"
   | "shippingErrors"
   | "errors"
   | ShippingPriceUpdateKeySpecifier
->;
-export interface ShippingPriceUpdateFieldPolicy {
+)[];
+export type ShippingPriceUpdateFieldPolicy = {
   shippingZone?: FieldPolicy<any> | FieldReadFunction<any>;
   shippingMethod?: FieldPolicy<any> | FieldReadFunction<any>;
   shippingErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShippingZoneKeySpecifier = Array<
+};
+export type ShippingZoneKeySpecifier = (
   | "id"
   | "privateMetadata"
   | "metadata"
@@ -5828,8 +6555,8 @@ export type ShippingZoneKeySpecifier = Array<
   | "channels"
   | "description"
   | ShippingZoneKeySpecifier
->;
-export interface ShippingZoneFieldPolicy {
+)[];
+export type ShippingZoneFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -5841,58 +6568,72 @@ export interface ShippingZoneFieldPolicy {
   warehouses?: FieldPolicy<any> | FieldReadFunction<any>;
   channels?: FieldPolicy<any> | FieldReadFunction<any>;
   description?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShippingZoneBulkDeleteKeySpecifier = Array<
-  "count" | "shippingErrors" | "errors" | ShippingZoneBulkDeleteKeySpecifier
->;
-export interface ShippingZoneBulkDeleteFieldPolicy {
+};
+export type ShippingZoneBulkDeleteKeySpecifier = (
+  | "count"
+  | "shippingErrors"
+  | "errors"
+  | ShippingZoneBulkDeleteKeySpecifier
+)[];
+export type ShippingZoneBulkDeleteFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   shippingErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShippingZoneCountableConnectionKeySpecifier = Array<
+};
+export type ShippingZoneCountableConnectionKeySpecifier = (
   | "pageInfo"
   | "edges"
   | "totalCount"
   | ShippingZoneCountableConnectionKeySpecifier
->;
-export interface ShippingZoneCountableConnectionFieldPolicy {
+)[];
+export type ShippingZoneCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShippingZoneCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | ShippingZoneCountableEdgeKeySpecifier
->;
-export interface ShippingZoneCountableEdgeFieldPolicy {
+};
+export type ShippingZoneCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | ShippingZoneCountableEdgeKeySpecifier
+)[];
+export type ShippingZoneCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShippingZoneCreateKeySpecifier = Array<
-  "shippingErrors" | "errors" | "shippingZone" | ShippingZoneCreateKeySpecifier
->;
-export interface ShippingZoneCreateFieldPolicy {
+};
+export type ShippingZoneCreateKeySpecifier = (
+  | "shippingErrors"
+  | "errors"
+  | "shippingZone"
+  | ShippingZoneCreateKeySpecifier
+)[];
+export type ShippingZoneCreateFieldPolicy = {
   shippingErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   shippingZone?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShippingZoneDeleteKeySpecifier = Array<
-  "shippingErrors" | "errors" | "shippingZone" | ShippingZoneDeleteKeySpecifier
->;
-export interface ShippingZoneDeleteFieldPolicy {
+};
+export type ShippingZoneDeleteKeySpecifier = (
+  | "shippingErrors"
+  | "errors"
+  | "shippingZone"
+  | ShippingZoneDeleteKeySpecifier
+)[];
+export type ShippingZoneDeleteFieldPolicy = {
   shippingErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   shippingZone?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShippingZoneUpdateKeySpecifier = Array<
-  "shippingErrors" | "errors" | "shippingZone" | ShippingZoneUpdateKeySpecifier
->;
-export interface ShippingZoneUpdateFieldPolicy {
+};
+export type ShippingZoneUpdateKeySpecifier = (
+  | "shippingErrors"
+  | "errors"
+  | "shippingZone"
+  | ShippingZoneUpdateKeySpecifier
+)[];
+export type ShippingZoneUpdateFieldPolicy = {
   shippingErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   shippingZone?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShopKeySpecifier = Array<
+};
+export type ShopKeySpecifier = (
   | "availablePaymentGateways"
   | "availableExternalAuthentications"
   | "availableShippingMethods"
@@ -5928,8 +6669,8 @@ export type ShopKeySpecifier = Array<
   | "limits"
   | "version"
   | ShopKeySpecifier
->;
-export interface ShopFieldPolicy {
+)[];
+export type ShopFieldPolicy = {
   availablePaymentGateways?: FieldPolicy<any> | FieldReadFunction<any>;
   availableExternalAuthentications?: FieldPolicy<any> | FieldReadFunction<any>;
   availableShippingMethods?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -5968,89 +6709,120 @@ export interface ShopFieldPolicy {
   staffNotificationRecipients?: FieldPolicy<any> | FieldReadFunction<any>;
   limits?: FieldPolicy<any> | FieldReadFunction<any>;
   version?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShopAddressUpdateKeySpecifier = Array<
-  "shop" | "shopErrors" | "errors" | ShopAddressUpdateKeySpecifier
->;
-export interface ShopAddressUpdateFieldPolicy {
+};
+export type ShopAddressUpdateKeySpecifier = (
+  | "shop"
+  | "shopErrors"
+  | "errors"
+  | ShopAddressUpdateKeySpecifier
+)[];
+export type ShopAddressUpdateFieldPolicy = {
   shop?: FieldPolicy<any> | FieldReadFunction<any>;
   shopErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShopDomainUpdateKeySpecifier = Array<
-  "shop" | "shopErrors" | "errors" | ShopDomainUpdateKeySpecifier
->;
-export interface ShopDomainUpdateFieldPolicy {
+};
+export type ShopDomainUpdateKeySpecifier = (
+  | "shop"
+  | "shopErrors"
+  | "errors"
+  | ShopDomainUpdateKeySpecifier
+)[];
+export type ShopDomainUpdateFieldPolicy = {
   shop?: FieldPolicy<any> | FieldReadFunction<any>;
   shopErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShopErrorKeySpecifier = Array<
-  "field" | "message" | "code" | ShopErrorKeySpecifier
->;
-export interface ShopErrorFieldPolicy {
+};
+export type ShopErrorKeySpecifier = (
+  | "field"
+  | "message"
+  | "code"
+  | ShopErrorKeySpecifier
+)[];
+export type ShopErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShopFetchTaxRatesKeySpecifier = Array<
-  "shop" | "shopErrors" | "errors" | ShopFetchTaxRatesKeySpecifier
->;
-export interface ShopFetchTaxRatesFieldPolicy {
+};
+export type ShopFetchTaxRatesKeySpecifier = (
+  | "shop"
+  | "shopErrors"
+  | "errors"
+  | ShopFetchTaxRatesKeySpecifier
+)[];
+export type ShopFetchTaxRatesFieldPolicy = {
   shop?: FieldPolicy<any> | FieldReadFunction<any>;
   shopErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShopSettingsTranslateKeySpecifier = Array<
-  "shop" | "translationErrors" | "errors" | ShopSettingsTranslateKeySpecifier
->;
-export interface ShopSettingsTranslateFieldPolicy {
+};
+export type ShopSettingsTranslateKeySpecifier = (
+  | "shop"
+  | "translationErrors"
+  | "errors"
+  | ShopSettingsTranslateKeySpecifier
+)[];
+export type ShopSettingsTranslateFieldPolicy = {
   shop?: FieldPolicy<any> | FieldReadFunction<any>;
   translationErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShopSettingsUpdateKeySpecifier = Array<
-  "shop" | "shopErrors" | "errors" | ShopSettingsUpdateKeySpecifier
->;
-export interface ShopSettingsUpdateFieldPolicy {
+};
+export type ShopSettingsUpdateKeySpecifier = (
+  | "shop"
+  | "shopErrors"
+  | "errors"
+  | ShopSettingsUpdateKeySpecifier
+)[];
+export type ShopSettingsUpdateFieldPolicy = {
   shop?: FieldPolicy<any> | FieldReadFunction<any>;
   shopErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type ShopTranslationKeySpecifier = Array<
-  "id" | "language" | "headerText" | "description" | ShopTranslationKeySpecifier
->;
-export interface ShopTranslationFieldPolicy {
+};
+export type ShopTranslationKeySpecifier = (
+  | "id"
+  | "language"
+  | "headerText"
+  | "description"
+  | ShopTranslationKeySpecifier
+)[];
+export type ShopTranslationFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   language?: FieldPolicy<any> | FieldReadFunction<any>;
   headerText?: FieldPolicy<any> | FieldReadFunction<any>;
   description?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type StaffBulkDeleteKeySpecifier = Array<
-  "count" | "staffErrors" | "errors" | StaffBulkDeleteKeySpecifier
->;
-export interface StaffBulkDeleteFieldPolicy {
+};
+export type StaffBulkDeleteKeySpecifier = (
+  | "count"
+  | "staffErrors"
+  | "errors"
+  | StaffBulkDeleteKeySpecifier
+)[];
+export type StaffBulkDeleteFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   staffErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type StaffCreateKeySpecifier = Array<
-  "staffErrors" | "errors" | "user" | StaffCreateKeySpecifier
->;
-export interface StaffCreateFieldPolicy {
+};
+export type StaffCreateKeySpecifier = (
+  | "staffErrors"
+  | "errors"
+  | "user"
+  | StaffCreateKeySpecifier
+)[];
+export type StaffCreateFieldPolicy = {
   staffErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   user?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type StaffDeleteKeySpecifier = Array<
-  "staffErrors" | "errors" | "user" | StaffDeleteKeySpecifier
->;
-export interface StaffDeleteFieldPolicy {
+};
+export type StaffDeleteKeySpecifier = (
+  | "staffErrors"
+  | "errors"
+  | "user"
+  | StaffDeleteKeySpecifier
+)[];
+export type StaffDeleteFieldPolicy = {
   staffErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   user?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type StaffErrorKeySpecifier = Array<
+};
+export type StaffErrorKeySpecifier = (
   | "field"
   | "message"
   | "code"
@@ -6059,8 +6831,8 @@ export type StaffErrorKeySpecifier = Array<
   | "groups"
   | "users"
   | StaffErrorKeySpecifier
->;
-export interface StaffErrorFieldPolicy {
+)[];
+export type StaffErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -6068,58 +6840,65 @@ export interface StaffErrorFieldPolicy {
   permissions?: FieldPolicy<any> | FieldReadFunction<any>;
   groups?: FieldPolicy<any> | FieldReadFunction<any>;
   users?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type StaffNotificationRecipientKeySpecifier = Array<
-  "id" | "user" | "email" | "active" | StaffNotificationRecipientKeySpecifier
->;
-export interface StaffNotificationRecipientFieldPolicy {
+};
+export type StaffNotificationRecipientKeySpecifier = (
+  | "id"
+  | "user"
+  | "email"
+  | "active"
+  | StaffNotificationRecipientKeySpecifier
+)[];
+export type StaffNotificationRecipientFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   email?: FieldPolicy<any> | FieldReadFunction<any>;
   active?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type StaffNotificationRecipientCreateKeySpecifier = Array<
+};
+export type StaffNotificationRecipientCreateKeySpecifier = (
   | "shopErrors"
   | "errors"
   | "staffNotificationRecipient"
   | StaffNotificationRecipientCreateKeySpecifier
->;
-export interface StaffNotificationRecipientCreateFieldPolicy {
+)[];
+export type StaffNotificationRecipientCreateFieldPolicy = {
   shopErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   staffNotificationRecipient?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type StaffNotificationRecipientDeleteKeySpecifier = Array<
+};
+export type StaffNotificationRecipientDeleteKeySpecifier = (
   | "shopErrors"
   | "errors"
   | "staffNotificationRecipient"
   | StaffNotificationRecipientDeleteKeySpecifier
->;
-export interface StaffNotificationRecipientDeleteFieldPolicy {
+)[];
+export type StaffNotificationRecipientDeleteFieldPolicy = {
   shopErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   staffNotificationRecipient?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type StaffNotificationRecipientUpdateKeySpecifier = Array<
+};
+export type StaffNotificationRecipientUpdateKeySpecifier = (
   | "shopErrors"
   | "errors"
   | "staffNotificationRecipient"
   | StaffNotificationRecipientUpdateKeySpecifier
->;
-export interface StaffNotificationRecipientUpdateFieldPolicy {
+)[];
+export type StaffNotificationRecipientUpdateFieldPolicy = {
   shopErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   staffNotificationRecipient?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type StaffUpdateKeySpecifier = Array<
-  "staffErrors" | "errors" | "user" | StaffUpdateKeySpecifier
->;
-export interface StaffUpdateFieldPolicy {
+};
+export type StaffUpdateKeySpecifier = (
+  | "staffErrors"
+  | "errors"
+  | "user"
+  | StaffUpdateKeySpecifier
+)[];
+export type StaffUpdateFieldPolicy = {
   staffErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   user?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type StockKeySpecifier = Array<
+};
+export type StockKeySpecifier = (
   | "id"
   | "warehouse"
   | "productVariant"
@@ -6127,69 +6906,87 @@ export type StockKeySpecifier = Array<
   | "quantityAllocated"
   | "quantityReserved"
   | StockKeySpecifier
->;
-export interface StockFieldPolicy {
+)[];
+export type StockFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   warehouse?: FieldPolicy<any> | FieldReadFunction<any>;
   productVariant?: FieldPolicy<any> | FieldReadFunction<any>;
   quantity?: FieldPolicy<any> | FieldReadFunction<any>;
   quantityAllocated?: FieldPolicy<any> | FieldReadFunction<any>;
   quantityReserved?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type StockCountableConnectionKeySpecifier = Array<
-  "pageInfo" | "edges" | "totalCount" | StockCountableConnectionKeySpecifier
->;
-export interface StockCountableConnectionFieldPolicy {
+};
+export type StockCountableConnectionKeySpecifier = (
+  | "pageInfo"
+  | "edges"
+  | "totalCount"
+  | StockCountableConnectionKeySpecifier
+)[];
+export type StockCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type StockCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | StockCountableEdgeKeySpecifier
->;
-export interface StockCountableEdgeFieldPolicy {
+};
+export type StockCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | StockCountableEdgeKeySpecifier
+)[];
+export type StockCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type StockErrorKeySpecifier = Array<
-  "field" | "message" | "code" | StockErrorKeySpecifier
->;
-export interface StockErrorFieldPolicy {
+};
+export type StockErrorKeySpecifier = (
+  | "field"
+  | "message"
+  | "code"
+  | StockErrorKeySpecifier
+)[];
+export type StockErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type TaxTypeKeySpecifier = Array<
-  "description" | "taxCode" | TaxTypeKeySpecifier
->;
-export interface TaxTypeFieldPolicy {
+};
+export type TaxTypeKeySpecifier = (
+  | "description"
+  | "taxCode"
+  | TaxTypeKeySpecifier
+)[];
+export type TaxTypeFieldPolicy = {
   description?: FieldPolicy<any> | FieldReadFunction<any>;
   taxCode?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type TaxedMoneyKeySpecifier = Array<
-  "currency" | "gross" | "net" | "tax" | TaxedMoneyKeySpecifier
->;
-export interface TaxedMoneyFieldPolicy {
+};
+export type TaxedMoneyKeySpecifier = (
+  | "currency"
+  | "gross"
+  | "net"
+  | "tax"
+  | TaxedMoneyKeySpecifier
+)[];
+export type TaxedMoneyFieldPolicy = {
   currency?: FieldPolicy<any> | FieldReadFunction<any>;
   gross?: FieldPolicy<any> | FieldReadFunction<any>;
   net?: FieldPolicy<any> | FieldReadFunction<any>;
   tax?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type TaxedMoneyRangeKeySpecifier = Array<
-  "start" | "stop" | TaxedMoneyRangeKeySpecifier
->;
-export interface TaxedMoneyRangeFieldPolicy {
+};
+export type TaxedMoneyRangeKeySpecifier = (
+  | "start"
+  | "stop"
+  | TaxedMoneyRangeKeySpecifier
+)[];
+export type TaxedMoneyRangeFieldPolicy = {
   start?: FieldPolicy<any> | FieldReadFunction<any>;
   stop?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type TimePeriodKeySpecifier = Array<
-  "amount" | "type" | TimePeriodKeySpecifier
->;
-export interface TimePeriodFieldPolicy {
+};
+export type TimePeriodKeySpecifier = (
+  | "amount"
+  | "type"
+  | TimePeriodKeySpecifier
+)[];
+export type TimePeriodFieldPolicy = {
   amount?: FieldPolicy<any> | FieldReadFunction<any>;
   type?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type TransactionKeySpecifier = Array<
+};
+export type TransactionKeySpecifier = (
   | "id"
   | "created"
   | "payment"
@@ -6200,8 +6997,8 @@ export type TransactionKeySpecifier = Array<
   | "gatewayResponse"
   | "amount"
   | TransactionKeySpecifier
->;
-export interface TransactionFieldPolicy {
+)[];
+export type TransactionFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   created?: FieldPolicy<any> | FieldReadFunction<any>;
   payment?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -6211,55 +7008,72 @@ export interface TransactionFieldPolicy {
   error?: FieldPolicy<any> | FieldReadFunction<any>;
   gatewayResponse?: FieldPolicy<any> | FieldReadFunction<any>;
   amount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type TranslatableItemConnectionKeySpecifier = Array<
-  "pageInfo" | "edges" | "totalCount" | TranslatableItemConnectionKeySpecifier
->;
-export interface TranslatableItemConnectionFieldPolicy {
+};
+export type TranslatableItemConnectionKeySpecifier = (
+  | "pageInfo"
+  | "edges"
+  | "totalCount"
+  | TranslatableItemConnectionKeySpecifier
+)[];
+export type TranslatableItemConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type TranslatableItemEdgeKeySpecifier = Array<
-  "node" | "cursor" | TranslatableItemEdgeKeySpecifier
->;
-export interface TranslatableItemEdgeFieldPolicy {
+};
+export type TranslatableItemEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | TranslatableItemEdgeKeySpecifier
+)[];
+export type TranslatableItemEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type TranslationErrorKeySpecifier = Array<
-  "field" | "message" | "code" | TranslationErrorKeySpecifier
->;
-export interface TranslationErrorFieldPolicy {
+};
+export type TranslationErrorKeySpecifier = (
+  | "field"
+  | "message"
+  | "code"
+  | TranslationErrorKeySpecifier
+)[];
+export type TranslationErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type UpdateMetadataKeySpecifier = Array<
-  "metadataErrors" | "errors" | "item" | UpdateMetadataKeySpecifier
->;
-export interface UpdateMetadataFieldPolicy {
+};
+export type UpdateMetadataKeySpecifier = (
+  | "metadataErrors"
+  | "errors"
+  | "item"
+  | UpdateMetadataKeySpecifier
+)[];
+export type UpdateMetadataFieldPolicy = {
   metadataErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   item?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type UpdatePrivateMetadataKeySpecifier = Array<
-  "metadataErrors" | "errors" | "item" | UpdatePrivateMetadataKeySpecifier
->;
-export interface UpdatePrivateMetadataFieldPolicy {
+};
+export type UpdatePrivateMetadataKeySpecifier = (
+  | "metadataErrors"
+  | "errors"
+  | "item"
+  | UpdatePrivateMetadataKeySpecifier
+)[];
+export type UpdatePrivateMetadataFieldPolicy = {
   metadataErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   item?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type UploadErrorKeySpecifier = Array<
-  "field" | "message" | "code" | UploadErrorKeySpecifier
->;
-export interface UploadErrorFieldPolicy {
+};
+export type UploadErrorKeySpecifier = (
+  | "field"
+  | "message"
+  | "code"
+  | UploadErrorKeySpecifier
+)[];
+export type UploadErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type UserKeySpecifier = Array<
+};
+export type UserKeySpecifier = (
   | "id"
   | "privateMetadata"
   | "metadata"
@@ -6286,8 +7100,8 @@ export type UserKeySpecifier = Array<
   | "lastLogin"
   | "dateJoined"
   | UserKeySpecifier
->;
-export interface UserFieldPolicy {
+)[];
+export type UserFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -6313,89 +7127,109 @@ export interface UserFieldPolicy {
   defaultBillingAddress?: FieldPolicy<any> | FieldReadFunction<any>;
   lastLogin?: FieldPolicy<any> | FieldReadFunction<any>;
   dateJoined?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type UserAvatarDeleteKeySpecifier = Array<
-  "user" | "accountErrors" | "errors" | UserAvatarDeleteKeySpecifier
->;
-export interface UserAvatarDeleteFieldPolicy {
+};
+export type UserAvatarDeleteKeySpecifier = (
+  | "user"
+  | "accountErrors"
+  | "errors"
+  | UserAvatarDeleteKeySpecifier
+)[];
+export type UserAvatarDeleteFieldPolicy = {
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type UserAvatarUpdateKeySpecifier = Array<
-  "user" | "accountErrors" | "errors" | UserAvatarUpdateKeySpecifier
->;
-export interface UserAvatarUpdateFieldPolicy {
+};
+export type UserAvatarUpdateKeySpecifier = (
+  | "user"
+  | "accountErrors"
+  | "errors"
+  | UserAvatarUpdateKeySpecifier
+)[];
+export type UserAvatarUpdateFieldPolicy = {
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type UserBulkSetActiveKeySpecifier = Array<
-  "count" | "accountErrors" | "errors" | UserBulkSetActiveKeySpecifier
->;
-export interface UserBulkSetActiveFieldPolicy {
+};
+export type UserBulkSetActiveKeySpecifier = (
+  | "count"
+  | "accountErrors"
+  | "errors"
+  | UserBulkSetActiveKeySpecifier
+)[];
+export type UserBulkSetActiveFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type UserCountableConnectionKeySpecifier = Array<
-  "pageInfo" | "edges" | "totalCount" | UserCountableConnectionKeySpecifier
->;
-export interface UserCountableConnectionFieldPolicy {
+};
+export type UserCountableConnectionKeySpecifier = (
+  | "pageInfo"
+  | "edges"
+  | "totalCount"
+  | UserCountableConnectionKeySpecifier
+)[];
+export type UserCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type UserCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | UserCountableEdgeKeySpecifier
->;
-export interface UserCountableEdgeFieldPolicy {
+};
+export type UserCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | UserCountableEdgeKeySpecifier
+)[];
+export type UserCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type UserPermissionKeySpecifier = Array<
-  "code" | "name" | "sourcePermissionGroups" | UserPermissionKeySpecifier
->;
-export interface UserPermissionFieldPolicy {
+};
+export type UserPermissionKeySpecifier = (
+  | "code"
+  | "name"
+  | "sourcePermissionGroups"
+  | UserPermissionKeySpecifier
+)[];
+export type UserPermissionFieldPolicy = {
   code?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   sourcePermissionGroups?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type VATKeySpecifier = Array<
-  "countryCode" | "standardRate" | "reducedRates" | VATKeySpecifier
->;
-export interface VATFieldPolicy {
+};
+export type VATKeySpecifier = (
+  | "countryCode"
+  | "standardRate"
+  | "reducedRates"
+  | VATKeySpecifier
+)[];
+export type VATFieldPolicy = {
   countryCode?: FieldPolicy<any> | FieldReadFunction<any>;
   standardRate?: FieldPolicy<any> | FieldReadFunction<any>;
   reducedRates?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type VariantMediaAssignKeySpecifier = Array<
+};
+export type VariantMediaAssignKeySpecifier = (
   | "productVariant"
   | "media"
   | "productErrors"
   | "errors"
   | VariantMediaAssignKeySpecifier
->;
-export interface VariantMediaAssignFieldPolicy {
+)[];
+export type VariantMediaAssignFieldPolicy = {
   productVariant?: FieldPolicy<any> | FieldReadFunction<any>;
   media?: FieldPolicy<any> | FieldReadFunction<any>;
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type VariantMediaUnassignKeySpecifier = Array<
+};
+export type VariantMediaUnassignKeySpecifier = (
   | "productVariant"
   | "media"
   | "productErrors"
   | "errors"
   | VariantMediaUnassignKeySpecifier
->;
-export interface VariantMediaUnassignFieldPolicy {
+)[];
+export type VariantMediaUnassignFieldPolicy = {
   productVariant?: FieldPolicy<any> | FieldReadFunction<any>;
   media?: FieldPolicy<any> | FieldReadFunction<any>;
   productErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type VariantPricingInfoKeySpecifier = Array<
+};
+export type VariantPricingInfoKeySpecifier = (
   | "onSale"
   | "discount"
   | "discountLocalCurrency"
@@ -6403,31 +7237,31 @@ export type VariantPricingInfoKeySpecifier = Array<
   | "priceUndiscounted"
   | "priceLocalCurrency"
   | VariantPricingInfoKeySpecifier
->;
-export interface VariantPricingInfoFieldPolicy {
+)[];
+export type VariantPricingInfoFieldPolicy = {
   onSale?: FieldPolicy<any> | FieldReadFunction<any>;
   discount?: FieldPolicy<any> | FieldReadFunction<any>;
   discountLocalCurrency?: FieldPolicy<any> | FieldReadFunction<any>;
   price?: FieldPolicy<any> | FieldReadFunction<any>;
   priceUndiscounted?: FieldPolicy<any> | FieldReadFunction<any>;
   priceLocalCurrency?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type VerifyTokenKeySpecifier = Array<
+};
+export type VerifyTokenKeySpecifier = (
   | "user"
   | "isValid"
   | "payload"
   | "accountErrors"
   | "errors"
   | VerifyTokenKeySpecifier
->;
-export interface VerifyTokenFieldPolicy {
+)[];
+export type VerifyTokenFieldPolicy = {
   user?: FieldPolicy<any> | FieldReadFunction<any>;
   isValid?: FieldPolicy<any> | FieldReadFunction<any>;
   payload?: FieldPolicy<any> | FieldReadFunction<any>;
   accountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type VoucherKeySpecifier = Array<
+};
+export type VoucherKeySpecifier = (
   | "id"
   | "privateMetadata"
   | "metadata"
@@ -6454,8 +7288,8 @@ export type VoucherKeySpecifier = Array<
   | "type"
   | "channelListings"
   | VoucherKeySpecifier
->;
-export interface VoucherFieldPolicy {
+)[];
+export type VoucherFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -6481,126 +7315,155 @@ export interface VoucherFieldPolicy {
   minSpent?: FieldPolicy<any> | FieldReadFunction<any>;
   type?: FieldPolicy<any> | FieldReadFunction<any>;
   channelListings?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type VoucherAddCataloguesKeySpecifier = Array<
-  "voucher" | "discountErrors" | "errors" | VoucherAddCataloguesKeySpecifier
->;
-export interface VoucherAddCataloguesFieldPolicy {
+};
+export type VoucherAddCataloguesKeySpecifier = (
+  | "voucher"
+  | "discountErrors"
+  | "errors"
+  | VoucherAddCataloguesKeySpecifier
+)[];
+export type VoucherAddCataloguesFieldPolicy = {
   voucher?: FieldPolicy<any> | FieldReadFunction<any>;
   discountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type VoucherBulkDeleteKeySpecifier = Array<
-  "count" | "discountErrors" | "errors" | VoucherBulkDeleteKeySpecifier
->;
-export interface VoucherBulkDeleteFieldPolicy {
+};
+export type VoucherBulkDeleteKeySpecifier = (
+  | "count"
+  | "discountErrors"
+  | "errors"
+  | VoucherBulkDeleteKeySpecifier
+)[];
+export type VoucherBulkDeleteFieldPolicy = {
   count?: FieldPolicy<any> | FieldReadFunction<any>;
   discountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type VoucherChannelListingKeySpecifier = Array<
+};
+export type VoucherChannelListingKeySpecifier = (
   | "id"
   | "channel"
   | "discountValue"
   | "currency"
   | "minSpent"
   | VoucherChannelListingKeySpecifier
->;
-export interface VoucherChannelListingFieldPolicy {
+)[];
+export type VoucherChannelListingFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   channel?: FieldPolicy<any> | FieldReadFunction<any>;
   discountValue?: FieldPolicy<any> | FieldReadFunction<any>;
   currency?: FieldPolicy<any> | FieldReadFunction<any>;
   minSpent?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type VoucherChannelListingUpdateKeySpecifier = Array<
+};
+export type VoucherChannelListingUpdateKeySpecifier = (
   | "voucher"
   | "discountErrors"
   | "errors"
   | VoucherChannelListingUpdateKeySpecifier
->;
-export interface VoucherChannelListingUpdateFieldPolicy {
+)[];
+export type VoucherChannelListingUpdateFieldPolicy = {
   voucher?: FieldPolicy<any> | FieldReadFunction<any>;
   discountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type VoucherCountableConnectionKeySpecifier = Array<
-  "pageInfo" | "edges" | "totalCount" | VoucherCountableConnectionKeySpecifier
->;
-export interface VoucherCountableConnectionFieldPolicy {
+};
+export type VoucherCountableConnectionKeySpecifier = (
+  | "pageInfo"
+  | "edges"
+  | "totalCount"
+  | VoucherCountableConnectionKeySpecifier
+)[];
+export type VoucherCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type VoucherCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | VoucherCountableEdgeKeySpecifier
->;
-export interface VoucherCountableEdgeFieldPolicy {
+};
+export type VoucherCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | VoucherCountableEdgeKeySpecifier
+)[];
+export type VoucherCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type VoucherCreateKeySpecifier = Array<
-  "discountErrors" | "errors" | "voucher" | VoucherCreateKeySpecifier
->;
-export interface VoucherCreateFieldPolicy {
+};
+export type VoucherCreateKeySpecifier = (
+  | "discountErrors"
+  | "errors"
+  | "voucher"
+  | VoucherCreateKeySpecifier
+)[];
+export type VoucherCreateFieldPolicy = {
   discountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   voucher?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type VoucherDeleteKeySpecifier = Array<
-  "discountErrors" | "errors" | "voucher" | VoucherDeleteKeySpecifier
->;
-export interface VoucherDeleteFieldPolicy {
+};
+export type VoucherDeleteKeySpecifier = (
+  | "discountErrors"
+  | "errors"
+  | "voucher"
+  | VoucherDeleteKeySpecifier
+)[];
+export type VoucherDeleteFieldPolicy = {
   discountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   voucher?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type VoucherRemoveCataloguesKeySpecifier = Array<
-  "voucher" | "discountErrors" | "errors" | VoucherRemoveCataloguesKeySpecifier
->;
-export interface VoucherRemoveCataloguesFieldPolicy {
+};
+export type VoucherRemoveCataloguesKeySpecifier = (
+  | "voucher"
+  | "discountErrors"
+  | "errors"
+  | VoucherRemoveCataloguesKeySpecifier
+)[];
+export type VoucherRemoveCataloguesFieldPolicy = {
   voucher?: FieldPolicy<any> | FieldReadFunction<any>;
   discountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type VoucherTranslatableContentKeySpecifier = Array<
+};
+export type VoucherTranslatableContentKeySpecifier = (
   | "id"
   | "name"
   | "translation"
   | "voucher"
   | VoucherTranslatableContentKeySpecifier
->;
-export interface VoucherTranslatableContentFieldPolicy {
+)[];
+export type VoucherTranslatableContentFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   translation?: FieldPolicy<any> | FieldReadFunction<any>;
   voucher?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type VoucherTranslateKeySpecifier = Array<
-  "translationErrors" | "errors" | "voucher" | VoucherTranslateKeySpecifier
->;
-export interface VoucherTranslateFieldPolicy {
+};
+export type VoucherTranslateKeySpecifier = (
+  | "translationErrors"
+  | "errors"
+  | "voucher"
+  | VoucherTranslateKeySpecifier
+)[];
+export type VoucherTranslateFieldPolicy = {
   translationErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   voucher?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type VoucherTranslationKeySpecifier = Array<
-  "id" | "language" | "name" | VoucherTranslationKeySpecifier
->;
-export interface VoucherTranslationFieldPolicy {
+};
+export type VoucherTranslationKeySpecifier = (
+  | "id"
+  | "language"
+  | "name"
+  | VoucherTranslationKeySpecifier
+)[];
+export type VoucherTranslationFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   language?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type VoucherUpdateKeySpecifier = Array<
-  "discountErrors" | "errors" | "voucher" | VoucherUpdateKeySpecifier
->;
-export interface VoucherUpdateFieldPolicy {
+};
+export type VoucherUpdateKeySpecifier = (
+  | "discountErrors"
+  | "errors"
+  | "voucher"
+  | VoucherUpdateKeySpecifier
+)[];
+export type VoucherUpdateFieldPolicy = {
   discountErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   voucher?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type WarehouseKeySpecifier = Array<
+};
+export type WarehouseKeySpecifier = (
   | "id"
   | "privateMetadata"
   | "metadata"
@@ -6613,8 +7476,8 @@ export type WarehouseKeySpecifier = Array<
   | "clickAndCollectOption"
   | "shippingZones"
   | WarehouseKeySpecifier
->;
-export interface WarehouseFieldPolicy {
+)[];
+export type WarehouseFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   privateMetadata?: FieldPolicy<any> | FieldReadFunction<any>;
   metadata?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -6626,77 +7489,94 @@ export interface WarehouseFieldPolicy {
   companyName?: FieldPolicy<any> | FieldReadFunction<any>;
   clickAndCollectOption?: FieldPolicy<any> | FieldReadFunction<any>;
   shippingZones?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type WarehouseCountableConnectionKeySpecifier = Array<
-  "pageInfo" | "edges" | "totalCount" | WarehouseCountableConnectionKeySpecifier
->;
-export interface WarehouseCountableConnectionFieldPolicy {
+};
+export type WarehouseCountableConnectionKeySpecifier = (
+  | "pageInfo"
+  | "edges"
+  | "totalCount"
+  | WarehouseCountableConnectionKeySpecifier
+)[];
+export type WarehouseCountableConnectionFieldPolicy = {
   pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
   edges?: FieldPolicy<any> | FieldReadFunction<any>;
   totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type WarehouseCountableEdgeKeySpecifier = Array<
-  "node" | "cursor" | WarehouseCountableEdgeKeySpecifier
->;
-export interface WarehouseCountableEdgeFieldPolicy {
+};
+export type WarehouseCountableEdgeKeySpecifier = (
+  | "node"
+  | "cursor"
+  | WarehouseCountableEdgeKeySpecifier
+)[];
+export type WarehouseCountableEdgeFieldPolicy = {
   node?: FieldPolicy<any> | FieldReadFunction<any>;
   cursor?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type WarehouseCreateKeySpecifier = Array<
-  "warehouseErrors" | "errors" | "warehouse" | WarehouseCreateKeySpecifier
->;
-export interface WarehouseCreateFieldPolicy {
+};
+export type WarehouseCreateKeySpecifier = (
+  | "warehouseErrors"
+  | "errors"
+  | "warehouse"
+  | WarehouseCreateKeySpecifier
+)[];
+export type WarehouseCreateFieldPolicy = {
   warehouseErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   warehouse?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type WarehouseDeleteKeySpecifier = Array<
-  "warehouseErrors" | "errors" | "warehouse" | WarehouseDeleteKeySpecifier
->;
-export interface WarehouseDeleteFieldPolicy {
+};
+export type WarehouseDeleteKeySpecifier = (
+  | "warehouseErrors"
+  | "errors"
+  | "warehouse"
+  | WarehouseDeleteKeySpecifier
+)[];
+export type WarehouseDeleteFieldPolicy = {
   warehouseErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   warehouse?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type WarehouseErrorKeySpecifier = Array<
-  "field" | "message" | "code" | WarehouseErrorKeySpecifier
->;
-export interface WarehouseErrorFieldPolicy {
+};
+export type WarehouseErrorKeySpecifier = (
+  | "field"
+  | "message"
+  | "code"
+  | WarehouseErrorKeySpecifier
+)[];
+export type WarehouseErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type WarehouseShippingZoneAssignKeySpecifier = Array<
+};
+export type WarehouseShippingZoneAssignKeySpecifier = (
   | "warehouseErrors"
   | "errors"
   | "warehouse"
   | WarehouseShippingZoneAssignKeySpecifier
->;
-export interface WarehouseShippingZoneAssignFieldPolicy {
+)[];
+export type WarehouseShippingZoneAssignFieldPolicy = {
   warehouseErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   warehouse?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type WarehouseShippingZoneUnassignKeySpecifier = Array<
+};
+export type WarehouseShippingZoneUnassignKeySpecifier = (
   | "warehouseErrors"
   | "errors"
   | "warehouse"
   | WarehouseShippingZoneUnassignKeySpecifier
->;
-export interface WarehouseShippingZoneUnassignFieldPolicy {
+)[];
+export type WarehouseShippingZoneUnassignFieldPolicy = {
   warehouseErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   warehouse?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type WarehouseUpdateKeySpecifier = Array<
-  "warehouseErrors" | "errors" | "warehouse" | WarehouseUpdateKeySpecifier
->;
-export interface WarehouseUpdateFieldPolicy {
+};
+export type WarehouseUpdateKeySpecifier = (
+  | "warehouseErrors"
+  | "errors"
+  | "warehouse"
+  | WarehouseUpdateKeySpecifier
+)[];
+export type WarehouseUpdateFieldPolicy = {
   warehouseErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   warehouse?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type WebhookKeySpecifier = Array<
+};
+export type WebhookKeySpecifier = (
   | "id"
   | "name"
   | "events"
@@ -6708,8 +7588,8 @@ export type WebhookKeySpecifier = Array<
   | "isActive"
   | "secretKey"
   | WebhookKeySpecifier
->;
-export interface WebhookFieldPolicy {
+)[];
+export type WebhookFieldPolicy = {
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   events?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -6720,70 +7600,88 @@ export interface WebhookFieldPolicy {
   targetUrl?: FieldPolicy<any> | FieldReadFunction<any>;
   isActive?: FieldPolicy<any> | FieldReadFunction<any>;
   secretKey?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type WebhookCreateKeySpecifier = Array<
-  "webhookErrors" | "errors" | "webhook" | WebhookCreateKeySpecifier
->;
-export interface WebhookCreateFieldPolicy {
+};
+export type WebhookCreateKeySpecifier = (
+  | "webhookErrors"
+  | "errors"
+  | "webhook"
+  | WebhookCreateKeySpecifier
+)[];
+export type WebhookCreateFieldPolicy = {
   webhookErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   webhook?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type WebhookDeleteKeySpecifier = Array<
-  "webhookErrors" | "errors" | "webhook" | WebhookDeleteKeySpecifier
->;
-export interface WebhookDeleteFieldPolicy {
+};
+export type WebhookDeleteKeySpecifier = (
+  | "webhookErrors"
+  | "errors"
+  | "webhook"
+  | WebhookDeleteKeySpecifier
+)[];
+export type WebhookDeleteFieldPolicy = {
   webhookErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   webhook?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type WebhookErrorKeySpecifier = Array<
-  "field" | "message" | "code" | WebhookErrorKeySpecifier
->;
-export interface WebhookErrorFieldPolicy {
+};
+export type WebhookErrorKeySpecifier = (
+  | "field"
+  | "message"
+  | "code"
+  | WebhookErrorKeySpecifier
+)[];
+export type WebhookErrorFieldPolicy = {
   field?: FieldPolicy<any> | FieldReadFunction<any>;
   message?: FieldPolicy<any> | FieldReadFunction<any>;
   code?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type WebhookEventKeySpecifier = Array<
-  "name" | "eventType" | WebhookEventKeySpecifier
->;
-export interface WebhookEventFieldPolicy {
+};
+export type WebhookEventKeySpecifier = (
+  | "name"
+  | "eventType"
+  | WebhookEventKeySpecifier
+)[];
+export type WebhookEventFieldPolicy = {
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   eventType?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type WebhookEventAsyncKeySpecifier = Array<
-  "name" | "eventType" | WebhookEventAsyncKeySpecifier
->;
-export interface WebhookEventAsyncFieldPolicy {
+};
+export type WebhookEventAsyncKeySpecifier = (
+  | "name"
+  | "eventType"
+  | WebhookEventAsyncKeySpecifier
+)[];
+export type WebhookEventAsyncFieldPolicy = {
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   eventType?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type WebhookEventSyncKeySpecifier = Array<
-  "name" | "eventType" | WebhookEventSyncKeySpecifier
->;
-export interface WebhookEventSyncFieldPolicy {
+};
+export type WebhookEventSyncKeySpecifier = (
+  | "name"
+  | "eventType"
+  | WebhookEventSyncKeySpecifier
+)[];
+export type WebhookEventSyncFieldPolicy = {
   name?: FieldPolicy<any> | FieldReadFunction<any>;
   eventType?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type WebhookUpdateKeySpecifier = Array<
-  "webhookErrors" | "errors" | "webhook" | WebhookUpdateKeySpecifier
->;
-export interface WebhookUpdateFieldPolicy {
+};
+export type WebhookUpdateKeySpecifier = (
+  | "webhookErrors"
+  | "errors"
+  | "webhook"
+  | WebhookUpdateKeySpecifier
+)[];
+export type WebhookUpdateFieldPolicy = {
   webhookErrors?: FieldPolicy<any> | FieldReadFunction<any>;
   errors?: FieldPolicy<any> | FieldReadFunction<any>;
   webhook?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type WeightKeySpecifier = Array<"unit" | "value" | WeightKeySpecifier>;
-export interface WeightFieldPolicy {
+};
+export type WeightKeySpecifier = ("unit" | "value" | WeightKeySpecifier)[];
+export type WeightFieldPolicy = {
   unit?: FieldPolicy<any> | FieldReadFunction<any>;
   value?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export type _ServiceKeySpecifier = Array<"sdl" | _ServiceKeySpecifier>;
-export interface _ServiceFieldPolicy {
+};
+export type _ServiceKeySpecifier = ("sdl" | _ServiceKeySpecifier)[];
+export type _ServiceFieldPolicy = {
   sdl?: FieldPolicy<any> | FieldReadFunction<any>;
-}
-export interface StrictTypedTypePolicies {
+};
+export type StrictTypedTypePolicies = {
   AccountAddressCreate?: Omit<TypePolicy, "fields" | "keyFields"> & {
     keyFields?:
       | false
@@ -10371,5 +11269,5 @@ export interface StrictTypedTypePolicies {
       | (() => undefined | _ServiceKeySpecifier);
     fields?: _ServiceFieldPolicy;
   };
-}
+};
 export type TypedTypePolicies = StrictTypedTypePolicies & TypePolicies;
