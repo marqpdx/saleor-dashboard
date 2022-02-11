@@ -12,5 +12,5 @@ export const BUTTON_SELECTORS = {
   nextPaginationButton: '[data-test="button-pagination-next"]',
   deleteIcon: '[data-test-id="deleteIcon"]',
   showMoreButton: '[data-test-id="showMoreButton"]',
-  button: "button"
+  button: '["button"]'
 };
